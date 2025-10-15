@@ -1,0 +1,97 @@
+const KermitSVG = ({ color, className = "", style = {} }) => {
+  return (
+    <svg
+      viewBox="0 0 50 50"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={style}
+      fill="none"
+    >
+      <path
+        d="M9.882,32.788
+          c1.733,1.589,3.497,4.041,3.497,7.443c0,6.69,11.708,6.69,11.708,6.69s11.708,0,11.708-6.69c0-3.402,1.763-5.854,3.497-7.443"
+        stroke={color}
+        strokeWidth={2}
+        strokeMiterlimit={10}
+        fill="none"
+      />
+      <path
+        d="M40.224,13.8C44.04,17.533,47,21.57,47,24.417
+          C47,31.222,30.077,39,25,39S3,31.222,3,24.417C3,21.57,5.96,17.533,9.776,13.8"
+        stroke={color}
+        strokeWidth={2}
+        strokeMiterlimit={10}
+        fill="none"
+      />
+      <path
+        d="M20.03,5.875C22.074,4.705,23.844,4,25,4
+          c1.156,0,2.926,0.705,4.97,1.875"
+        stroke={color}
+        strokeWidth={2}
+        strokeMiterlimit={10}
+        fill="none"
+      />
+      <path
+        d="M22,7.444c0,0-2.105,6.79-10.657,8.556
+          c-3.421-3.531-3.207-8.759,1.382-11.408C16.715,2.289,22,7.444,22,7.444z"
+        stroke={color}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeMiterlimit={10}
+        fill="none"
+      />
+      <circle cx="15" cy="10" r="2" fill={color} />
+      <path
+        d="M18.211,7.553c0,0-4.053,1.737-6.368,5.211"
+        stroke={color}
+        strokeWidth={2}
+        strokeMiterlimit={10}
+        fill="none"
+      />
+      <path
+        d="M28,7.444c0,0,2.105,6.79,10.657,8.556
+          c3.421-3.531,3.207-8.759-1.382-11.408C33.285,2.289,28,7.444,28,7.444z"
+        stroke={color}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeMiterlimit={10}
+        fill="none"
+      />
+      <circle cx="35" cy="10" r="2" fill={color} />
+      <path
+        d="M31.789,7.553c0,0,4.053,1.737,6.368,5.211"
+        stroke={color}
+        strokeWidth={2}
+        strokeMiterlimit={10}
+        fill="none"
+      />
+      <path
+        d="M42,24c0,0-8.895,6-17,6S8,24,8,24"
+        stroke={color}
+        strokeWidth={2}
+        strokeMiterlimit={10}
+        fill="none"
+      />
+      <path
+        d="M40,22c0,0,3.158,1.526,2,5"
+        stroke={color}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeMiterlimit={10}
+        fill="none"
+      />
+      <path
+        d="M10,22c0,0-3.158,1.526-2,5"
+        stroke={color}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeMiterlimit={10}
+        fill="none"
+      />
+    </svg>
+  );
+};
+
+export default KermitSVG;
