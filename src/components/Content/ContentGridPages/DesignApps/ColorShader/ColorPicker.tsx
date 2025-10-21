@@ -144,7 +144,7 @@ const ColorPicker: React.FC<Props> = ({
       <button
         id="generatePallete"
         onClick={generateOnClick}
-        className="flex-center m-12 w-[100px] h-[65px] border border-[var(--textColor)] rounded-[0.6rem] bg-amber-300"
+        className="flex-center m-12 w-[90px] h-[45px] text-[#0d390d] hover:text-black border border-[#71ef71] hover:border-[#6ae76a] rounded-[1.5rem] bg-[#44e444] hover:bg-[#71ef71] shadow-[1px_1px_5px_rgba(128,128,128,0.6)] hover:shadow-none transition-colors duration-200"
       >
         Generate
       </button>

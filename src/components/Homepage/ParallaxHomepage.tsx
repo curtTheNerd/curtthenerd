@@ -12,13 +12,19 @@ import layer7 from "../../assets/backgoundLayers/layer7ForegroundGras.svg";
 
 import { SmallCloud, BigCloud } from "./Clouds";
 import Content from "../Content/Content";
-import Background from "../Content/ContentGridPages/DesignApps/BackgroundApp/Background";
 
-const ParallaxHomepage: React.FC = () => {
+const ParallaxHomepageBanner: React.FC = () => {
   const parallaxRef = useRef(null);
   return (
-    <div id="parallax-banner-content" className="w-screen h-screen">
-      <Parallax pages={3} ref={parallaxRef}>
+    <div
+      id="parallax-banner-content"
+      className="relative w-screen h-screen bg-[var(--bgColor)]"
+    >
+      {
+        //    !!    Page-Settings
+      }
+
+      <Parallax pages={4.2} ref={parallaxRef} className="z-10">
         <ParallaxLayer offset={0} speed={0.1}>
           <img
             src={layer0}
@@ -174,15 +180,42 @@ const ParallaxHomepage: React.FC = () => {
           />
         </ParallaxLayer>
 
-        <ParallaxLayer className="flex-center" offset={1} speed={0.5}>
-          <Content />
+        <ParallaxLayer
+          offset={0.5}
+          speed={0.3}
+          sticky={{ start: 0.75, end: 1.5 }}
+          className="flex-center "
+        >
+          <h2 className="w-[60%] h-[250px] bg-amber-100 p-8 flex-center ">
+            Welcome to the Showroom!!
+          </h2>
         </ParallaxLayer>
-        <ParallaxLayer className="flex-center" offset={2} speed={0.5}>
-          <Background />
+        {/*
+        <ParallaxLayer offset={3} speed={2} className="flex-center ">
+          <h2 className="w-[100%] h-[250px] bg-amber-500 p-8 flex-center ">
+            zwei
+          </h2>
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={2} speed={1} className="flex-center ">
+          <h2 className="w-[80%] h-[250px] bg-amber-300 p-8 flex-center ">
+            eins
+          </h2>
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={2} speed={-2.2} className="flex-center ">
+          <h2 className="w-[50%] h-[250px] bg-amber-700 p-8 flex-center ">
+            eins
+          </h2>
+        </ParallaxLayer> */}
+        <ParallaxLayer offset={3} speed={0.1}>
+          <div className="w-full flex flex-col items-center justify-start">
+            <Content />
+          </div>
         </ParallaxLayer>
       </Parallax>
     </div>
   );
 };
 
-export default ParallaxHomepage;
+export default ParallaxHomepageBanner;

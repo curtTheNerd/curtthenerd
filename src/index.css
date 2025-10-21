@@ -21,9 +21,9 @@
 
 @layer base {
   :root {
-    --textColor: rgb(44, 41, 37);
+    --textColor: rgb(24, 20, 14);
     --textColorNegative: antiquewhite;
-    --bgColor: rgb(255, 221, 85);
+    --bgColor: rgb(144, 244, 165);
 
     font-family: Helvetica, Avenir, system-ui, Arial, sans-serif;
     text-rendering: optimizeLegibility;
@@ -35,7 +35,7 @@
     @apply w-screen h-screen scroll-smooth;
   }
   body {
-    @apply w-full h-full flex flex-col items-center mx-auto bg-[rgba(255,255,255,0)];
+    @apply w-full h-full flex flex-col items-center mx-auto;
   }
   a,
   li,
@@ -67,15 +67,21 @@
   }
 
   .modal-page {
-    @apply flex flex-col items-center justify-center w-full h-full overflow-hidden m-4;
+    @apply flex items-center justify-center w-full h-full;
+  }
+  .modal-container {
+    @apply w-[90vw] lg:w-[80vw] h-full;
   }
 
   .grid-item {
-    @apply flex flex-col items-center justify-center p-2 bg-[rgba(255,255,0,0.5)] cursor-pointer;
+    @apply flex flex-col items-center justify-center p-2 bg-[rgba(255,255,255,0.4)] cursor-pointer hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-102 transition-transform duration-200;
+  }
+  .grid-item-hidden-bg {
+    @apply flex flex-col items-center justify-center p-2;
   }
 
   .btn {
-    @apply w-[110px] h-[45px] bg-[rgba(255,255,255,0.5)] text-[var(--textColor)] text-[1.2rem] rounded-[0.25rem] shadow-md hover:bg-white/40 transition;
+    @apply cursor-pointer w-[110px] h-[45px] bg-[rgba(255,255,255,0.3)] hover:bg-[rgba(255,255,255,1)] text-[var(--textColor)] text-[1.2rem] rounded-[0.25rem] shadow-md;
   }
   .btnAddedText {
     @apply w-[110px] h-[45px] text-[var(--textColor)] text-[1.2rem];
@@ -89,6 +95,6 @@
   }
 
   .icon {
-    @apply text-[rgb(201,154,26)] m-[0.5rem] transition-all duration-300;
+    @apply m-[0.5rem] transition-all duration-300;
   }
 }

@@ -1,11 +1,11 @@
 import "./index.css";
-import ParallaxHomepage from "./components/Homepage/ParallaxHomepage";
-import Background from "./components/Content/ContentGridPages/DesignApps/BackgroundApp/Background";
+import "./fonts.css";
+import HomepageRouter from "./components/Homepage/HomePageRouter";
 
 const App = () => {
   return (
     <>
-      <Background />
+      <HomepageRouter />
     </>
   );
 };

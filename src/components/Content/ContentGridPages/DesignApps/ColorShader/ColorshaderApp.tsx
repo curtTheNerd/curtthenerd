@@ -31,7 +31,7 @@ const ColorShaderApp: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col xl:flex-row xl:gap-4 m-4">
+    <div className="flex flex-col xl:flex-row xl:gap-4 md:m-4">
       <div className="flex flex-col xl:pt-20">
         <h2>RGB-Color Shader</h2>
 

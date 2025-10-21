@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
+import { colorProgression, randomRGB } from "./helperFunctions/helpers";
 import ButtonPanel from "./ButtonPanel";
 import BackgroundEntity from "./BackgroundEntity";
-import { colorProgression, randomRGB } from "./helperFunctions/helpers";
 
 type RGB = [number, number, number];
 
@@ -9,7 +9,7 @@ const Background = () => {
   //  states & constants
   const [isRunning, setIsRunning] = useState<boolean>(true);
   const [color, setColor] = useState<RGB>(randomRGB);
-  const [backgroundColor, setBackgroundColor] = useState<RGB>([80, 238, 115]);
+  const [backgroundColor, setBackgroundColor] = useState<RGB>([144, 244, 165]);
   const [blockIndex, setBlockIndex] = useState<number>(0);
   const [medianWidth, setMedianWidth] = useState<number>(
     window.innerWidth / 32
@@ -54,6 +54,7 @@ const Background = () => {
 
   const handleReset = () => {
     setIsRunning(false);
+    setBackgroundColor([144, 244, 165]);
     setEntityMode("circle");
     setMedianWidth(window.innerWidth / 32);
     setEntityAnimationSpeed(12);
@@ -119,6 +120,8 @@ const Background = () => {
         : colorProgressionParameter - 8
     );
 
+  // code execution
+
   useEffect(() => {
     if (!isRunning) return;
 
@@ -152,34 +155,34 @@ const Background = () => {
   return (
     <>
       <div
-        className="absolute left-0 flex-center w-[100vw] h-[100vh] overflow-hidden"
+        className="absolute top-0 left-0 w-[100%] h-[100vh] m-0 -z-10"
         style={{
           backgroundColor: `rgb(${backgroundColor[0]}, ${backgroundColor[1]}, ${backgroundColor[2]})`,
         }}
       >
         {entityArray}
-        <ButtonPanel
-          width={medianWidth}
-          speed={entityAnimationSpeed}
-          delay={entityAnimationDelay}
-          colorProgressionFactor={colorProgressionParameter}
-          onStart={handleStart}
-          onStop={handleStop}
-          onReset={handleReset}
-          onOption={handleOption}
-          onCircle={handleCircle}
-          onSquare={handleSquare}
-          onKermit={handleKermit}
-          onSizeUp={handleSizeUp}
-          onSizeDown={handleSizeDown}
-          onSpeedUp={handleAnimationSpeedFaster}
-          onSpeedDown={handleAnimationSpeedSlower}
-          onDelayUp={handleAnimationDelayFaster}
-          onDelayDown={handleAnimationDelaySlower}
-          onColorProgressionUp={handleColorProgressionHarder}
-          onColorProgressionDown={handleColorProgressionSofter}
-        />
       </div>
+      <ButtonPanel
+        width={medianWidth}
+        speed={entityAnimationSpeed}
+        delay={entityAnimationDelay}
+        colorProgressionFactor={colorProgressionParameter}
+        onStart={handleStart}
+        onStop={handleStop}
+        onReset={handleReset}
+        onOption={handleOption}
+        onCircle={handleCircle}
+        onSquare={handleSquare}
+        onKermit={handleKermit}
+        onSizeUp={handleSizeUp}
+        onSizeDown={handleSizeDown}
+        onSpeedUp={handleAnimationSpeedFaster}
+        onSpeedDown={handleAnimationSpeedSlower}
+        onDelayUp={handleAnimationDelayFaster}
+        onDelayDown={handleAnimationDelaySlower}
+        onColorProgressionUp={handleColorProgressionHarder}
+        onColorProgressionDown={handleColorProgressionSofter}
+      />
     </>
   );
 };

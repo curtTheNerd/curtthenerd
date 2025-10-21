@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { IoClose } from "react-icons/io5";
 
 interface ButtonPanelProps {
   width: number;
@@ -49,22 +50,22 @@ const ButtonPanel: React.FC<ButtonPanelProps> = ({
 
   return (
     <div
-      className={`absolute group bottom-8 right-8 z-10 ${panelActive ? "w-full max-w-[500px]" : "w-[150px] h-[100px] rounded-2xl bg-[rgba(255,255,255,0.5)]"}`}
+      className={`group absolute flex-center bottom-4 right-4 lg:bottom-8 lg:right-8 2xl:bottom-12 2xl:right-12 z-1000 ${panelActive ? "w-full max-w-[400px]" : "cursor-pointer w-[80px] hover:w-[175px] hover:h-[90px] transition-all duration-500 lg:w-[100px] lg:h-[100px] 2xl:w-[110px] 2xl:h-[110px] h-[80px] rounded-2xl bg-[rgba(255,255,255,0.5)]"}`}
       onClick={handleOpenPanelMenu}
     >
-      <div>
+      <div className="backdrop-blur-md bg-[rgba(255,255,255,0.2)]">
         <p
-          className={`relative flex-center text-center h-[4rem] text-[0rem] duration-1000 ${panelActive ? "hover:flex-center text-[1.25rem]" : "group-hover:text-[1.1rem] flex-col pt-9"}`}
+          className={`relative flex-center text-center h-[4rem] text-[0rem] transition-all duration-500 ${panelActive ? "hover:flex-center text-[1.25rem]" : "group-hover:text-[1.1rem] flex-col"}`}
         >
           <div className="pr-1.5">Manipulate</div>
           <div>Background</div>
         </p>
 
         <button
-          className={`absolute top-4 right-12 text-[1.25rem] ${panelActive ? "" : "hidden"}`}
+          className={`absolute top-4 right-6 text-[1.25rem] ${panelActive ? "" : "hidden"}`}
           onClick={handleClosePanelMenu}
         >
-          X
+          <IoClose className="cursor-pointer text-[2rem] hover:text-[2.15rem] text-green-950 hover:text-black transition-all duration-200" />
         </button>
 
         <div

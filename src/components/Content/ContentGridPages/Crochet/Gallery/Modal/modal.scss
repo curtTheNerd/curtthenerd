@@ -1,0 +1,110 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  margin: 0 auto;
+
+  .description_modal {
+    position: absolute;
+    bottom: 2.25rem;
+    right: 2.5rem;
+    width: 90%;
+    text-align: end;
+    pointer-events: none;
+    z-index: 101;
+
+    p {
+      color: rgb(29, 3, 36);
+      font-size: 1.1rem;
+      text-shadow:
+        0px 0px 8px white,
+        0px 0px 5px white,
+        0px 0px 5px white;
+    }
+  }
+
+  .close,
+  .prev,
+  .next,
+  .zoom {
+    position: absolute;
+    border: none;
+    background: none;
+    transition: 0.5s ease;
+    z-index: 102;
+  }
+
+  .close {
+    top: 2rem;
+    right: 2.5rem;
+    color: rgb(112, 112, 112);
+    font-size: 3.75rem;
+    font-weight: 525;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(56, 34, 68);
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+  }
+
+  .prev,
+  .next {
+    top: 45%;
+    width: auto;
+    padding: 1rem;
+    color: rgb(112, 112, 112);
+    font-weight: bold;
+    font-size: 2.2rem;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(56, 34, 68);
+      transform: scale(1.25);
+      transition: 0.5s;
+    }
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+    padding-right: 1rem;
+  }
+
+  /* out for now on clients request
+  .zoom {
+    top: 1.5rem;
+    left: 2.5rem;
+    width: 6.25rem;
+    height: 4.5rem;
+    font-size: 1.25rem;
+    color: rgb(29, 3, 36);
+    text-shadow:
+      0px 0px 8px white,
+      0px 0px 5px white,
+      0px 0px 5px white;
+    border-radius: 0.5rem;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transition: 0.7s ease;
+      box-shadow: rgba(255, 255, 255, 0.4) 1px 1px 10px 2px;
+    }
+  }*/
+}
