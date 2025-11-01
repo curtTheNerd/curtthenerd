@@ -24,7 +24,7 @@ const ParallaxHomepageBanner: React.FC = () => {
         //    !!    Page-Settings
       }
 
-      <Parallax pages={4.2} ref={parallaxRef} className="z-10">
+      <Parallax pages={2.7} ref={parallaxRef} className="z-10">
         <ParallaxLayer offset={0} speed={0.1}>
           <img
             src={layer0}
@@ -180,35 +180,39 @@ const ParallaxHomepageBanner: React.FC = () => {
           />
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={0.5}
-          speed={0.3}
-          sticky={{ start: 0.75, end: 1.5 }}
-          className="flex-center "
-        >
-          <h2 className="w-[60%] h-[250px] bg-amber-100 p-8 flex-center ">
-            Welcome to the Showroom!!
-          </h2>
-        </ParallaxLayer>
-        {/*
-        <ParallaxLayer offset={3} speed={2} className="flex-center ">
-          <h2 className="w-[100%] h-[250px] bg-amber-500 p-8 flex-center ">
-            zwei
-          </h2>
+        <ParallaxLayer offset={0} speed={2}>
+          <div id="logo" className="absolute bottom-8 left-4">
+            <div className="w-[240px] h-[50px]">
+              <svg viewBox="0 0 240 50" className="w-full h-full rounded-sm">
+                <defs>
+                  <mask id="text-mask" x="0" y="0" width="240" height="50">
+                    <rect width="100%" height="100%" fill="white" />
+                    <text
+                      x="44%"
+                      y="74%"
+                      text-anchor="middle"
+                      dominant-baseline="middle"
+                      font-size="36"
+                      font-family="sans-serif"
+                      fill="black"
+                    >
+                      CurtTheNerd
+                    </text>
+                  </mask>
+                </defs>
+
+                <rect
+                  width="100%"
+                  height="100%"
+                  fill="black"
+                  mask="url(#text-mask)"
+                />
+              </svg>
+            </div>
+          </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={2} speed={1} className="flex-center ">
-          <h2 className="w-[80%] h-[250px] bg-amber-300 p-8 flex-center ">
-            eins
-          </h2>
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={2} speed={-2.2} className="flex-center ">
-          <h2 className="w-[50%] h-[250px] bg-amber-700 p-8 flex-center ">
-            eins
-          </h2>
-        </ParallaxLayer> */}
-        <ParallaxLayer offset={3} speed={0.1}>
+        <ParallaxLayer offset={1.5} speed={0}>
           <div className="w-full flex flex-col items-center justify-start">
             <Content />
           </div>

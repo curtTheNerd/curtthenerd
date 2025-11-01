@@ -31,10 +31,8 @@ const ColorShaderApp: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col xl:flex-row xl:gap-4 md:m-4">
-      <div className="flex flex-col xl:pt-20">
-        <h2>RGB-Color Shader</h2>
-
+    <div className="w-full h-full grid grid-col-1 xl:grid-cols-2 xl:gap-4 md:m-4 pt-8">
+      <div className="pt-32">
         <ColorPicker
           red={inputColor[0]}
           green={inputColor[1]}
@@ -56,7 +54,7 @@ const ColorShaderApp: React.FC = () => {
         <div className="flex-center flex-wrap gap-2 m-auto">
           {colorCardsArray}
         </div>
-        <p className="pt-6">
+        <p className="">
           {/*Click on the separate tiles, if you want to remove some.*/}
         </p>
       </div>

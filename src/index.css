@@ -35,7 +35,7 @@
     @apply w-screen h-screen scroll-smooth;
   }
   body {
-    @apply w-full h-full flex flex-col items-center mx-auto;
+    @apply w-full h-full flex flex-col items-center mx-auto overflow-x-hidden;
   }
   a,
   li,
@@ -45,19 +45,19 @@
   h3,
   h4,
   h5 {
-    @apply no-underline tracking-[0.44px];
+    @apply no-underline tracking-[0.44px] break-normal text-[var(--textColor)];
   }
 
   p,
   a,
   li {
-    @apply text-[1.1rem] lg:text-[1.25rem] text-[var(--textColor)] leading-[1.8];
+    @apply text-[1.1rem] lg:text-[1.25rem] leading-[1.8];
   }
   li {
     @apply list-none;
   }
   h2 {
-    @apply text-[1.75rem] sm:text-[1.9rem] md:text-[2.2rem] text-[var(--pColor)] text-center m-[0_auto] pt-8 pb-8;
+    @apply text-[1.75rem] text-center pt-8 pb-8;
   }
 }
 
@@ -66,22 +66,19 @@
     @apply flex justify-center items-center;
   }
 
-  .modal-page {
-    @apply flex items-center justify-center w-full h-full;
-  }
-  .modal-container {
-    @apply w-[90vw] lg:w-[80vw] h-full;
-  }
-
   .grid-item {
-    @apply flex flex-col items-center justify-center p-2 bg-[rgba(255,255,255,0.4)] cursor-pointer hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-102 transition-transform duration-200;
+    @apply flex flex-col items-center justify-center p-2 bg-[rgba(255,255,255,0.55)] cursor-pointer hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-102 transition-transform duration-200;
   }
   .grid-item-hidden-bg {
     @apply flex flex-col items-center justify-center p-2;
   }
 
+  .content-page {
+    @apply flex flex-col justify-center items-center w-[95%] max-w-[1440px] h-auto md:w-[90%] m-auto pt-32 pb-32;
+  }
+
   .btn {
-    @apply cursor-pointer w-[110px] h-[45px] bg-[rgba(255,255,255,0.3)] hover:bg-[rgba(255,255,255,1)] text-[var(--textColor)] text-[1.2rem] rounded-[0.25rem] shadow-md;
+    @apply cursor-pointer w-[75px] h-[35px] sm:w-[110px] sm:h-[45px] bg-[rgba(255,255,255,0.3)] hover:bg-[rgba(255,255,255,1)] text-[var(--textColor)] text-[0.9rem] sm:text-[1.2rem] rounded-[0.25rem] shadow-md;
   }
   .btnAddedText {
     @apply w-[110px] h-[45px] text-[var(--textColor)] text-[1.2rem];

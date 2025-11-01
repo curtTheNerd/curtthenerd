@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import type React from "react";
 import { colorProgression, randomRGB } from "./helperFunctions/helpers";
 import ButtonPanel from "./ButtonPanel";
 import BackgroundEntity from "./BackgroundEntity";
@@ -15,12 +16,12 @@ const Background = () => {
     window.innerWidth / 32
   );
   const [entityMode, setEntityMode] = useState<string>("circle");
-  const [entityAnimationSpeed, setEntityAnimationSpeed] = useState<number>(12);
+  const [entityAnimationSpeed, setEntityAnimationSpeed] = useState<number>(15);
   const [entityAnimationDelay, setEntityAnimationDelay] =
-    useState<number>(1000);
+    useState<number>(2000);
   const [colorProgressionParameter, setColorProgressionParameter] =
-    useState<number>(24);
-  const [entityArray, setEntityArray] = useState<JSX.Element[]>([]);
+    useState<number>(20);
+  const [entityArray, setEntityArray] = useState<React.ReactElement[]>([]);
 
   const allSizes: number[] = [
     medianWidth * 2.5,
@@ -37,7 +38,7 @@ const Background = () => {
 
   //  functions & handlers
 
-  const arrayRegulator = (array: JSX.Element[]) => {
+  const arrayRegulator = (array: any[]) => {
     if (array.length > entityAnimationSpeed / (entityAnimationDelay / 1000)) {
       setEntityArray((prev) => prev.slice(1));
     }
@@ -57,9 +58,9 @@ const Background = () => {
     setBackgroundColor([144, 244, 165]);
     setEntityMode("circle");
     setMedianWidth(window.innerWidth / 32);
-    setEntityAnimationSpeed(12);
-    setEntityAnimationDelay(1000);
-    setColorProgressionParameter(24);
+    setEntityAnimationSpeed(15);
+    setEntityAnimationDelay(2000);
+    setColorProgressionParameter(20);
   };
   const handleStart = () => {
     setColor(randomRGB);
@@ -77,19 +78,19 @@ const Background = () => {
     );
   const handleSizeDown = () =>
     setMedianWidth(
-      medianWidth <= window.innerWidth / 64 ? medianWidth : medianWidth / 2
+      medianWidth <= window.innerWidth / 128 ? medianWidth : medianWidth / 2
     );
 
   const handleAnimationSpeedFaster = () =>
     setEntityAnimationSpeed(
-      entityAnimationSpeed <= 3
+      entityAnimationSpeed <= 5
         ? entityAnimationSpeed
         : entityAnimationSpeed - 1
     );
 
   const handleAnimationSpeedSlower = () =>
     setEntityAnimationSpeed(
-      entityAnimationSpeed >= 15
+      entityAnimationSpeed >= 25
         ? entityAnimationSpeed
         : entityAnimationSpeed + 1
     );
@@ -103,21 +104,21 @@ const Background = () => {
 
   const handleAnimationDelaySlower = () =>
     setEntityAnimationDelay(
-      entityAnimationDelay >= 4000
+      entityAnimationDelay >= 5000
         ? entityAnimationDelay
         : entityAnimationDelay + 250
     );
   const handleColorProgressionHarder = () =>
     setColorProgressionParameter(
-      colorProgressionParameter >= 48
+      colorProgressionParameter >= 64
         ? colorProgressionParameter
-        : colorProgressionParameter + 8
+        : colorProgressionParameter + 4
     );
   const handleColorProgressionSofter = () =>
     setColorProgressionParameter(
       colorProgressionParameter <= 8
         ? colorProgressionParameter
-        : colorProgressionParameter - 8
+        : colorProgressionParameter - 4
     );
 
   // code execution

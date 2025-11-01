@@ -86,13 +86,13 @@ const CollyBlocsComponent = () => {
     }
 
     const drawScore = () => {
-      ctx.font = "30px Comic Sans MS";
+      ctx.font = "25px Comic Sans MS";
       ctx.fillStyle = "white";
       ctx.fillText("Score: " + gamePoints, 25, 40);
     };
 
     const drawLives = () => {
-      ctx.font = "30px Comic Sans MS";
+      ctx.font = "25px Comic Sans MS";
       ctx.fillStyle = "white";
       ctx.fillText("Lives: " + lives, 25, 80);
     };
@@ -100,14 +100,14 @@ const CollyBlocsComponent = () => {
     const getRandomX = () => {
       do {
         randomX = Math.floor(Math.random() * (canvas.width - 50));
-      } while (randomX >= player.x - 100 && randomX <= player.x + 150);
+      } while (randomX >= player.x - 25 && randomX <= player.x + 75);
       return randomX;
     };
 
     const getRandomY = () => {
       do {
         randomY = Math.floor(Math.random() * (canvas.height - 50));
-      } while (randomY >= player.y - 100 && randomY <= player.y + 150);
+      } while (randomY >= player.y - 25 && randomY <= player.y + 75);
       return randomY;
     };
 
@@ -132,10 +132,10 @@ const CollyBlocsComponent = () => {
     };
 
     const createEnemy = () => {
-      for (let i = 0; i < 20; i++) {
+      for (let i = 0; i < 12; i++) {
         allEnemy.push(new Enemy(getRandomX(), getRandomY(), "lime"));
       }
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 30; i++) {
         allEnemy.push(new Enemy(getRandomX(), getRandomY(), "yellow"));
       }
       for (let i = 0; i < 5; i++) {

@@ -23,15 +23,15 @@ const HomepageRouter = () => {
         <Route path="/about" element={<About />} />
         <Route path="/websites" element={<Websites />} />
         <Route path="/api" element={<APIs />} />
-        <Route path="/crochet" element={<Crochet />} />
+        <Route path="/gallery" element={<Crochet />} />
 
         <Route
           path="*"
           element={
             <div className="p-10 text-center text-xl">
-              ❌ Seite nicht gefunden –{" "}
+              ❌ Adress not found –{" "}
               <a href="/" className="underline">
-                Zurück zur Startseite
+                Back to HomePage
               </a>
             </div>
           }
