@@ -1,73 +1,24 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite + TailwindCSS/SCSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My Website as little Selection of my Code & Parts of Projects
 
-Currently, two official plugins are available:
+I wrote it mostly tsx-files and incorporated a few plain jsx-files from previous projects just because there is no point in spending more time for an already turning wheel to redo the parts due to convenience reasons. Just if someone is asking. For further explanation of separate components please look into them on the separate repos here on my GitHub page, almost every part that might needs further explanation is written there.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The Website has a simple Landing-Page with multilayered Parallax-Banner on top and the Links down below. It's unfortunatly unfinished from the particular "rabbit-hole-to-treasure-chamber"-design at the moment until I get a nice background artwork from my graphics designer.
 
-## React Compiler
+Utilized dependencies:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+"@react-spring/parallax": "^10.0.3",
+"@tailwindcss/postcss": "^4.1.14",
+"@tailwindcss/vite": "^4.1.14",
+"postcss": "^8.5.6",
+"react": "^19.1.1",
+"react-dom": "^19.1.1",
+"react-icons": "^5.5.0",
+"react-router": "^7.9.4",
+"react-router-dom": "^7.9.4",
+"react-zoom-pan-pinch": "^3.7.0",
+"serve": "^14.2.5",
+"tailwindcss": "^4.1.14",
+"tailwindcss-animate": "^1.0.7",
+"tailwindcss-motion": "^1.1.1"

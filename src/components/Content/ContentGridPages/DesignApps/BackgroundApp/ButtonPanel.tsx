@@ -59,7 +59,7 @@ const ButtonPanel: React.FC<ButtonPanelProps> = ({
         >
           <img
             className="group-hover:absolute group-hover:hidden opacity-50 w-[50px] md:w-[55px] lg:w-[60px]"
-            src="/public/ContentGrid/settings-2-svgrepo-com.svg"
+            src="/ContentGrid/settings-2-svgrepo-com.svg"
             alt="#"
           />
           <div className="pr-1.5">Manipulate Background</div>

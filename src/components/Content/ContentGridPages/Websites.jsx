@@ -68,7 +68,7 @@ const Websites = () => {
             Checkout the code on my
             <span className="cursor-pointer pl-2">
               <a
-                href="https://github.com/curtTheNerd/KatyaReact"
+                href="https://github.com/curtTheNerd/katyaGranovadev1.2"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-green-700 transition-colors duration-300"

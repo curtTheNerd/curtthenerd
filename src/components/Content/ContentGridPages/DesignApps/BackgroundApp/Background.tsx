@@ -18,7 +18,7 @@ const Background = () => {
   const [entityMode, setEntityMode] = useState<string>("circle");
   const [entityAnimationSpeed, setEntityAnimationSpeed] = useState<number>(15);
   const [entityAnimationDelay, setEntityAnimationDelay] =
-    useState<number>(2000);
+    useState<number>(3000);
   const [colorProgressionParameter, setColorProgressionParameter] =
     useState<number>(20);
   const [entityArray, setEntityArray] = useState<React.ReactElement[]>([]);
@@ -59,7 +59,7 @@ const Background = () => {
     setEntityMode("circle");
     setMedianWidth(window.innerWidth / 32);
     setEntityAnimationSpeed(15);
-    setEntityAnimationDelay(2000);
+    setEntityAnimationDelay(3000);
     setColorProgressionParameter(20);
   };
   const handleStart = () => {
@@ -90,7 +90,7 @@ const Background = () => {
 
   const handleAnimationSpeedSlower = () =>
     setEntityAnimationSpeed(
-      entityAnimationSpeed >= 25
+      entityAnimationSpeed >= 35
         ? entityAnimationSpeed
         : entityAnimationSpeed + 1
     );
@@ -104,7 +104,7 @@ const Background = () => {
 
   const handleAnimationDelaySlower = () =>
     setEntityAnimationDelay(
-      entityAnimationDelay >= 5000
+      entityAnimationDelay >= 8000
         ? entityAnimationDelay
         : entityAnimationDelay + 250
     );
