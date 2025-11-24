@@ -12,6 +12,7 @@ import About from "../Content/ContentGridPages/About/About.jsx";
 import Websites from "../Content/ContentGridPages/Websites";
 import APIs from "../Content/ContentGridPages/APIs/APIs.jsx";
 import Crochet from "../Content/ContentGridPages/Crochet/Crochet.jsx";
+import Contact from "../ContactForm";
 
 const HomepageRouter = () => {
   const router = createBrowserRouter(
@@ -24,6 +25,7 @@ const HomepageRouter = () => {
         <Route path="/websites" element={<Websites />} />
         <Route path="/api" element={<APIs />} />
         <Route path="/gallery" element={<Crochet />} />
+        <Route path="/contact" element={<Contact />} />
 
         <Route
           path="*"

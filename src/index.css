@@ -94,4 +94,8 @@
   .icon {
     @apply m-[0.5rem] transition-all duration-300;
   }
+
+  .certificate-style {
+    @apply text-[1.05rem] pl-4 text-gray-500 hover:underline hover:text-[var(--textColor)];
+  }
 }

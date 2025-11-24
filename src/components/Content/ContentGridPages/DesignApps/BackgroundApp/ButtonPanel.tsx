@@ -58,7 +58,7 @@ const ButtonPanel: React.FC<ButtonPanelProps> = ({
           className={`relative flex-center text-center h-[4rem] text-[0rem] ${panelActive ? "hover:flex-center text-[1rem] sm:text-[1.2rem]" : "group-hover:text-[1.1rem] flex-col"}`}
         >
           <img
-            className="group-hover:absolute group-hover:hidden opacity-50 w-[50px] md:w-[55px] lg:w-[60px]"
+            className={`group-hover:absolute group-hover:hidden opacity-50 w-[50px] md:w-[55px] lg:w-[60px] ${panelActive ? "hidden" : "block"}`}
             src="/ContentGrid/settings-2-svgrepo-com.svg"
             alt="#"
           />

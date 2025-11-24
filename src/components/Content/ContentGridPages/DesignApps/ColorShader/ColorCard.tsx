@@ -14,7 +14,7 @@ const ColorCard: React.FC<CardProps> = ({ red, green, blue }) => {
         }}
       ></div>
       <p
-        className="relative flex-center flex-col w-full h-ful px-1 text-[1.2rem] text-black opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        className="relative flex-center flex-col w-full h-ful px-1 text-[1.2rem] text-black lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500"
         style={{ textShadow: "0px 0px 5px white" }}
       >
         <span>rgb</span>

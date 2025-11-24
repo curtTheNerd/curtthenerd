@@ -1,101 +1,88 @@
 import BackButton from "../BackButton";
 import Gallery from "./Gallery/Gallery";
 
-import img1 from "../../../../assets/images/catGallery/photo_2025-10-20_23-02-56.jpg";
-import img2 from "../../../../assets/images/catGallery/photo_2025-10-20_23-03-33.jpg";
-import img3 from "../../../../assets/images/catGallery/photo_2025-10-20_23-03-41.jpg";
-import img4 from "../../../../assets/images/catGallery/photo_2025-10-20_23-04-04.jpg";
-import img5 from "../../../../assets/images/catGallery/photo_2025-10-20_23-04-29.jpg";
-import img6 from "../../../../assets/images/catGallery/photo_2025-10-20_23-04-32.jpg";
-import img7 from "../../../../assets/images/catGallery/photo_2025-10-20_23-04-51.jpg";
-import img8 from "../../../../assets/images/catGallery/photo_2025-10-20_23-05-00.jpg";
-import img9 from "../../../../assets/images/catGallery/photo_2025-10-20_23-06-02.jpg";
-import img10 from "../../../../assets/images/catGallery/photo_2025-10-20_23-06-13.jpg";
-import img11 from "../../../../assets/images/catGallery/photo_2025-10-20_23-07-28.jpg";
-import img12 from "../../../../assets/images/catGallery/photo_2025-10-20_23-07-30.jpg";
-
 const images = [
   {
-    id: "I'll kill you in your sleep",
-    src: img1,
-    method: "Method: Oil on canvas (nah, not really^^)",
-    size: "Size: 115 x 150cm",
-    date: "Date: 2024",
+    id: "'I'll kill you in your sleep', she says...",
+    src: "/catGallery/photo_2025-10-20_23-02-56.jpg",
+    method: "Method: Oil on canvas (photo realistic! ^^)",
+    size: "Size: 115 x 150cm (made up)",
+    date: "Date: 2025",
     title: "Little, cute animal Gallery",
   },
   {
-    id: "But Pixia is as well is curious",
-    src: img2,
+    id: "But Pixia is sometimes just curious as well",
+    src: "/catGallery/photo_2025-10-20_23-03-33.jpg",
     method: "",
     size: "",
     date: "2024",
   },
   {
-    id: "Anfisa the fluffy Living-Room-Tiger",
-    src: img3,
+    id: "Anfisa the fluffy 'Living-Room-Tiger'",
+    src: "/catGallery/photo_2025-10-20_23-03-41.jpg",
     method: "",
     size: "",
     date: "2024",
   },
   {
-    id: "Random Cat in a Train",
-    src: img4,
+    id: "Random Cat on a Train",
+    src: "/catGallery/photo_2025-10-20_23-04-04.jpg",
     method: "",
     size: "",
     date: "2025",
   },
   {
     id: "Agitated",
-    src: img5,
+    src: "/catGallery/photo_2025-10-20_23-04-29.jpg",
     method: "",
     size: "",
     date: "2024",
   },
   {
     id: "Derpy",
-    src: img6,
+    src: "/catGallery/photo_2025-10-20_23-04-32.jpg",
     method: "",
     size: "",
     date: "2024",
   },
   {
     id: "Bored",
-    src: img7,
+    src: "/catGallery/photo_2025-10-20_23-04-51.jpg",
     method: "",
     size: "",
     date: "2025",
   },
   {
     id: "What do you want again?!",
-    src: img8,
+    src: "/catGallery/photo_2025-10-20_23-05-00.jpg",
     method: "",
     size: "",
     date: "2025",
   },
   {
-    id: "Cute but Pixelsss...",
-    src: img9,
+    id: "Cute but lack of Pixelsss...",
+    src: "/catGallery/photo_2025-10-20_23-06-02.jpg",
     method: "",
     size: "",
     date: "2023",
   },
   {
     id: "Doggo for a change, Frida and Frodo",
-    src: img10,
+    src: "/catGallery/photo_2025-10-20_23-06-13.jpg",
     method: "Species: Dachshund, ",
     size: " Age: 2 days",
     date: "Date of Birth: 01.01.2025 (03:00)",
   },
   {
     id: "Life's hard man",
-    src: img11,
+    src: "/catGallery/photo_2025-10-20_23-07-28.jpg",
     method: "",
     size: "",
     date: "2024",
   },
   {
     id: "But lucky Me being so pretty",
-    src: img12,
+    src: "/catGallery/photo_2025-10-20_23-07-30.jpg",
     method: "",
     size: "",
     date: "",
@@ -117,18 +104,16 @@ const Crochet = () => {
           Gallery-App
         </p>
         <p className="text-[1.1rem]">
-          Originally developed for Katya-Granova.com.
-          <br /> - takes an array objects (object: id, src, method, size, date)
+          - takes an array objects (each including id, src and string)
           <br />
           - returns uniform image containers as a preview gallery with title as
           hover:overlay
           <br />
           - opens image carousel on click with full-view, description,
-          scroll-zoom & grab function
+          scroll-zoom & grab functionality
           <br />
-          - renders image frame with max size on screen without distortion,
-          regardless of image measures
-          <br />- navigation either by keys (Arrow, ESC) or overlay buttons
+          - renders image frame with max size on screen without distortion
+          <br />- navigation either by keys (Arrow, ESC) or by overlay buttons
           <br />- full responsive for all screen sizes
         </p>
       </div>

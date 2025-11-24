@@ -1,6 +1,8 @@
 import { FaSquareGithub } from "react-icons/fa6";
 import { BsLinkedin } from "react-icons/bs";
 import { LiaCopyright } from "react-icons/lia";
+import { SiImessage } from "react-icons/si";
+import { Link } from "react-router";
 
 const Footer: React.FC = () => {
   return (
@@ -10,6 +12,15 @@ const Footer: React.FC = () => {
     >
       <div className="flex-center space-x-7 pb-4">
         <a
+          href="https://www.linkedin.com/in/kurt-georg-gatzke-143831350/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="cursor-pointer text-[2.4rem] text-green-950">
+            <BsLinkedin />
+          </div>
+        </a>
+        <a
           href="https://github.com/curtTheNerd"
           target="_blank"
           rel="noreferrer"
@@ -18,15 +29,12 @@ const Footer: React.FC = () => {
             <FaSquareGithub />
           </div>
         </a>
-        <a
-          href="https://www.linkedin.com/in/kurt-georg-gatzke-143831350/"
-          target="_blank"
-          rel="noreferrer"
-        >
+
+        <Link to="/contact" id="contactForm">
           <div className="cursor-pointer text-[2.45rem] text-green-950">
-            <BsLinkedin />
+            <SiImessage />
           </div>
-        </a>
+        </Link>
       </div>
       <div className="flex-center space-x-1">
         <p className="text-[1.05rem]">2025</p>

@@ -21,7 +21,8 @@ const DesignApps = () => {
         <p className="text-[1.1rem]">
           - app created with TypeScript and TailwindCSS
           <br />- take 3 RGB-values and renders tiles with similar shades as
-          well as new RGB-value as hover:overlay
+          well as new RGB-value; RGB-value text as hover:overlay when media
+          screen is over 64rem (1024px)
           <br />- fully adjustable: amount of shades and progression of
           gradients
           <br />- this App and the Background-App below utilize the same
