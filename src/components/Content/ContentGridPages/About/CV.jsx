@@ -160,7 +160,7 @@ const CV = () => {
             <h3 className="text-lg font-medium">
               Assembly Team Leader & Site Supervisor
             </h3>
-            <p className="text-sm text-gray-500 mb-2">02 / 2019 – 04 / 2023</p>
+            <p className="text-sm text-gray-500 mb-2">02 / 2021 – 04 / 2023</p>
             <ul className="list-disc list-inside text-base space-y-1">
               <li className="pb-2">CoMoDi GmbH, Arnstadt, Germany</li>
               <li>

@@ -27,7 +27,7 @@ const Websites = () => {
             <br />- custom-design based on the provided image for background
             <br />
             <br />
-            Checkout the code on my
+            Check out the code on
             <span className="cursor-pointer pl-2">
               <a
                 href="https://github.com/curtTheNerd/faquelage2.0/tree/gitMain"
@@ -65,7 +65,7 @@ const Websites = () => {
             <br />- design based of detailed clients wishes
             <br />
             <br />
-            Checkout the code on my
+            Check out the code on
             <span className="cursor-pointer pl-2">
               <a
                 href="https://github.com/curtTheNerd/katyaGranovadev1.2"
@@ -103,7 +103,7 @@ const Websites = () => {
             react-parallax, react-spring
             <br />
             <br />
-            Checkout the code on my
+            Check out the code on
             <span className="cursor-pointer pl-2">
               <a
                 href="https://github.com/curtTheNerd/curtthenerd"

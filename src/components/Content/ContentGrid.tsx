@@ -22,11 +22,11 @@ const ContentGrid: React.FC = () => {
   }, [location]);
   return (
     <div id="content-grid" className="flex-center w-full h-full">
-      <div className="grid w-full z-0 max-w-[90vw] max-h-[90vh] md:m-4 xl:m-8 grid-cols-7 grid-rows-9 sm:grid-cols-8 sm:grid-rows-9 lg:grid-cols-12 lg:grid-rows-9 gap-2 lg:gap-3 2xl:gap-3">
+      <div className="grid w-[90%] lg:w-[80%] z-0 max-w-[90vw] max-h-[90vh] md:m-4 xl:m-8 grid-cols-7 grid-rows-9 sm:grid-cols-8 sm:grid-rows-9 lg:grid-cols-12 lg:grid-rows-9 gap-2 lg:gap-3 2xl:gap-3">
         <Link
           to="/designapps"
           id="stylingHelpers"
-          className="group grid-item col-start-1 col-end-5 row-start-3 row-end-5 sm:col-start-1 sm:col-end-5 sm:row-start-1 sm:row-end-3 lg:col-start-1 lg:col-end-4 lg:row-start-1 lg:row-end-7"
+          className="group grid-item col-start-1 col-end-5 row-start-3 row-end-5 sm:col-start-1 sm:col-end-5 sm:row-start-1 sm:row-end-3 lg:col-start-1 lg:col-end-4 lg:row-start-2 lg:row-end-7"
         >
           <div className="flex-center flex-col">
             <img
@@ -46,7 +46,7 @@ const ContentGrid: React.FC = () => {
         <Link
           to="/websites"
           id="websites"
-          className="group grid-item col-start-1 col-end-5 row-start-5 row-end-8 lg:col-start-4 lg:col-end-10 lg:row-start-1 lg:row-end-5"
+          className="group grid-item col-start-1 col-end-5 row-start-5 row-end-9 sm:col-start-6 sm:col-end-9 sm:row-start-4 sm:row-end-9 lg:col-start-4 lg:col-end-10 lg:row-start-1 lg:row-end-5"
         >
           <div className="flex-center flex-col">
             <div className="flex-center gap-4">
@@ -92,7 +92,7 @@ const ContentGrid: React.FC = () => {
         <Link
           to="/about"
           id="about"
-          className="group grid-item col-start-1 col-end-4 row-start-8 row-end-10 sm:col-start-2 sm:col-end-6 sm:row-start-8 sm:row-end-10 lg:col-start-10 lg:col-end-13 lg:row-start-1 lg:row-end-4"
+          className="group grid-item col-start-5 col-end-8 row-start-6 row-end-9 sm:col-start-2 sm:col-end-6 sm:row-start-7 sm:row-end-9 lg:col-start-10 lg:col-end-13 lg:row-start-2 lg:row-end-5"
         >
           <div className="flex-center flex-col">
             <div className="flex-center">
@@ -119,7 +119,7 @@ const ContentGrid: React.FC = () => {
         <Link
           to="/gallery"
           id="gallery"
-          className="group grid-item col-start-1 col-end-5 row-start-1 row-end-3 sm:col-start-2 sm:col-end-6 sm:row-start-3 sm:row-end-5 lg:col-start-4 lg:col-end-9 lg:row-start-5 lg:row-end-8"
+          className="group grid-item col-start-1 col-end-5 row-start-1 row-end-3 sm:col-start-2 sm:col-end-6 sm:row-start-3 sm:row-end-5 lg:col-start-7 lg:col-end-11 lg:row-start-5 lg:row-end-8"
         >
           <div className="flex-center flex-col">
             <img
@@ -139,7 +139,7 @@ const ContentGrid: React.FC = () => {
         <Link
           to="api"
           id="api"
-          className="group grid-item col-start-6 col-end-8 row-start-4 row-end-6 sm:col-start-6 sm:col-end-8 sm:row-start-4 sm:row-end-6 lg:col-start-4 lg:col-end-6 lg:row-start-8 lg:row-end-10"
+          className="group grid-item col-start-5 col-end-8 row-start-4 row-end-6 sm:col-start-1 sm:col-end-5 sm:row-start-5 sm:row-end-7 lg:col-start-4 lg:col-end-7 lg:row-start-5 lg:row-end-8"
         >
           <div className="flex-center flex-col">
             <img

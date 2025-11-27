@@ -24,7 +24,7 @@ const ParallaxHomepageBanner: React.FC = () => {
         //    !!    Page-Settings
       }
 
-      <Parallax pages={2.7} ref={parallaxRef} className="z-10">
+      <Parallax pages={2.2} ref={parallaxRef} className="z-10">
         <ParallaxLayer offset={0} speed={0.1}>
           <img
             src={layer0}
@@ -212,7 +212,7 @@ const ParallaxHomepageBanner: React.FC = () => {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1.5} speed={0}>
+        <ParallaxLayer offset={1} speed={0}>
           <div className="w-full flex flex-col items-center justify-start">
             <Content />
           </div>

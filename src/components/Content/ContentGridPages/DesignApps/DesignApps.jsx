@@ -29,7 +29,7 @@ const DesignApps = () => {
           function for color-progression
           <br />
           <br />
-          Checkout the code on my
+          Check out the code on
           <span className="cursor-pointer pl-2">
             <a
               href="https://github.com/curtTheNerd/curtthenerd/tree/gitMain/src/components/Content/ContentGridPages/DesignApps/ColorShader"
@@ -68,7 +68,7 @@ const DesignApps = () => {
           animation-speed, delay and background-color
           <br />
           <br />
-          Checkout the code on my
+          Check out the code on
           <span className="cursor-pointer pl-2">
             <a
               href="https://github.com/curtTheNerd/curtthenerd/tree/gitMain/src/components/Content/ContentGridPages/DesignApps/BackgroundApp"
