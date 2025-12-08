@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import ParallaxHomepage from "./ParallaxHomepage";
+
 import PlayCorner from "../Content/ContentGridPages/PlayCorner/PlayCorner";
 import DesignApps from "../Content/ContentGridPages/DesignApps/DesignApps";
 import About from "../Content/ContentGridPages/About/About.jsx";

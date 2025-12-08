@@ -8,18 +8,20 @@ const ContentGrid: React.FC = () => {
 
   const fontStyle = { fontFamily: "Courier New" };
 
+  // effect for the "BACK"-button to automatically scroll down to content-section on Homepage when navigating back
   useEffect(() => {
     const scrollId = location.state?.scrollToId;
     if (scrollId) {
       const element = document.getElementById(scrollId);
       if (element) {
-        // kurze Verzögerung, damit Seite "bereit" ist
+        // short delay to ensure the site is "ready"
         setTimeout(() => {
           element.scrollIntoView({ behavior: "smooth" });
         }, 100);
       }
     }
   }, [location]);
+
   return (
     <div id="content-grid" className="flex-center w-full h-full">
       <div className="grid w-[90%] lg:w-[80%] z-0 max-w-[90vw] max-h-[90vh] md:m-4 xl:m-8 grid-cols-7 grid-rows-9 sm:grid-cols-8 sm:grid-rows-9 lg:grid-cols-12 lg:grid-rows-9 gap-2 lg:gap-3 2xl:gap-3">

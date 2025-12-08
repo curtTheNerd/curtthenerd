@@ -4,9 +4,9 @@ import HomepageRouter from "./components/Homepage/HomePageRouter";
 
 const App = () => {
   return (
-    <>
+    <div className="">
       <HomepageRouter />
-    </>
+    </div>
   );
 };
 

@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import Footer from "../Footer";
 
 import layer0 from "../../assets/backgoundLayers/layer0LightBlueSky.svg";
 import layer1 from "../../assets/backgoundLayers/layer1BlueMountain.svg";
@@ -24,7 +25,7 @@ const ParallaxHomepageBanner: React.FC = () => {
         //    !!    Page-Settings
       }
 
-      <Parallax pages={2.2} ref={parallaxRef} className="z-10">
+      <Parallax pages={5} ref={parallaxRef} className="z-10">
         <ParallaxLayer offset={0} speed={0.1}>
           <img
             src={layer0}
@@ -212,10 +213,13 @@ const ParallaxHomepageBanner: React.FC = () => {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1} speed={0}>
-          <div className="w-full flex flex-col items-center justify-start">
+        <ParallaxLayer offset={1} speed={1}>
+          <div className="w-full flex flex-col items-center justify-start relative bg-[var(--bgColor)]">
             <Content />
           </div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={4.7} speed={1}>
+          <Footer />
         </ParallaxLayer>
       </Parallax>
     </div>

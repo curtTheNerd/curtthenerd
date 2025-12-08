@@ -76,7 +76,9 @@
   .content-page {
     @apply flex flex-col justify-center items-center w-[95%] max-w-[1440px] h-auto md:w-[90%] m-auto pt-32 pb-32;
   }
-
+  .custom-scrollbar {
+    @apply overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500;
+  }
   .btn {
     @apply cursor-pointer w-[75px] h-[35px] sm:w-[110px] sm:h-[45px] bg-[rgba(255,255,255,0.3)] hover:bg-[rgba(255,255,255,1)] text-[var(--textColor)] text-[0.9rem] sm:text-[1.2rem] rounded-[0.25rem] shadow-md;
   }
