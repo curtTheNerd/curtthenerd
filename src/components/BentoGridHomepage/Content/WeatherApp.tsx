@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
+
+// 2 nested interfaces to control the cities name and backgroundColor statically and combine with API calls
 
 interface WeatherData {
   name: string;
@@ -14,8 +16,92 @@ interface WeatherData {
   }[];
 }
 
+interface CityWeather {
+  name: string;
+  color: string;
+  weather: WeatherData;
+}
+
 const API_KEY = import.meta.env.VITE_OPEN_WEATHER_API_KEY;
 
+const displayedCities = [
+  { name: "Leipzig", color: "lightgreen" },
+  { name: "London", color: "orange" },
+  { name: "St. Petersburg", color: "lightblue" },
+];
+
+const OpenWeatherAPI: React.FC = () => {
+  const [weatherList, setWeatherList] = useState<CityWeather[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    const loadWeather = async () => {
+      setLoading(true);
+
+      try {
+        const results: CityWeather[] = [];
+
+        for (const city of displayedCities) {
+          const response = await axios.get<WeatherData>(
+            `https://api.openweathermap.org/data/2.5/weather?q=${city.name}&appid=${API_KEY}&units=metric&lang=en`
+          );
+
+          results.push({
+            name: city.name,
+            color: city.color,
+            weather: response.data,
+          });
+        }
+
+        setWeatherList(results);
+      } catch (err) {
+        setError("Failed to load weather data.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadWeather();
+  }, []);
+
+  // loading and error feedback -> optional, but
+
+  return (
+    <div className="min-h-screen p-6">
+      <div className="grid grid-cols-3 gap-6">
+        {weatherList.map(({ name, color, weather }) => (
+          <div
+            key={name}
+            className="min-w-[250px] rounded-xl p-6 text-center"
+            style={{ backgroundColor: color }}
+          >
+            <h2 className="text-2xl font-semibold">{weather.name}</h2>
+            <p className="capitalize">{weather.weather[0].description}</p>
+
+            <img
+              src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+              alt="Weather icon"
+              className="mx-auto"
+            />
+
+            <p className="text-3xl font-bold">
+              {weather.main.temp.toFixed(1)} °C
+            </p>
+            <p>Feels like: {weather.main.feels_like.toFixed(1)} °C</p>
+            <p>Humidity: {weather.main.humidity}%</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default OpenWeatherAPI;
+
+/*
+
+previous mobile-app version
 if (!API_KEY) {
   console.warn("No API-Key!");
 }
@@ -89,6 +175,4 @@ const OpenWeatherAPI: React.FC = () => {
       )}
     </div>
   );
-};
-
-export default OpenWeatherAPI;
+}; */

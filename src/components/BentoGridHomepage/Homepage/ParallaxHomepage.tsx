@@ -2,14 +2,14 @@ import { useRef } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Footer from "../Footer";
 
-import layer0 from "../../assets/backgoundLayers/layer0LightBlueSky.svg";
-import layer1 from "../../assets/backgoundLayers/layer1BlueMountain.svg";
-import layer2 from "../../assets/backgoundLayers/layer2YellowForest.svg";
-import layer3 from "../../assets/backgoundLayers/layer3OrangeForest.svg";
-import layer4 from "../../assets/backgoundLayers/layer4OccreGrasPlusTrees.svg";
-import layer5 from "../../assets/backgoundLayers/layer5BrownGrasPlusTree.svg";
-import layer6 from "../../assets/backgoundLayers/layer6ForegroundWaterMirrow.svg";
-import layer7 from "../../assets/backgoundLayers/layer7ForegroundGras.svg";
+import layer0 from "../../../assets/backgoundLayers/layer0LightBlueSky.svg";
+import layer1 from "../../../assets/backgoundLayers/layer1BlueMountain.svg";
+import layer2 from "../../../assets/backgoundLayers/layer2YellowForest.svg";
+import layer3 from "../../../assets/backgoundLayers/layer3OrangeForest.svg";
+import layer4 from "../../../assets/backgoundLayers/layer4OccreGrasPlusTrees.svg";
+import layer5 from "../../../assets/backgoundLayers/layer5BrownGrasPlusTree.svg";
+import layer6 from "../../../assets/backgoundLayers/layer6ForegroundWaterMirrow.svg";
+import layer7 from "../../../assets/backgoundLayers/layer7ForegroundGras.svg";
 
 import { SmallCloud, BigCloud } from "./Clouds";
 import Content from "../Content/Content";
