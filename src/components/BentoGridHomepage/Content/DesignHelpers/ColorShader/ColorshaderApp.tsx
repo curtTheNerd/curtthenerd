@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { colorProgression } from "../BackgroundApp/helperFunctions/helpers";
+import { colorProgression } from "../BackgroundApp/helpers";
 import ColorCard from "./ColorCard";
 import ColorPicker from "./ColorPicker";
 

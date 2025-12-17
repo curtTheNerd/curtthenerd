@@ -26,6 +26,21 @@ const ContentGrid: React.FC = () => {
     <div id="content-grid" className="flex-center w-full h-full">
       <div className="grid w-[90%] lg:w-[80%] z-0 max-w-[90vw] max-h-[90vh] md:m-4 xl:m-8 grid-cols-7 grid-rows-9 sm:grid-cols-8 sm:grid-rows-9 lg:grid-cols-12 lg:grid-rows-9 gap-2 lg:gap-3 2xl:gap-3">
         <Link
+          to="weatherApp"
+          id="weatherApp"
+          className="group grid-item col-start-5 col-end-8 row-start-4 row-end-6 sm:col-start-1 sm:col-end-5 sm:row-start-5 sm:row-end-7 lg:col-start-4 lg:col-end-7 lg:row-start-5 lg:row-end-8"
+        >
+          <div className="flex-center flex-col">
+            <img
+              className="opacity-50 w-[70px] md:w-[100px] xl:w-[110px]"
+              src="/ContentGrid/api-svgrepo-com (1).svg"
+              alt="#"
+            />
+            <div className="absolute bottom-2 mt-4 text-[var(textColor)] opacity-0 group-hover:opacity-100  transition-all duration-500"></div>
+          </div>
+        </Link>
+        {/*
+        <Link
           to="/designapps"
           id="stylingHelpers"
           className="group grid-item col-start-1 col-end-5 row-start-3 row-end-5 sm:col-start-1 sm:col-end-5 sm:row-start-1 sm:row-end-3 lg:col-start-1 lg:col-end-4 lg:row-start-2 lg:row-end-7"
@@ -136,22 +151,8 @@ const ContentGrid: React.FC = () => {
               Gallery App
             </div>
           </div>
-        </Link>
+        </Link> */}
 
-        <Link
-          to="api"
-          id="api"
-          className="group grid-item col-start-5 col-end-8 row-start-4 row-end-6 sm:col-start-1 sm:col-end-5 sm:row-start-5 sm:row-end-7 lg:col-start-4 lg:col-end-7 lg:row-start-5 lg:row-end-8"
-        >
-          <div className="flex-center flex-col">
-            <img
-              className="opacity-50 w-[70px] md:w-[100px] xl:w-[110px]"
-              src="/ContentGrid/api-svgrepo-com (1).svg"
-              alt="#"
-            />
-            <div className="absolute bottom-2 mt-4 text-[var(textColor)] opacity-0 group-hover:opacity-100  transition-all duration-500"></div>
-          </div>
-        </Link>
         <div className="w-full aspect-square"></div>
       </div>
     </div>

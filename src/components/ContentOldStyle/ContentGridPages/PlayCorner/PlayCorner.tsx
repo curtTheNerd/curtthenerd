@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 
-import BackButton from "../BackButton.jsx";
-import Collyblocs from "./CollyBlocs/Collyblocs.jsx";
-import TicTacToe from "./TicTacToe/TicTacToe.tsx";
+import BackButton from "../../../BentoGridHomepage/Content/BackButton.jsx";
+import Collyblocs from "./CollyBlocs/Collyblocs.js";
+import TicTacToe from "./TicTacToe/TicTacToe.js";
 
 const PlayCorner: React.FC = () => {
   useEffect(() => {

@@ -7,13 +7,13 @@ import {
 
 import ParallaxHomepage from "./ParallaxHomepage";
 
-import PlayCorner from "../Content/ContentGridPages/PlayCorner/PlayCorner";
-import DesignApps from "../Content/ContentGridPages/DesignApps/DesignApps";
-import About from "../Content/ContentGridPages/About/About.jsx";
-import Websites from "../Content/ContentGridPages/Websites";
-import APIs from "../Content/ContentGridPages/APIs/APIs.jsx";
-import Crochet from "../Content/ContentGridPages/Crochet/Crochet.jsx";
-import Contact from "../ContactForm";
+import PlayCorner from "../../ContentOldStyle/ContentGridPages/PlayCorner/PlayCorner";
+import DesignApps from "../Content/DesignHelpers/DesignApps";
+import About from "../Content/About/About.jsx";
+import Websites from "../Content/Websites";
+import WeatherApp from "../Content/WeatherApp";
+import Crochet from "../../ContentOldStyle/ContentGridPages/Crochet/Crochet.js";
+import Contact from "../../ContactForm";
 
 const HomepageRouter = () => {
   const router = createBrowserRouter(
@@ -24,7 +24,7 @@ const HomepageRouter = () => {
         <Route path="/designapps" element={<DesignApps />} />
         <Route path="/about" element={<About />} />
         <Route path="/websites" element={<Websites />} />
-        <Route path="/api" element={<APIs />} />
+        <Route path="/weatherApp" element={<WeatherApp />} />
         <Route path="/gallery" element={<Crochet />} />
         <Route path="/contact" element={<Contact />} />
 

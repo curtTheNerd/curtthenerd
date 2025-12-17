@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import type React from "react";
-import { colorProgression, randomRGB } from "./helperFunctions/helpers";
+import { colorProgression, randomRGB } from "./helpers";
 import ButtonPanel from "./ButtonPanel";
-import BackgroundEntity from "./BackgroundEntity";
+import BackgroundEntity from "../../../../ContentOldStyle/ContentGridPages/DesignApps/BackgroundApp/BackgroundEntity";
 
 type RGB = [number, number, number];
 

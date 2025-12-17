@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import faquelage from "../../../assets/images/FaquelageWebsiteHomeImage.png";
 import katyaGranova from "../../../assets/images/KatyaGranovaWebsiteHomeImage.png";
 import schaustelle from "../../../assets/images/SchaustelleHalleWebsite.png";
-import BackButton from "../ContentGridPages/BackButton";
+import BackButton from "./BackButton";
 
 const Websites = () => {
   return (

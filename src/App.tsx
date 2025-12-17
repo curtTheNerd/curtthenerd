@@ -1,11 +1,11 @@
 import "./index.css";
 import "./fonts.css";
-import HomepageRouter from "./components/Homepage/HomePageRouter";
+import BentoGridHomepage from "./components/BentoGridHomepage/BentoGridHomepage";
 
 const App = () => {
   return (
     <div className="">
-      <HomepageRouter />
+      <BentoGridHomepage />
     </div>
   );
 };

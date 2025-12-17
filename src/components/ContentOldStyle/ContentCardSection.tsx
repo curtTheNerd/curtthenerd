@@ -6,6 +6,8 @@ import ContentCard from "./ContentCard";
 const ContentCards: React.FC = () => {
   const location = useLocation();
 
+  const contentItems = [{titel: "Websites", src: "/ContentGrid/website-program-svgrepo-com.svg", text: []},]
+
   // const fontStyle = { fontFamily: "Courier New" };
 
   // effect for the "BACK"-button to automatically scroll down to content-section on Homepage when navigating back
