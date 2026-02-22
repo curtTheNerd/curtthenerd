@@ -57,7 +57,7 @@
     @apply list-none;
   }
   h2 {
-    @apply text-[1.75rem] text-center pt-8 pb-8;
+    @apply text-[1.75rem] pt-8 pb-8;
   }
 }
 
