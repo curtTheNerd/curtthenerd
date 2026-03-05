@@ -13,13 +13,18 @@ const ContentSectionBlock = ({ header, sectionContent }: SectionProps) => {
   const handleToggleFoldout = () => setFoldoutOpen(!foldoutOpen);
 
   return (
-    <div className="w-full">
+    <div className="group w-full pr-4">
       <div
         className="flex items-center justify-between cursor-pointer"
         onClick={handleToggleFoldout}
       >
-        <p style={{ fontFamily: "Inter, sans-serif" }}>{header}</p>
-        <button className="text-[1.25rem] ml-4 cursor-pointer">
+        <p
+          className="text-xl text-gray-700 font-semibold tracking-tight group-hover:underline group-hover:tracking-wide group-hover:text-[var(--textColor)] transition-all duration-300"
+          style={{ fontFamily: "Inter, sans-serif" }}
+        >
+          {header}
+        </p>
+        <button className="text-2xl ml-4 text-gray-700 font-semibold tracking-tight group-hover:underline group-hover:tracking-wide group-hover:text-[var(--textColor)] transition-all duration-300">
           {foldoutOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
         </button>
       </div>

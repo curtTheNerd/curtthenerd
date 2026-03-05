@@ -9,7 +9,7 @@ const App = () => {
 
   return (
     <VariantContext.Provider value={{ variant, setVariant }}>
-      <div className="relative w-screen h-full min-w-[300px] min-h-screen">
+      <div className="w-screen h-full min-w-[300px] min-h-screen">
         <AppRouter />
       </div>
     </VariantContext.Provider>

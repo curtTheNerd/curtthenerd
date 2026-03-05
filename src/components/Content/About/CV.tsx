@@ -5,7 +5,7 @@ const CV = () => {
     window.scrollTo(0, 0);
   };
   return (
-    <div className="min-h-screen bg-[#faf9f6] text-[#1a1a1a] font-sans px-6 lg:px-16 xl:px-32">
+    <div className="w-[95%] max-w-[1200px] min-h-screen bg-[#faf9f6] text-[#1a1a1a] font-sans mx-auto pb-20 px-6 lg:px-16 xl:px-32">
       {/* Header */}
       <section className="grid md:grid-cols-2 gap-8 mb-16 items-center pt-16">
         {/* Profile Text */}

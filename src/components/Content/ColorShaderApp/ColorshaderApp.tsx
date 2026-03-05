@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { colorProgression } from "../DesignHelpers/BackgroundApp/helpers";
-import ColorCard from "../DesignHelpers/ColorShader/ColorCard";
-import ColorPicker from "../DesignHelpers/ColorShader/ColorPicker";
+import { colorProgression } from "../BackgroundApp/helpers";
+import ColorCard from "./ColorCard";
+import ColorPicker from "./ColorPicker";
 
 type RGB = [number, number, number];
 

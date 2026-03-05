@@ -8,16 +8,15 @@ const ThemeSwitcher = () => {
   // fixed Button to control differnt Homepage styles, determined by what DynamicHomepage component renders as index element on "/"
 
   return (
-    <div className="">
-      {" "}
+    <div className="style-switch-menu">
       {
         //absolute top-4 left-4 z-50
       }
       <button
         onClick={() => setOpen(!open)}
-        className="px-4 py-2 bg-black text-white rounded"
+        className="text-[1.1rem] px-5 py-1 border-2 border-gray-800 rounded-xl hover:text-[1.15rem] hover:text-gray-800 hover:shadow-lg hover:border-gray-600 hover:bg-gray-300 transition-all duration-500"
       >
-        Theme
+        Style
       </button>
       {open && (
         <div className="mt-2 bg-white shadow-lg rounded">

@@ -1,18 +1,25 @@
-// import { LiaCopyright } from "react-icons/lia";
+import { LiaCopyright } from "react-icons/lia";
 import { IconLinkedIn, IconGithub, IconContact } from "../../Core/IconLinks";
 
 const Footer: React.FC = () => {
   return (
     <div
       id="footer"
-      className="w-full flex-center flex-col h-[auto] pt-4 pb-8" //  border-t-1
+      className="w-full flex-center flex-col pt-8 mt-8 border-t-1 border-gray-500" //
     >
-      <div className="flex-center space-x-6 pb-4">
-        <IconLinkedIn />
-        <IconGithub />
-        <IconContact />
+      <div className="flex-center space-x-6 pb-5">
+        <IconLinkedIn color="text-[var(--textColor)]" />
+        <IconGithub color="text-[var(--textColor)]" />
+        <IconContact color="text-[var(--textColor)]" />
       </div>
-      <p className="text-[0.9rem]">Designed & build by CurtTheNerd</p>
+
+      <p className="text-sm">Designed & build by CurtTheNerd</p>
+      <div className="flex-center space-x-2">
+        <div className="text-[1.25rem] text-[var(--textColor)] -translate-y-0.25">
+          <LiaCopyright />
+        </div>
+        <p className="text-sm">2026</p>
+      </div>
     </div>
   );
 };
@@ -20,12 +27,6 @@ const Footer: React.FC = () => {
 export default Footer;
 
 {
-  /* 
-      <div className="flex-center space-x-1">
-        <p className="text-[1.05rem]">2025</p>
-        <div className="text-[1.5rem] text-[var(--textColor)]">
-          <LiaCopyright />
-        </div>
-        <p className="text-[0.95rem]">CopyRight CurtTheNerd</p>
-      </div>*/
+  /*
+   */
 }

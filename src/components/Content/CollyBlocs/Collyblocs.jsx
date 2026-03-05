@@ -50,6 +50,14 @@ const CollyBlocsComponent = () => {
       }
 
       keydown = (e) => {
+        if (
+          e.code === "ArrowLeft" ||
+          e.code === "ArrowUp" ||
+          e.code === "ArrowRight" ||
+          e.code === "ArrowDown"
+        ) {
+          e.preventDefault(); //  prevent site from scrolling
+        }
         if (e.code === "ArrowLeft") this.leftPressed = true;
         if (e.code === "ArrowUp") this.upPressed = true;
         if (e.code === "ArrowRight") this.rightPressed = true;
@@ -224,7 +232,13 @@ const CollyBlocsComponent = () => {
   }, []);
 
   return (
-    <canvas ref={canvasRef} id="canvas" style={{ border: "1px solid white" }} />
+    <canvas
+      ref={canvasRef}
+      id="canvas"
+      style={{
+        margin: "auto",
+      }}
+    />
   );
 };
 

@@ -87,10 +87,8 @@ const ButtonPanel: React.FC<ButtonPanelProps> = ({
               <button className="btn" onClick={onReset}>
                 Reset
               </button>
-              <button className="btn" onClick={() => {}}>
-                {
-                  //BG-Color
-                }
+              <button className="btn" onClick={onOption}>
+                BG-Color
               </button>
             </div>
 

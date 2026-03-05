@@ -1,10 +1,12 @@
-import BackButton from "../BackButton";
-import CV from "./CV";
+// import BackButton from "../BackButton";
+// import CV from "./CV";
 
 const About = () => {
   return (
     <div className="content-page">
-      <BackButton />
+      {
+        //<BackButton />
+      }
       <div className="w-full grid grid-cols-1">
         <div className="flex flex-col justify-center p-8">
           <p
@@ -39,18 +41,11 @@ const About = () => {
             my CV.
             <br />
           </p>
-          <p
-            className="text-[1.75rem] md:text-[2rem] pt-12 pb-28"
-            style={{
-              fontFamily: "Courier New",
-              fontStyle: "italic",
-            }}
-          >
-            CV down below
-          </p>
         </div>
       </div>
-      <CV />
+      {
+        //<CV />
+      }
     </div>
   );
 };

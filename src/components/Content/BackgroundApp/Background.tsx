@@ -2,18 +2,20 @@ import { useState, useEffect } from "react";
 import type React from "react";
 import { colorProgression, randomRGB } from "./helpers";
 import ButtonPanel from "./ButtonPanel";
-import BackgroundEntity from "../../../../ContentOldStyle/ContentGridPages/DesignApps/BackgroundApp/BackgroundEntity";
+import BackgroundEntity from "./BackgroundEntity";
 
 type RGB = [number, number, number];
 
 const Background = () => {
+  //  naming it 'BubbleBlaster' but that's still up to decide
+
   //  states & constants
   const [isRunning, setIsRunning] = useState<boolean>(true);
   const [color, setColor] = useState<RGB>(randomRGB);
   const [backgroundColor, setBackgroundColor] = useState<RGB>([144, 244, 165]);
   const [blockIndex, setBlockIndex] = useState<number>(0);
   const [medianWidth, setMedianWidth] = useState<number>(
-    window.innerWidth / 32
+    window.innerWidth / 32,
   );
   const [entityMode, setEntityMode] = useState<string>("circle");
   const [entityAnimationSpeed, setEntityAnimationSpeed] = useState<number>(15);
@@ -74,51 +76,51 @@ const Background = () => {
 
   const handleSizeUp = () =>
     setMedianWidth(
-      medianWidth >= window.innerWidth / 8 ? medianWidth : medianWidth * 2
+      medianWidth >= window.innerWidth / 8 ? medianWidth : medianWidth * 2,
     );
   const handleSizeDown = () =>
     setMedianWidth(
-      medianWidth <= window.innerWidth / 128 ? medianWidth : medianWidth / 2
+      medianWidth <= window.innerWidth / 128 ? medianWidth : medianWidth / 2,
     );
 
   const handleAnimationSpeedFaster = () =>
     setEntityAnimationSpeed(
       entityAnimationSpeed <= 5
         ? entityAnimationSpeed
-        : entityAnimationSpeed - 1
+        : entityAnimationSpeed - 1,
     );
 
   const handleAnimationSpeedSlower = () =>
     setEntityAnimationSpeed(
       entityAnimationSpeed >= 35
         ? entityAnimationSpeed
-        : entityAnimationSpeed + 1
+        : entityAnimationSpeed + 1,
     );
 
   const handleAnimationDelayFaster = () =>
     setEntityAnimationDelay(
       entityAnimationDelay <= 500
         ? entityAnimationDelay
-        : entityAnimationDelay - 250
+        : entityAnimationDelay - 250,
     );
 
   const handleAnimationDelaySlower = () =>
     setEntityAnimationDelay(
       entityAnimationDelay >= 8000
         ? entityAnimationDelay
-        : entityAnimationDelay + 250
+        : entityAnimationDelay + 250,
     );
   const handleColorProgressionHarder = () =>
     setColorProgressionParameter(
       colorProgressionParameter >= 64
         ? colorProgressionParameter
-        : colorProgressionParameter + 4
+        : colorProgressionParameter + 4,
     );
   const handleColorProgressionSofter = () =>
     setColorProgressionParameter(
       colorProgressionParameter <= 8
         ? colorProgressionParameter
-        : colorProgressionParameter - 4
+        : colorProgressionParameter - 4,
     );
 
   // code execution
@@ -156,7 +158,7 @@ const Background = () => {
   return (
     <>
       <div
-        className="absolute top-0 left-0 w-[100%] h-[100vh] m-0 -z-10"
+        className="absolute inset-0 w-[100%] h-[100vh] m-0 -z-10 overflow-hidden"
         style={{
           backgroundColor: `rgb(${backgroundColor[0]}, ${backgroundColor[1]}, ${backgroundColor[2]})`,
         }}

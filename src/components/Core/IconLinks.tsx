@@ -16,7 +16,9 @@ export const IconLinkedIn = ({
     <a
       href="https://www.linkedin.com/in/kurt-georg-gatzke-143831350/"
       target="_blank"
-      rel="noreferrer"
+      rel="noreferrer noopener"
+      title="LinkedIn"
+      aria-label="LinkedIn"
       className={`cursor-pointer ${size} ${color}`}
     >
       <BsLinkedin />
@@ -32,7 +34,9 @@ export const IconGithub = ({
     <a
       href="https://github.com/curtTheNerd"
       target="_blank"
-      rel="noreferrer"
+      rel="noreferrer noopener"
+      title="GitHub"
+      aria-label="GitHub"
       className={`cursor-pointer ${size} ${color}`}
     >
       <FaSquareGithub />
@@ -48,6 +52,8 @@ export const IconContact = ({
     <Link
       to="/contact"
       id="contactForm"
+      title="Contact"
+      aria-label="Contact"
       className={`cursor-pointer ${size} ${color}`}
     >
       <SiImessage />
