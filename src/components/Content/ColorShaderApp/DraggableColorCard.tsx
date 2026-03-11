@@ -7,9 +7,16 @@ type RGB = [number, number, number];
 type Props = {
   id: string;
   color: RGB;
+  onDoubleClick?: () => void;
+  showRGB: boolean;
 };
 
-const DraggableColorCard: React.FC<Props> = ({ id, color }) => {
+const DraggableColorCard: React.FC<Props> = ({
+  id,
+  color,
+  onDoubleClick,
+  showRGB,
+}) => {
   //  what a hassle bro... didn't expect to have sorting and animating with a kit with that many variables :/
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id });
@@ -20,8 +27,19 @@ const DraggableColorCard: React.FC<Props> = ({ id, color }) => {
   };
 
   return (
-    <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
-      <ColorCard red={color[0]} green={color[1]} blue={color[2]} />
+    <div
+      ref={setNodeRef}
+      style={style}
+      {...attributes}
+      {...listeners}
+      onDoubleClick={onDoubleClick}
+    >
+      <ColorCard
+        red={color[0]}
+        green={color[1]}
+        blue={color[2]}
+        showRGB={showRGB}
+      />
     </div>
   );
 };

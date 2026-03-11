@@ -34,120 +34,136 @@ const ColorPicker: React.FC<Props> = ({
       setter(value);
     };
 
+  const styles = {
+    input:
+      "w-[70px] xl:w-[75px] text-xl xl:text-2xl pl-3 py-0.5 bg-gray-200 px-1 rounded-sm",
+  };
+
   return (
-    <div className="flex-center flex-col">
-      <div
-        id="colorPicker"
-        className="flex-center flex-col sm:flex-row w-full h-full gap-8 sm:gap-16"
-      >
+    <div className="flex-center w-full h-full mx-auto">
+      <div id="colorPicker" className="flex flex-row space-x-8">
         <div
-          id="showSelectedColor+RBGvalue"
-          className="flex items-center gap-2 sm:gap-8 md:gap-16 lg:gap-24"
+          id="displayInput"
+          className="flex flex-col space-x-2 sm:space-x-8 space-y-8"
         >
-          <div
-            id="baseColorRGB"
-            className="group relative flex-center flex-col w-[150px] h-[150px] m-[0.25rem]"
-          >
-            <div
-              className="absolute flex-center w-full h-full top-0 left-0"
-              style={{
-                backgroundColor: `rgb(${red}, ${green}, ${blue})`,
-              }}
-            >
-              <p
-                className="relative flex-center flex-col w-full h-ful px-1 text-[1.2rem] text-black opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                style={{ textShadow: "0px 0px 5px white" }}
-              >
-                <span>rgb</span>
-                {`(${red},${green},${blue})`}
-              </p>
-            </div>
-          </div>
-          <div id="setSeparateColors" className="flex-center flex-col gap-2">
+          <div id="inputColors" className="flex-center flex-col space-y-2">
             <label className="flex-center">
-              <span className="w-[75px]">Red</span>
+              <div className="w-[80px] xl:w-[120px] xl:text-2xl text-xl">
+                <span className="pr-0.25 text-2xl xl:text-3xl text-red-900">
+                  R
+                </span>
+                ed
+              </div>
               <input
                 type="number"
                 value={red}
                 onChange={handleRGBgenerate(setRed)}
                 min={0}
                 max={255}
-                className="text-right border w-[50px] bg-[rgba(255,255,255,0.75)]"
+                className={styles.input}
               />
             </label>
             <label className="flex-center">
-              <span className="w-[75px]">Green</span>
+              <div className="w-[80px] xl:w-[120px] xl:text-2xl text-xl">
+                <span className="pr-0.25 text-2xl xl:text-3xl text-green-900">
+                  G
+                </span>
+                reen
+              </div>
               <input
                 type="number"
                 value={green}
                 onChange={handleRGBgenerate(setGreen)}
                 min={0}
                 max={255}
-                className="text-right border w-[50px] bg-[rgba(255,255,255,0.75)]"
+                className={styles.input}
               />
             </label>
             <label className="flex-center">
-              <span className="w-[75px]">Blau</span>
+              <div className="w-[80px] xl:w-[120px] xl:text-2xl text-xl">
+                <span className="pr-0.25 text-2xl xl:text-3xl text-blue-900">
+                  B
+                </span>
+                lue
+              </div>
               <input
                 type="number"
                 value={blue}
                 onChange={handleRGBgenerate(setBlue)}
                 min={0}
                 max={255}
-                className="text-right border w-[50px] bg-[rgba(255,255,255,0.75)]"
+                className={styles.input}
               />
+            </label>
+          </div>
+          <div className="flex flex-col space-y-2" id="shaderControl">
+            <label htmlFor="intensity" className="flex-center flex-col">
+              gradient
+              <input
+                type="range"
+                id="intensity"
+                name="intensity"
+                value={progressionParameter}
+                onChange={(e) =>
+                  setProgressionParameter(Number(e.target.value))
+                }
+                min={8}
+                max={32}
+                step={1}
+                className="w-[95%]"
+              />
+              <div className="flex justify-between w-full">
+                <span className="flex">smooth</span>
+                <span className="flex">hard</span>
+              </div>
+            </label>
+
+            <label htmlFor="tileAmount" className="flex-center flex-col">
+              amount
+              <input
+                type="range"
+                id="tileAmount"
+                name="tileAmount"
+                value={colorCardsAmount}
+                onChange={(e) => setColorCardsAmount(Number(e.target.value))}
+                min={4}
+                max={32}
+                step={1}
+                className="w-[95%]"
+              />
+              <div className="flex justify-between w-full">
+                <span className="flex">min</span>
+                <span className="flex">{colorCardsAmount}</span>
+                <span className="flex">max</span>
+              </div>
             </label>
           </div>
         </div>
 
         <div
-          className="flex-center sm:flex-col gap-8 sm:gap-2"
-          id="shaderControl"
+          id="baseColorCard"
+          className="flex flex-col items-center justify-between"
         >
-          <label htmlFor="intensity" className="flex-center flex-col">
-            Gradients
-            <input
-              type="range"
-              id="intensity"
-              name="intensity"
-              value={progressionParameter}
-              onChange={(e) => setProgressionParameter(Number(e.target.value))}
-              min={8}
-              max={32}
-              step={1}
-            />
-            <div className="flex justify-between w-full">
-              <span className="flex">smooth</span>
-              <span className="flex">hard</span>
-            </div>
-          </label>
-
-          <label htmlFor="tileAmount" className="flex-center flex-col">
-            Amount
-            <input
-              type="range"
-              id="tileAmount"
-              name="tileAmount"
-              value={colorCardsAmount}
-              onChange={(e) => setColorCardsAmount(Number(e.target.value))}
-              min={4}
-              max={20}
-              step={1}
-            />
-            <div className="flex justify-between w-full">
-              <span className="flex">4</span>
-              <span className="flex">20</span>
-            </div>
-          </label>
+          <div className="flex-center flex-col space-y-2">
+            <div
+              id="baseColor"
+              className="group relative flex-center flex-col w-[140px] aspect-square md:w-[160px] xl:w-[180px] rounded-lg"
+              style={{ background: `rgb(${red}, ${green}, ${blue})` }}
+            ></div>
+            <div
+              id="baseColorValue"
+              className="text-xl tracking-tight"
+            >{`rgb(${red},${green},${blue})`}</div>
+          </div>
+          <button
+            id="generatePallete"
+            onClick={generateOnClick}
+            className="flex-center w-[120px] h-[45px] text-xl tracking-tight ml-4 mb-6 text-[#0d390d] hover:text-black border border-[#71ef71] hover:border-[#6ae76a] rounded-xl bg-[#44e444] hover:bg-[#71ef71] shadow-[1px_1px_5px_rgba(128,128,128,0.6)] hover:shadow-none transition-colors duration-200"
+          >
+            Start
+          </button>
         </div>
       </div>
-      <button
-        id="generatePallete"
-        onClick={generateOnClick}
-        className="flex-center m-12 w-[90px] h-[45px] text-[#0d390d] hover:text-black border border-[#71ef71] hover:border-[#6ae76a] rounded-[1.5rem] bg-[#44e444] hover:bg-[#71ef71] shadow-[1px_1px_5px_rgba(128,128,128,0.6)] hover:shadow-none transition-colors duration-200"
-      >
-        Generate
-      </button>
     </div>
   );
 };
