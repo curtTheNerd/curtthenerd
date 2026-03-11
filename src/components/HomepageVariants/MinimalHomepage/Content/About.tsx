@@ -25,7 +25,7 @@ const About = () => {
           <br /> I am self-taught, out of passion for the game. I don't have a
           university degree, but you will find my alternative certificates in my
           <Link to="/CV">
-            <span className="text-[1.1rem] italic pl-2 cursor-pointer">
+            <span className="text-[1.1rem] italic pl-2 underline cursor-pointer tracking-tight hover:tracking-wider transition-all duration-300">
               CV here
             </span>
           </Link>

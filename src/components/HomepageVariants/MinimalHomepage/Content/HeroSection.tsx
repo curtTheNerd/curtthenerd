@@ -1,10 +1,13 @@
-import React from "react";
-
 const HeroSection = () => {
   return (
-    <section className="hero-section flex-center grid grid-cols-1 md:grid-cols-2 py-8 mx-auto space-y-8">
-      <div className="hero-description flex-center">
-        This could be your advertisement!
+    <section className="hero-section w-full items-between flex flex-col md:flex-row py-8 mx-auto space-y-24 space-x-12">
+      <div className="hero-description w-full flex flex-col justify-center ">
+        <p className="text-4xl">CurtTheNerd</p>
+        <p>
+          CurtTheNerd - legal name Kurt Gatzke - is an independent software
+          engineer, web developer and sales trainer, as well as a German-English
+          translator and interpreter.
+        </p>
       </div>
       <div className="hero-image">
         <img

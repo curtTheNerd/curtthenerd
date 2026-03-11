@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   return (
     <div
       id="footer"
-      className="w-full flex-center flex-col pt-8 mt-8 border-t-1 border-gray-500" //
+      className="w-full flex-center flex-col pt-8 border-t-1 border-gray-500" //
     >
       <div className="flex-center space-x-6 pb-5">
         <IconLinkedIn color="text-[var(--textColor)]" />

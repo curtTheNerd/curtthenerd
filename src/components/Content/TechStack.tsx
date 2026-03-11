@@ -8,11 +8,18 @@ import {
   SiHtml5,
   SiCsswizardry,
   SiCss3,
+  SiPostcss,
   SiSass,
   SiTailwindcss,
   SiBootstrap,
   SiRedux,
   SiJest,
+  SiMysql,
+  SiSqlite,
+  SiPostgresql,
+  SiGithub,
+  SiGit,
+  SiFigma,
 } from "react-icons/si";
 import { BsFiletypeScss } from "react-icons/bs";
 
@@ -29,10 +36,17 @@ export const TechStack = () => {
     <SiCss3 title="CSS 3" aria-label="CSS 3" />,
     <BsFiletypeScss title="SCSS" aria-label="SCSS" />,
     <SiSass title="SASS" aria-label="SASS" />,
+    <SiPostcss title="PostCSS" aria-label="PostCSS" />,
     <SiTailwindcss title="TailwindCSS" aria-label="TailwindCSS" />,
     <SiBootstrap title="BootStrap" aria-label="BootStrap" />,
     <SiRedux title="Redux" aria-label="Redux" />,
     <SiJest title="Jest" aria-label="Jest" />,
+    <SiMysql title="MySQL" aria-label="MySQL" />,
+    <SiPostgresql title="PostgreSQL" aria-label="PostgreSQL" />,
+    <SiSqlite title="SQLite" aria-label="SQLite" />,
+    <SiGithub title="GitHub" aria-label="GitHub" />,
+    <SiGit title="git" aria-label="git" />,
+    <SiFigma title="Figma" aria-label="Figma" />,
   ];
 
   return (

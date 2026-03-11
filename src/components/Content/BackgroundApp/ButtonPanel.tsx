@@ -48,21 +48,48 @@ const ButtonPanel: React.FC<ButtonPanelProps> = ({
   const handleOpenPanelMenu = () => (panelActive ? "" : setPanelActive(true));
   const handleClosePanelMenu = () => setPanelActive(false);
 
+  //  btn-style for index.css
+  //  { cursor-pointer w-[75px] h-[35px] sm:w-[110px] sm:h-[45px] bg-[rgba(255,255,255,0.3)] hover:bg-[rgba(255,255,255,1)] text-[var(--textColor)] text-[0.8rem] sm:text-[1rem] rounded-[0.25rem] shadow-md }
+
+  const evalColorProgression = () => {
+    if (colorProgressionFactor === 64) return "max";
+    if (colorProgressionFactor === 8) return "min";
+    else {
+      return colorProgressionFactor;
+    }
+  };
+
+  const evalSpeed = () => {
+    if (speed === 5) return "max";
+    if (speed === 35) return "min";
+    else {
+      return speed;
+    }
+  };
+
+  const evalDelay = () => {
+    if (delay === 8000) return "max";
+    if (delay === 500) return "min";
+    else {
+      return `${delay}ms`;
+    }
+  };
+
   return (
     <div
-      className={`group absolute flex-center bottom-2 right-2 sm:bottom-4 sm:right-4 lg:bottom-8 lg:right-8 2xl:bottom-12 2xl:right-12 z-1000 ${panelActive ? "w-full max-w-[400px]" : "cursor-pointer w-[80px] hover:w-[175px] hover:h-[90px] lg:w-[100px] lg:h-[100px] 2xl:w-[110px] 2xl:h-[110px] h-[80px] rounded-2xl bg-[rgba(255,255,255,0.5)]"}`}
+      className={`absolute flex-center bottom-4 right-4 z-1000 ${panelActive ? "max-w-[400px]" : "cursor-pointer w-[80px] h-[80px] rounded-2xl bg-[rgba(255,255,255,0.5)]"}`}
       onClick={handleOpenPanelMenu}
     >
-      <div className="group backdrop-blur-md ">
-        <p
-          className={`relative flex-center text-center h-[4rem] text-[0rem] ${panelActive ? "hover:flex-center text-[1rem] sm:text-[1.2rem]" : "group-hover:text-[1.1rem] flex-col"}`}
-        >
+      <div className="group backdrop-blur-md">
+        <p className="relative flex items-center h-[4rem]">
           <img
-            className={`group-hover:absolute group-hover:hidden opacity-50 w-[50px] md:w-[55px] lg:w-[60px] ${panelActive ? "hidden" : "block"}`}
+            className={`opacity-50 w-[42px] 2xl:w-[52px] ${panelActive ? "hidden" : "block"}`}
             src="/ContentGrid/settings-2-svgrepo-com.svg"
             alt="#"
           />
-          <div className="pr-1.5">Manipulate Background</div>
+          <div className={`${panelActive ? "block" : "hidden"} pl-4`}>
+            Manipulate Background
+          </div>
         </p>
 
         <button
@@ -77,8 +104,8 @@ const ButtonPanel: React.FC<ButtonPanelProps> = ({
           className={panelActive ? "" : "hidden"}
         >
           <div className="group grid grid-cols-1 gap-0.5">
-            <div className="flex-center gap-0.5">
-              <button className="btn" onClick={onStart}>
+            <div className="flex-center gap-0.5 pb-0.5">
+              <button className="btn mr-0.5" onClick={onStart}>
                 Start
               </button>
               <button className="btn" onClick={onStop}>
@@ -93,21 +120,19 @@ const ButtonPanel: React.FC<ButtonPanelProps> = ({
             </div>
 
             <div className="flex-center gap-0.5">
-              <button className="btn" onClick={onCircle}>
-                Circle
-              </button>
+              <button className="btn mr-0.5">Shapes:</button>
               <button className="btn" onClick={onColorProgressionUp}>
                 Color +
               </button>
               <button className="btn" onClick={onColorProgressionDown}>
                 Color -
               </button>
-              <button className="btn">{colorProgressionFactor}</button>
+              <button className="btn">{evalColorProgression()}</button>
             </div>
 
             <div className="flex-center gap-0.5">
-              <button className="btn" onClick={onSquare}>
-                Square
+              <button className="btn mr-0.5" onClick={onCircle}>
+                Circle
               </button>
               <button className="btn" onClick={onSizeUp}>
                 Size +
@@ -115,12 +140,12 @@ const ButtonPanel: React.FC<ButtonPanelProps> = ({
               <button className="btn" onClick={onSizeDown}>
                 Size -
               </button>
-              <button className="btn">{Math.round(width)}</button>
+              <button className="btn">{Math.round(width)}px</button>
             </div>
 
             <div className="flex-center gap-0.5">
-              <button className="btn" onClick={onKermit}>
-                Kermit
+              <button className="btn mr-0.5" onClick={onSquare}>
+                Square
               </button>
               <button className="btn" onClick={onSpeedUp}>
                 Speed +
@@ -128,18 +153,20 @@ const ButtonPanel: React.FC<ButtonPanelProps> = ({
               <button className="btn" onClick={onSpeedDown}>
                 Speed -
               </button>
-              <button className="btn">{speed}</button>
+              <button className="btn">{evalSpeed()}</button>
             </div>
 
             <div className="flex-center gap-0.5">
-              <button className="btn"></button>
+              <button className="btn mr-0.5" onClick={onKermit}>
+                Kermit
+              </button>
               <button className="btn" onClick={onDelayDown}>
                 Delay +
               </button>
               <button className="btn" onClick={onDelayUp}>
                 Delay -
               </button>
-              <button className="btn">{delay}</button>
+              <button className="btn">{evalDelay()}</button>
             </div>
           </div>
         </div>

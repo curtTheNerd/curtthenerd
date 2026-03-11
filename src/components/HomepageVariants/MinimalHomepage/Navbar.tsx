@@ -13,7 +13,7 @@ const Navbar = () => {
   ];
   return (
     <nav className="navbar-title-section w-full h-full flex items-center justify-between pl-4 pr-8">
-      <div className="navbar logo pt-12 pl-6 w-[12rem]">
+      <div className="navbar logo pt-12 w-[12rem]">
         <img src="/public/CurtTheNerd_logo_text.webp" alt="logo" />
       </div>
       <ul className="flex-center space-x-4">

@@ -19,7 +19,7 @@ const ContentSection = () => {
     },
   ];
   return (
-    <section className="content-section w-full pb-12 space-y-4">
+    <section className="content-section w-full space-y-3">
       {contentSectionData.map((element) => (
         <ContentSectionBlock
           header={element.header}

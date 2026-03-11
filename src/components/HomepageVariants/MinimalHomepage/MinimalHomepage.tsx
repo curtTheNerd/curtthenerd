@@ -1,28 +1,31 @@
 import Navbar from "./Navbar";
-import HeroSection from "./HeroSection";
-
+import HeroSection from "./Content/HeroSection";
 import Projects from "./Content/Projects";
 import ContentSection from "./Content/ContentSection";
-import { TechStack } from "./TechStack";
+import { TechStack } from "../../Content/TechStack";
 import Footer from "./Footer";
 
 const MinimalHomepage = () => {
   return (
-    <div className="minimal-hompepage w-full md:w-[1000px] h-full min-w-[300px] min-h-screen mx-auto">
+    <div className="minimal-hompepage w-full md:w-[1200px] h-full min-w-[300px] min-h-screen mx-auto">
       <div className="w-full h-[5rem]">
         <Navbar />
       </div>
 
-      <div className="w-[90%] max-w-[1000px] h-full mx-auto">
+      <div className="w-[85%] max-w-[1000px] mx-auto pt-24">
         <HeroSection />
         <div className="pt-8 pb-4">
           <Projects />
         </div>
+        <div className="pt-8 pb-8">
+          <ContentSection />
+        </div>
 
-        <ContentSection />
-
-        <TechStack />
-
+        <div className="pt-12">
+          <TechStack />
+        </div>
+      </div>
+      <div className="w-[90%] max-w-[1000px] mx-auto py-8">
         <Footer />
       </div>
     </div>

@@ -6,9 +6,9 @@ interface CardProps {
 
 const ColorCard: React.FC<CardProps> = ({ red, green, blue }) => {
   return (
-    <div className="group relative flex-center flex-col w-[125px] h-[125px] md:w-[150px] md:h-[150px]">
+    <div className="relative flex-center flex-col w-[125px] h-[125px] md:w-[150px] md:h-[150px] cursor-pointer">
       <div
-        className="absolute w-full h-full top-0 left-0 rounded-[3px]"
+        className="absolute w-full h-full inset-0 rounded-md"
         style={{
           backgroundColor: `rgb(${red}, ${green}, ${blue})`,
         }}

@@ -80,7 +80,7 @@
     @apply overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500;
   }
   .btn {
-    @apply cursor-pointer w-[75px] h-[35px] sm:w-[110px] sm:h-[45px] bg-[rgba(255,255,255,0.3)] hover:bg-[rgba(255,255,255,1)] text-[var(--textColor)] text-[0.8rem] sm:text-[1rem] rounded-[0.25rem] shadow-md;
+    @apply cursor-pointer w-[75px] h-[35px] sm:w-[110px] sm:h-[45px] bg-[rgba(255,255,255,0.3)] hover:bg-[rgba(255,255,255,0.75)] text-[var(--textColor)] text-[0.8rem] sm:text-[1rem] rounded-[0.25rem] shadow-md;
   }
   .btnAddedText {
     @apply w-[110px] h-[45px] text-[var(--textColor)] text-[1.2rem];
@@ -98,14 +98,14 @@
   }
 
   .certificate-style {
-    @apply text-[1.05rem] pl-4 text-gray-500 hover:underline hover:text-[var(--textColor)];
+    @apply text-[1.05rem] pl-4 text-gray-500 hover:underline hover:text-[var(--textColor)] transition-all duration-300;
   }
 
   .featured-projects-title {
-    @apply text-[1.1rem] text-gray-600 hover:text-black hover:underline hover:scale-101 group-hover:text-gray-800 transition-color duration-300;
+    @apply text-[1.1rem] text-gray-600 hover:text-black hover:underline hover:scale-101 group-hover:text-gray-800 transition-all duration-300;
   }
 
   .featured-projects-subtitle {
-    @apply text-[1rem] text-gray-600 group-hover:text-gray-800 transition-color duration-300;
+    @apply text-[1rem] text-gray-600 group-hover:text-gray-800 transition-all duration-300;
   }
 }

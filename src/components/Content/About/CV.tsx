@@ -22,22 +22,23 @@ const CV = () => {
             </h1>
           </NavLink>
           <h2 className="text-lg md:text-xl uppercase tracking-widest text-gray-600 mb-6">
-            Software Developer
+            Software Engineer & Web-Developer
           </h2>
           <p className="text-base leading-relaxed max-w-prose">
-            I'm a Frontend Software and Web Developer from Leipzig, Germany,
-            with a strong focus on React, JavaScript, and TypeScript. After
-            years of treating coding as a passion project, I now turned one of
-            my biggest long-term hobbies into a career. With 3 years of
-            experience I'm still relatively new to the industry - and absolutely
-            hungry to learn more.
+            I'm a Software Engineer and Web-Developer based in Leipzig, Germany,
+            with a strong focus on Frontends using React, JavaScript, and
+            TypeScript. After years of treating coding just as a passion, I now
+            turned one of my biggest long-term hobbies into a career. With 3
+            years of experience I'm still relatively new to the industry - and
+            absolutely hungry for more.
             <br />
-            <br /> After completing my Frontend studies a while ago, I'm now
-            expanding into Backend development with the goal of becoming a
-            Full-Stack Developer. I'm looking for opportunities to dive deeper
-            into the field, sharpen my skills, and grow at a even faster pace.
-            If that resonates with you and you like what I do, feel free to
-            reach out - I'd be happy to have a conversation.
+            <br /> After completing my Frontend studies a while ago, I'm
+            currently expanding my knowlegde in Backend and Fullstack
+            development as well as Databases. I'm looking for interesting new
+            projects and opportunities to dive deeper into the field, sharpen my
+            skills, and grow at a even faster pace. If that resonates with you
+            and you like what I do, feel free to reach out - I'd be happy to
+            have a conversation.
           </p>
         </div>
 
@@ -81,8 +82,29 @@ const CV = () => {
 
         <div className="space-y-12">
           <div>
-            <h3 className="text-lg font-medium pt-4">Frontend Developer</h3>
-            <p className="text-sm text-gray-500 mb-2">12 / 2024 – Present</p>
+            <h3 className="text-lg font-medium">
+              Contract Web Developer & WebApp Consultant
+            </h3>
+            <p className="text-sm text-gray-500 mb-2">05 / 2023 – Present</p>
+            <ul className="list-disc list-inside text-base space-y-1">
+              <li className="pb-2">Selfemployed, Leipzig / London</li>
+              <li>
+                - React JavaScript & TypeScript, HTML 5, CSS, CSS 3, SCSS, SASS,
+                TailwindCSS, WordPress, PHP, SQL
+              </li>
+              <li>
+                Specializing in WebApp and website development with React
+                JavaScript and TypeScript. I design intuitive, responsive user
+                interfaces, improve user experiences, connect frontends with
+                backend systems, and provide technical consulting. Also
+                experienced in German-English translation and localization to
+                support international projects.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-medium pt-4">Frontend Engineer</h3>
+            <p className="text-sm text-gray-500 mb-2">12 / 2024 – 12 / 2025</p>
             <ul className="list-disc list-inside text-base space-y-1">
               <li className="pb-2">Hackney Games, London , UK (remote)</li>
               <li>
@@ -130,28 +152,6 @@ const CV = () => {
                 hosting and infrastructure, covering website solutions, design
                 services, virtual servers, custom development, and managed
                 hosting environments.
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-medium">
-              Contract Web Developer & WebApp Consultant
-            </h3>
-            <p className="text-sm text-gray-500 mb-2">05 / 2023 – Present</p>
-            <ul className="list-disc list-inside text-base space-y-1">
-              <li className="pb-2">Selfemployed, Leipzig / London</li>
-              <li>
-                - React JavaScript & TypeScript, HTML 5, CSS, CSS 3, SCSS, SASS,
-                TailwindCSS, WordPress, PHP, SQL
-              </li>
-              <li>
-                Specializing in WebApp and website development with React
-                JavaScript and TypeScript. I design intuitive, responsive user
-                interfaces, improve user experiences, connect frontends with
-                backend systems, and provide technical consulting. Also
-                experienced in German-English translation and localization to
-                support international projects.
               </li>
             </ul>
           </div>
