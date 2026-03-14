@@ -1,6 +1,11 @@
 import { createContext, useContext } from "react";
 
-export type VariantType = "minimal" | "bento" | "parallax" | "modern-minimal";
+export type VariantType =
+  | "Minimal"
+  | "Parallax"
+  | "Modern"
+  | "Bento"
+  | "Playful";
 
 interface VariantContextType {
   variant: VariantType;
@@ -8,7 +13,7 @@ interface VariantContextType {
 }
 
 export const VariantContext = createContext<VariantContextType>({
-  variant: "minimal",
+  variant: "Minimal",
   setVariant: () => {},
 });
 

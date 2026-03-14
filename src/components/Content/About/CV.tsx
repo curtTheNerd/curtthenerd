@@ -90,7 +90,7 @@ const CV = () => {
               <li className="pb-2">Selfemployed, Leipzig / London</li>
               <li>
                 - React JavaScript & TypeScript, HTML 5, CSS, CSS 3, SCSS, SASS,
-                TailwindCSS, WordPress, PHP, SQL
+                TailwindCSS, WordPress, PHP, SQL, and more
               </li>
               <li>
                 Specializing in WebApp and website development with React

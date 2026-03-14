@@ -5,7 +5,7 @@ import { VariantContext, VariantType } from "./components/Core/VariantContext";
 import AppRouter from "./components/Core/AppRouter";
 
 const App = () => {
-  const [variant, setVariant] = useState<VariantType>("minimal");
+  const [variant, setVariant] = useState<VariantType>("Minimal");
 
   return (
     <VariantContext.Provider value={{ variant, setVariant }}>

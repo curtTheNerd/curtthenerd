@@ -7,13 +7,14 @@ interface SectionProps {
   sectionContent: ReactNode;
 }
 
-const ContentSectionBlock = ({ header, sectionContent }: SectionProps) => {
+const ContentSectionBlock = ({ header, sectionContent, id }: SectionProps) => {
   const [foldoutOpen, setFoldoutOpen] = useState(false);
 
   const handleToggleFoldout = () => setFoldoutOpen(!foldoutOpen);
 
   return (
     <div
+      id={header}
       className={`group w-full pr-4 border-b-1 border-gray-300 ${foldoutOpen ? "pb-6" : "pb-2"}`}
     >
       <div

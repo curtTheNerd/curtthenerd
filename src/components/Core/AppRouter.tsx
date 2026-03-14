@@ -13,6 +13,7 @@ import WeatherApp from "../Content/CompareWeatherForTravelApp/WeatherApp";
 import CollyBlocs from "../Content/CollyBlocs/CollyBlocsWrapper";
 
 import CV from "../Content/About/CV";
+import NotFound from "./NotFound";
 
 const HomepageRouter: React.FC = () => {
   const router = createBrowserRouter(
@@ -27,17 +28,7 @@ const HomepageRouter: React.FC = () => {
 
         <Route path="/CV" element={<CV />} />
 
-        <Route
-          path="*"
-          element={
-            <div className="p-10 text-center text-xl">
-              ❌ Adress not found –{" "}
-              <a href="/" className="underline">
-                Back to HomePage
-              </a>
-            </div>
-          }
-        />
+        <Route path="*" element={<NotFound />} />
       </>,
     ),
   );

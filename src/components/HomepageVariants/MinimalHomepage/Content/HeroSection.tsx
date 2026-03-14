@@ -13,7 +13,7 @@ const HeroSection = () => {
         <img
           src="/public/meWithStrawHatMarocco.jpg"
           alt="plain image of me"
-          className="w-full max-w-[400px] h-full flex object-cover mx-auto"
+          className="w-full max-w-[400px] h-full flex mx-auto"
         />
       </div>
     </section>

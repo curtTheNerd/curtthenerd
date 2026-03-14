@@ -9,13 +9,14 @@ const ContentSection = () => {
       header: "About",
       content: <About />,
     },
-    {
-      header: "Contact",
-      content: <ContactForm />,
-    },
+
     {
       header: "History",
       content: "still to decide content",
+    },
+    {
+      header: "Contact",
+      content: <ContactForm />,
     },
   ];
   return (
