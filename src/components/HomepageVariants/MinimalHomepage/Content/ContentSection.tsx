@@ -1,6 +1,6 @@
 import ContentSectionBlock from "./ContentSectionBlock";
-
 import About from "./About";
+import History from "./History";
 import ContactForm from "../../../Content/ContactForm";
 
 const ContentSection = () => {
@@ -9,10 +9,9 @@ const ContentSection = () => {
       header: "About",
       content: <About />,
     },
-
     {
       header: "History",
-      content: "still to decide content",
+      content: <History />,
     },
     {
       header: "Contact",

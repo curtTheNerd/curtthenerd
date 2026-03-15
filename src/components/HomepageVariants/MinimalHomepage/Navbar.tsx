@@ -18,21 +18,21 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="navbar-logo-section w-full h-[6rem] flex items-center justify-between pl-4 pr-8">
+    <nav className="navbar-logo-section w-full h-[6rem] flex items-center justify-between pl-4 pr-6">
       {/* LOGO */}
-      <Link to="/" className="navbar logo pt-6 px-2 w-[14rem]">
+      <Link to="/" className="navbar logo pt-2 sm:pt-6 w-[12rem]">
         <img src="/public/CurtTheNerd_logo_text.webp" alt="logo" />
       </Link>
 
       {/* NAV-LIST */}
-      <div className="w-full flex items-center justify-end pr-5 space-x-6">
+      <div className="w-full flex items-center justify-end space-x-4">
         {/* NAV_ITEMS */}
-        <ul className="flex-center space-x-4">
+        <ul className="flex-center">
           {navItems.map((item) => (
             <a
               href={item.link}
               key={item.name}
-              className="text-xl hidden md:block"
+              className={`${navItems.indexOf(item) < navItems.length - 1 ? "border-r-1" : ""} px-4 border-gray-500 text-xl hidden md:block hover:underline`}
             >
               {item.name}
             </a>
@@ -41,9 +41,9 @@ const Navbar = () => {
 
         {/* THEME-SWITCHER */}
         <ThemeSwitcher
-          wrapperStyle={`${menuOpen ? "pr-10" : "block"} md:pl-4`}
-          buttonStyle=" cursor-pointer text-[1.15rem] px-5 py-1 border-2 border-gray-400 rounded-lg hover:text-gray-100 hover:shadow-lg hover:border-gray-200 hover:bg-gray-500 transition-all duration-300"
-          foldOutWrapperStyle="mt-2 bg-white shadow-lg rounded"
+          wrapperStyle={`${menuOpen ? "pr-10" : "block"}`}
+          buttonStyle="cursor-pointer relative text-[1.15rem] px-5 py-1 border-2 border-gray-400 rounded-lg hover:text-gray-100 hover:shadow-lg hover:border-gray-200 hover:bg-gray-500 transition-all duration-300"
+          foldOutWrapperStyle="absolute top-full left-0 mt-1 bg-white shadow-lg rounded-md"
           foldOutItemStyle="block px-4 py-2 w-full text-left hover:bg-gray-100"
         />
 

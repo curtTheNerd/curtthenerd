@@ -1,5 +1,4 @@
 import "./index.css";
-import "./fonts.css";
 import { useState } from "react";
 import { VariantContext, VariantType } from "./components/Core/VariantContext";
 import AppRouter from "./components/Core/AppRouter";

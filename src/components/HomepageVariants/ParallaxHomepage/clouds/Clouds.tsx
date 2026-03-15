@@ -1,5 +1,5 @@
-import cloud1 from "../../../assets/svgs/simplecloud.svg";
-import cloud2 from "../../../assets/svgs/stylized_basic_cloud.svg";
+import cloud1 from "./simplecloud.svg";
+import cloud2 from "./stylized_basic_cloud.svg";
 
 export const BigCloud = ({ style }: { style?: React.CSSProperties }) => {
   return (

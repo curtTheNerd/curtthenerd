@@ -7,17 +7,19 @@ import Footer from "./Footer";
 
 const MinimalHomepage = () => {
   return (
-    <div className="minimal-hompepage w-full md:w-[1400px] h-full min-w-[300px] min-h-screen mx-auto">
+    <div className="minimal-hompepage w-[90%] sm:w-[85%] max-w-[1200px] h-full min-h-screen mx-auto">
       <div className="w-full h-[5rem]">
         <Navbar />
       </div>
 
-      <div className="w-[85%] max-w-[1000px] mx-auto pt-24">
-        <HeroSection />
-        <div id="Projects" className="pt-8 pb-4">
+      <div className="w-full md:w-[80%] max-w-[850px] mx-auto pt-24 md:pt-36 space-y-20">
+        <div>
+          <HeroSection />
+        </div>
+        <div id="Projects">
           <Projects />
         </div>
-        <div className="pt-8 pb-8">
+        <div>
           <ContentSection />
         </div>
 

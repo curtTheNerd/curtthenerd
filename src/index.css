@@ -45,7 +45,7 @@
   h3,
   h4,
   h5 {
-    @apply no-underline tracking-[0.44px] break-normal text-[var(--textColor)];
+    @apply no-underline tracking-normal break-normal text-[var(--textColor)];
   }
 
   p,

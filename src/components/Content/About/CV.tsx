@@ -148,7 +148,7 @@ const CV = () => {
                 Sales
               </li>
               <li>
-                IT Sales and Sales Coach (IONOS) with a strong focus of web
+                IT Sales and Sales Coach (IONOS) with a strong focus on web
                 hosting and infrastructure, covering website solutions, design
                 services, virtual servers, custom development, and managed
                 hosting environments.
@@ -199,7 +199,7 @@ const CV = () => {
             <p className="text-lg font-medium mb-2">
               Certificates:
               <a
-                href="/Kurt Gatzke - Frontend Certificate.pdf"
+                href="/certificates/Kurt Gatzke - Frontend Certificate.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="certificate-style"
@@ -207,7 +207,15 @@ const CV = () => {
                 FrontEnd Career-Path
               </a>
               <a
-                href="/TypeScript Class Types.pdf"
+                href="/certificates/PHPCertificate.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="certificate-style"
+              >
+                PHP Course
+              </a>
+              <a
+                href="/certificates/TypeScript Class Types.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="certificate-style"
@@ -215,7 +223,7 @@ const CV = () => {
                 Intermediate TypeScript: Class Types
               </a>
               <a
-                href="/TypeScript Configuration.pdf"
+                href="/certificates/TypeScript Configuration.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="certificate-style"
@@ -223,7 +231,7 @@ const CV = () => {
                 Intermediate TypeScript: Configuration
               </a>
               <a
-                href="/MySQLCertificate.pdf"
+                href="/certificates/MySQLCertificate.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="certificate-style"

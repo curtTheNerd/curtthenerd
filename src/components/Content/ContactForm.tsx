@@ -50,8 +50,11 @@ export default function Contact() {
   };
 
   return (
-    <div className="pr-6 sm:pr-8 md:pr-12 lg:pr-20">
-      <div className="w-[80vw] max-w-[640px] mx-auto mt-12 p-8 mb-20 bg-gray-50 rounded-md ring-1 ring-gray-200">
+    <div className="w-full mx-auto">
+      <p className="w-full text-center text-[1.4rem] pt-12">
+        Write me a message!
+      </p>
+      <div className="w-full max-w-[640px] mx-auto mt-12 p-8 mb-20 bg-gray-50 rounded-md ring-1 ring-gray-200">
         <form onSubmit={onSubmit}>
           <div className="flex flex-col mb-4">
             <p className="text-md font-semibold pb-6">

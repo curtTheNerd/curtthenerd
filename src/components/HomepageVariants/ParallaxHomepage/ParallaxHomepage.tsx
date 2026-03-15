@@ -3,17 +3,16 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Logo from "../../Core/Logo";
 import Footer from "../MinimalHomepage/Footer";
 
-import layer0 from "../../../assets/backgoundLayers/layer0LightBlueSky.svg";
-import layer1 from "../../../assets/backgoundLayers/layer1BlueMountain.svg";
-import layer2 from "../../../assets/backgoundLayers/layer2YellowForest.svg";
-import layer3 from "../../../assets/backgoundLayers/layer3OrangeForest.svg";
-import layer4 from "../../../assets/backgoundLayers/layer4OccreGrasPlusTrees.svg";
-import layer5 from "../../../assets/backgoundLayers/layer5BrownGrasPlusTree.svg";
-import layer6 from "../../../assets/backgoundLayers/layer6ForegroundWaterMirrow.svg";
-import layer7 from "../../../assets/backgoundLayers/layer7ForegroundGras.svg";
+import layer0 from "./backgoundLayersParallax/layer0LightBlueSky.svg";
+import layer1 from "./backgoundLayersParallax/layer1BlueMountain.svg";
+import layer2 from "./backgoundLayersParallax/layer2YellowForest.svg";
+import layer3 from "./backgoundLayersParallax/layer3OrangeForest.svg";
+import layer4 from "./backgoundLayersParallax/layer4OccreGrasPlusTrees.svg";
+import layer5 from "./backgoundLayersParallax/layer5BrownGrasPlusTree.svg";
+import layer6 from "./backgoundLayersParallax/layer6ForegroundWaterMirrow.svg";
+import layer7 from "./backgoundLayersParallax/layer7ForegroundGras.svg";
 
-import { SmallCloud, BigCloud } from "./Clouds";
-import ContentGrid from "../../Content/ContentGrid";
+import { SmallCloud, BigCloud } from "./clouds/Clouds";
 
 const ParallaxHomepageBanner: React.FC = () => {
   const parallaxRef = useRef(null);
@@ -188,11 +187,6 @@ const ParallaxHomepageBanner: React.FC = () => {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1} speed={1}>
-          <div className="w-full flex flex-col items-center justify-start relative bg-[var(--bgColor)]">
-            <ContentGrid />
-          </div>
-        </ParallaxLayer>
         <ParallaxLayer offset={4.7} speed={1}>
           <Footer />
         </ParallaxLayer>

@@ -10,11 +10,12 @@ const DynamicHome = () => {
   switch (variant) {
     case "Parallax":
       return <ParallaxHomepage />;
-    case "Modern":
-      return <ModernMinimalistHomepage />;
-    case "Bento":
-      return <BentoGridHomepage />;
-    // "Playful" still to add
+    //case "Modern":
+    //  return <ModernMinimalistHomepage />;
+    //case "Bento":
+    //  return <BentoGridHomepage />;
+    //case "Playful":
+    //return <PlayfulHomepage />;
     default:
       return <MinimalHomepage />;
   }

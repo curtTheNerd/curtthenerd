@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useVariant, VariantType } from "./VariantContext";
+import { Link } from "react-router";
 
 type StyleProps = {
   wrapperStyle?: string;
@@ -24,9 +25,9 @@ const ThemeSwitcher = ({
   const themes: VariantType[] = [
     "Minimal",
     "Parallax",
-    "Modern",
-    "Bento",
-    "Playful",
+    //  "Modern",
+    //  "Bento",
+    //  "Playful",
   ];
 
   return (
@@ -36,24 +37,26 @@ const ThemeSwitcher = ({
       }
       <button onClick={() => setOpen(!open)} className={buttonStyle}>
         Style
+        {open && (
+          <div className={foldOutWrapperStyle}>
+            {themes.map((theme) => (
+              <Link to="/">
+                <button
+                  key={theme}
+                  className={foldOutItemStyle}
+                  onClick={() => {
+                    console.log("Switch to", theme);
+                    setVariant(theme);
+                    setOpen(false);
+                  }}
+                >
+                  {theme}
+                </button>
+              </Link>
+            ))}
+          </div>
+        )}
       </button>
-
-      {open && (
-        <div className={foldOutWrapperStyle}>
-          {themes.map((theme) => (
-            <button
-              key={theme}
-              className={foldOutItemStyle}
-              onClick={() => {
-                console.log("Switch to", theme);
-                setVariant(theme);
-              }}
-            >
-              {theme}
-            </button>
-          ))}
-        </div>
-      )}
     </div>
   );
 };

@@ -1,21 +1,20 @@
 import { ReactNode, useState } from "react";
-import { IoIosArrowDown } from "react-icons/io";
-import { IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 interface SectionProps {
   header: string;
   sectionContent: ReactNode;
 }
 
-const ContentSectionBlock = ({ header, sectionContent, id }: SectionProps) => {
-  const [foldoutOpen, setFoldoutOpen] = useState(false);
+const ContentSectionBlock = ({ header, sectionContent }: SectionProps) => {
+  const [foldoutOpen, setFoldoutOpen] = useState(true);
 
   const handleToggleFoldout = () => setFoldoutOpen(!foldoutOpen);
 
   return (
     <div
       id={header}
-      className={`group w-full pr-4 border-b-1 border-gray-300 ${foldoutOpen ? "pb-6" : "pb-2"}`}
+      className={`group w-full border-b-1 border-gray-300 ${foldoutOpen ? "pb-12" : "pb-2"}`}
     >
       <div
         className="flex items-center justify-between cursor-pointer"
