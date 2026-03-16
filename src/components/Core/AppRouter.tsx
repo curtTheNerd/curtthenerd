@@ -11,6 +11,7 @@ import Background from "../Content/BackgroundApp/Background";
 import ColorShaderApp from "../Content/ColorShaderApp/ColorshaderApp";
 import WeatherApp from "../Content/CompareWeatherForTravelApp/WeatherApp";
 import CollyBlocs from "../Content/CollyBlocs/CollyBlocsWrapper";
+import GalleryWrapper from "../Content/GalleryApp/GalleryAppWrapper";
 
 import CV from "../Content/About/CV";
 import Contact from "../Content/ContactForm";
@@ -26,6 +27,7 @@ const HomepageRouter: React.FC = () => {
         <Route path="/RGB-colorShader" element={<ColorShaderApp />} />
         <Route path="/compareYourWeather" element={<WeatherApp />} />
         <Route path="/collyblocs" element={<CollyBlocs />} />
+        <Route path="/galleryApp" element={<GalleryWrapper />} />
 
         <Route path="/CV" element={<CV />} />
         <Route path="/Contact" element={<Contact />} />

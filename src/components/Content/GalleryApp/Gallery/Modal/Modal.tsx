@@ -29,13 +29,10 @@ const Modal = ({ selectedImage, closeModal, prevImage, nextImage }) => {
         <TransformImage selectedImage={selectedImage} scaleState={scaleState} />
 
         <div className="description_modal">
-          <p style={{ fontStyle: "italic" }}>
-            {selectedImage.id},
-            <span style={{ fontStyle: "normal" }}> {selectedImage.date}</span>
-          </p>
-          <p>{selectedImage.method}</p>
-          <p>{selectedImage.sizeCm}</p>
-          <p>{selectedImage.sizeInch}</p>
+          <p style={{ fontStyle: "italic" }}>{selectedImage.id}</p>
+          <p>{selectedImage.text1}</p>
+          <p>{selectedImage.text2}</p>
+          <p>{selectedImage.text3}</p>
         </div>
 
         <button

@@ -138,4 +138,16 @@ export const ContentData = [
       </div>
     ),
   },
+  {
+    title: "Gallery",
+    image: "/",
+    HTML_block: (
+      <div className="group">
+        <Link to="/galleryApp" onClick={handleClick}>
+          <p className={styles.title}>GalleryApp</p>
+        </Link>
+        <p className={styles.subtitle}>nice pics</p>
+      </div>
+    ),
+  },
 ];
