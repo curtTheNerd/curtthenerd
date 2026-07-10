@@ -1,7 +1,11 @@
 import { useRef } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import Logo from "../../Core/Logo";
+import ScrollToTopButton from "../../Core/ScrollToTopButton";
 import Footer from "../MinimalHomepage/Footer";
+import HeroSection from "../MinimalHomepage/Content/HeroSection";
+import Projects from "../MinimalHomepage/Content/Projects";
+import ContentSection from "../MinimalHomepage/Content/ContentSection";
+import { TechStack } from "../../Content/TechStack";
 
 import layer0 from "./backgoundLayersParallax/layer0LightBlueSky.svg";
 import layer1 from "./backgoundLayersParallax/layer1BlueMountain.svg";
@@ -13,29 +17,25 @@ import layer6 from "./backgoundLayersParallax/layer6ForegroundWaterMirrow.svg";
 import layer7 from "./backgoundLayersParallax/layer7ForegroundGras.svg";
 
 import { SmallCloud, BigCloud } from "./clouds/Clouds";
+import { TopsoilLayer } from "./layers/TopsoilLayer";
+import { EarthLayer } from "./layers/EarthLayer";
+import { DeepEarthLayer } from "./layers/DeepEarthLayer";
+import { CaveEntranceLayer } from "./layers/CaveEntranceLayer";
+import { GemstoneCaveLayer } from "./layers/GemstoneCaveLayer";
 
-const ParallaxHomepageBanner: React.FC = () => {
+const ParallaxHomepage: React.FC = () => {
   const parallaxRef = useRef(null);
-  return (
-    <div
-      id="parallax-banner-content"
-      className="relative w-screen h-screen bg-[var(--bgColor)]"
-    >
-      {
-        //    !!    Page-Settings
-      }
 
-      <Parallax pages={5} ref={parallaxRef} className="z-10">
+  return (
+    <div className="relative w-full min-h-screen bg-green-300">
+      <Parallax pages={14} ref={parallaxRef} className="w-full">
+        {/* ===== ORIGINAL SURFACE LAYER - Pages 0-1 ===== */}
+
         <ParallaxLayer offset={0} speed={0.1}>
-          <img
-            src={layer0}
-            alt="Layer 0"
-            className="w-full h-full object-cover"
-          />
+          <img src={layer0} alt="Sky" className="w-full h-full object-cover" />
         </ParallaxLayer>
 
-        {/*                 Cloud-Layer                 !!*/}
-
+        {/* Cloud Layer 1 */}
         <ParallaxLayer
           className="relative w-screen h-screen overflow-hidden"
           offset={0}
@@ -70,13 +70,12 @@ const ParallaxHomepageBanner: React.FC = () => {
         <ParallaxLayer offset={0} speed={0.1}>
           <img
             src={layer1}
-            alt="Layer 1"
+            alt="Mountains"
             className="w-full h-full object-cover"
           />
         </ParallaxLayer>
 
-        {/*                 Cloud-Layer                 !!*/}
-
+        {/* Cloud Layer 2 */}
         <ParallaxLayer offset={0} speed={0.25}>
           <BigCloud
             style={{
@@ -95,13 +94,12 @@ const ParallaxHomepageBanner: React.FC = () => {
         <ParallaxLayer offset={0} speed={0.25}>
           <img
             src={layer2}
-            alt="Layer 2"
+            alt="Forest"
             className="w-full h-full object-cover"
           />
         </ParallaxLayer>
 
-        {/*                 Cloud-Layer                 !!*/}
-
+        {/* Cloud Layer 3 */}
         <ParallaxLayer offset={0} speed={0.4}>
           <SmallCloud
             style={{
@@ -131,7 +129,7 @@ const ParallaxHomepageBanner: React.FC = () => {
             style={{
               position: "absolute",
               width: "160px",
-              height: "160p",
+              height: "160px",
               top: "150px",
               left: "-160px",
               opacity: 0.6,
@@ -144,7 +142,7 @@ const ParallaxHomepageBanner: React.FC = () => {
         <ParallaxLayer offset={0} speed={0.4}>
           <img
             src={layer3}
-            alt="Layer 3"
+            alt="Orange Forest"
             className="w-full h-full object-cover"
           />
         </ParallaxLayer>
@@ -152,7 +150,7 @@ const ParallaxHomepageBanner: React.FC = () => {
         <ParallaxLayer offset={0} speed={0.45}>
           <img
             src={layer4}
-            alt="Layer 4"
+            alt="Grass and Trees"
             className="w-full h-full object-cover"
           />
         </ParallaxLayer>
@@ -160,7 +158,7 @@ const ParallaxHomepageBanner: React.FC = () => {
         <ParallaxLayer offset={0} speed={0.5}>
           <img
             src={layer5}
-            alt="Layer 5"
+            alt="Brown Grass"
             className="w-full h-full object-cover"
           />
         </ParallaxLayer>
@@ -168,7 +166,7 @@ const ParallaxHomepageBanner: React.FC = () => {
         <ParallaxLayer offset={0} speed={0.55}>
           <img
             src={layer6}
-            alt="Layer 6"
+            alt="Water"
             className="w-full h-full object-cover"
           />
         </ParallaxLayer>
@@ -176,18 +174,67 @@ const ParallaxHomepageBanner: React.FC = () => {
         <ParallaxLayer offset={0} speed={0.55}>
           <img
             src={layer7}
-            alt="Layer 7"
+            alt="Foreground Grass"
             className="w-full h-full object-cover"
           />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={0} speed={2}>
-          <div id="logo" className="absolute bottom-8 left-4">
-            <Logo />
+        {/* ===== TRANSITION TO DIGGING - Topsoil Layer (Pages 1-2) ===== */}
+        <ParallaxLayer
+          offset={1}
+          speed={0}
+          className="bg-gradient-to-b from-green-300 to-yellow-700 to-40%"
+        ></ParallaxLayer>
+
+        {/* ===== DEEPER EARTH - Pages 2-4 ===== */}
+        <ParallaxLayer
+          offset={1.99}
+          speed={0}
+          className="bg-gradient-to-b from-yellow-700 to-yellow-950 to-40%"
+        ></ParallaxLayer>
+
+        {/* ===== VERY DEEP EARTH - Pages 4-6 ===== */}
+        <ParallaxLayer offset={3.5} speed={0}>
+          <DeepEarthLayer />
+        </ParallaxLayer>
+
+        {/* ===== CAVE ENTRANCE - Pages 6-8 ===== */}
+        <ParallaxLayer offset={5.5} speed={0}>
+          <CaveEntranceLayer />
+        </ParallaxLayer>
+
+        {/* Content: Transition message */}
+        <ParallaxLayer
+          offset={6}
+          speed={0.5}
+          className="flex items-center justify-center"
+        >
+          <div className="w-[90%] sm:w-[85%] max-w-[850px] text-center text-white">
+            <p className="text-xl font-light tracking-wide">
+              Entering the depths...
+            </p>
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={4.7} speed={1}>
+        {/* ===== GEMSTONE CAVE - Pages 8-14 ===== */}
+        <ParallaxLayer offset={7} speed={0}>
+          <GemstoneCaveLayer />
+        </ParallaxLayer>
+        {/* Additional cave content layer */}
+        <ParallaxLayer
+          offset={9}
+          speed={0.5}
+          className="flex items-center justify-center"
+        >
+          <div className="w-[90%] sm:w-[85%] max-w-[900px] text-center">
+            <p className="text-gray-400 text-lg font-light">
+              More premium content placeholders
+            </p>
+          </div>
+        </ParallaxLayer>
+
+        {/* Footer */}
+        <ParallaxLayer offset={12.5} speed={0.5}>
           <Footer />
         </ParallaxLayer>
       </Parallax>
@@ -195,4 +242,4 @@ const ParallaxHomepageBanner: React.FC = () => {
   );
 };
 
-export default ParallaxHomepageBanner;
+export default ParallaxHomepage;

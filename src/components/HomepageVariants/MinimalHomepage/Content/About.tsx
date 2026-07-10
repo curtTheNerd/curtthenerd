@@ -71,7 +71,7 @@ const About = () => {
             healthy principles you should allow yourself to break those rules
             now and then and forfeit yourself to a sin if you feel like it. For
             example, I don't think that alcohol is a solution (well, chemically
-            actually it is), but I like beer as well.
+            it is actually), but I like beer as well.
             <br />
             <br />
             Life is about balance. Cheers.
@@ -83,10 +83,12 @@ const About = () => {
           </p>
           <p className="pl-2">
             I generally like everything that is assemblable and disassemblable
-            like music, chemistry, crocheting, and riddles. In my free time I
-            work as a musician (composing, piano, blues harmonica) and as a
-            crochet instructor; currently publishing a few free crocheting
-            patterns on my gallery blog.
+            in blocks and parts like music, chemistry, languages, crocheting,
+            gardening, and riddles. And all the other things that I consider as
+            'defaults' that most people like, for example travelling and eating
+            good food. In my free time I have projects as a musician (composing,
+            piano, blues harmonica) and as a crochet instructor; currently
+            publishing a few free crocheting patterns on my gallery blog.
             {/* <Link to="/crochet" onClick={handleScroll}>
               <span className="text-[1.1rem] italic px-2 underline cursor-pointer tracking-tight hover:tracking-wider transition-all duration-300">
                 Blog here
