@@ -12,6 +12,8 @@ Personal portfolio site built with React, TypeScript, and Vite — a dynamic, st
 - React Router
 - `@react-spring/parallax` for the parallax-style page
 - `@dnd-kit` for drag-and-drop interactions
+- `react-icons`
+- `react-zoom-pan-pinch` for the gallery zoom/pan
 - Axios
 - and more...
 

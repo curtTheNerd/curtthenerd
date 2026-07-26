@@ -1,7 +1,7 @@
 import ContentSectionBlock from "./ContentSectionBlock";
 import About from "./About";
 import History from "./History";
-import ContactForm from "../../../Content/ContactForm";
+import ContactForm from "../../../Core/ContactForm";
 
 const ContentSection = () => {
   const contentSectionData = [

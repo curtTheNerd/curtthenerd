@@ -9,8 +9,10 @@ import DynamicHome from "../HomepageVariants/DynamicHome";
 
 import Background from "../Content/BackgroundApp/Background";
 import ColorShaderApp from "../Content/ColorShaderApp/ColorshaderApp";
-import WeatherApp from "../Content/CompareWeatherForTravelApp/WeatherApp";
+import WeatherWrapper from "../Content/CompareWeatherForTravelApp/WeatherWrapper";
 import CollyBlocs from "../Content/CollyBlocs/CollyBlocsWrapper";
+import CollyBlocs1_2 from "../Content/CollyBlocs/CollyBlocs1.2_demo/CollyBlocs1.2Wrapper";
+import SHC_Wrapper from "../Content/SHC_eco_calc/SHC_Wrapper";
 import GalleryWrapper from "../Content/GalleryApp/GalleryAppWrapper";
 
 import CV from "../Content/About/CV";
@@ -25,8 +27,10 @@ const HomepageRouter: React.FC = () => {
 
         <Route path="/bubbleBlaster" element={<Background />} />
         <Route path="/RGB-colorShader" element={<ColorShaderApp />} />
-        <Route path="/compareYourWeather" element={<WeatherApp />} />
+        <Route path="/compareYourWeather" element={<WeatherWrapper />} />
         <Route path="/collyblocs" element={<CollyBlocs />} />
+        <Route path="/collyblocs1.2" element={<CollyBlocs1_2 />} />
+        <Route path="/SHC_eco_calc" element={<SHC_Wrapper />} />
         <Route path="/galleryApp" element={<GalleryWrapper />} />
 
         <Route path="/CV" element={<CV />} />

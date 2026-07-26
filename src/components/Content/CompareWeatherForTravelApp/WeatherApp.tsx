@@ -22,6 +22,13 @@ interface CityWeather {
 
 const API_KEY = import.meta.env.VITE_OPEN_WEATHER_API_KEY;
 
+const getRandomLightColor = () => {
+  const r = Math.floor(150 + Math.random() * 105);
+  const g = Math.floor(150 + Math.random() * 105);
+  const b = Math.floor(150 + Math.random() * 105);
+  return `rgb(${r}, ${g}, ${b})`;
+};
+
 const initialCities = [
   { name: "Leipzig", color: "rgb(170, 220, 180)" },
   { name: "London", color: "rgb(255, 200, 120)" },
@@ -73,7 +80,7 @@ const OpenWeatherAPI: React.FC = () => {
       return;
     }
 
-    const color = "rgb(205, 161, 140)";
+    const color = getRandomLightColor();
 
     try {
       const response = await axios.get<WeatherData>(
@@ -98,33 +105,39 @@ const OpenWeatherAPI: React.FC = () => {
   if (error) return <p className="p-6 text-red-500">{error}</p>;
 
   return (
-    <div className="w-screen min-h-screen flex items-center justify-start flex-col space-y-4">
-      <p className="w-90% text-2xl pt-8">Compare your Weather</p>
+    <div className="w-full max-w-360 mx-auto min-h-screen flex items-center justify-start flex-col space-y-4">
+      
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2 w-[95%] mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 w-[95%] mx-auto">
         {weatherList.map(({ name, color, weather }) => (
           <div
             key={name}
-            className="w-full h-[150px] sm:h-[250px] flex items-center justify-between px-6 sm:px-8 md:px-12 rounded-md"
+            className="w-full min-h-[130px] flex items-center justify-between gap-3 px-4 py-4 sm:px-6 sm:py-5 rounded-md overflow-hidden"
             style={{ background: color }}
           >
-            <div className="-space-y-1">
-              <p className="text-3xl font-semibold text-start">
+            <div className="min-w-0 flex-1 space-y-0.5">
+              <p className="text-lg sm:text-xl md:text-2xl font-semibold text-start truncate">
                 {weather.name}
               </p>
-              <p className="text-3xl font-bold">
+              <p className="text-xl sm:text-2xl md:text-3xl font-bold whitespace-nowrap">
                 {weather.main.temp.toFixed(1)} °C
               </p>
-              <p>Feels like: {weather.main.feels_like.toFixed(1)} °C</p>
-              <p>Humidity: {weather.main.humidity}%</p>
+              <p className="text-sm sm:text-base whitespace-nowrap">
+                Feels like: {weather.main.feels_like.toFixed(1)} °C
+              </p>
+              <p className="text-sm sm:text-base whitespace-nowrap">
+                Humidity: {weather.main.humidity}%
+              </p>
             </div>
-            <div className="flex flex-col pb-4">
+            <div className="flex flex-col items-center shrink-0">
               <img
                 src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
                 alt="Weather icon"
-                className="mx-auto"
+                className="mx-auto w-14 h-14 sm:w-20 sm:h-20"
               />
-              <p className="capitalize">{weather.weather[0].description}</p>
+              <p className="capitalize text-sm sm:text-base text-center">
+                {weather.weather[0].description}
+              </p>
             </div>
           </div>
         ))}
@@ -154,6 +167,7 @@ const OpenWeatherAPI: React.FC = () => {
           Add
         </button>
       </form>
+      <p className="w-[90%] text-xl">Maximum 9</p>
     </div>
   );
 };

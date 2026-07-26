@@ -13,6 +13,24 @@ const handleClick = () => {
 
 export const ContentData = [
   {
+    title: "Probussoft.de & Probus EventPilot",
+    image: "/",
+    HTML_block: (
+      <div className="group">
+        <a
+          href="https://probussoft.de/"
+          rel="noreferrer noopener"
+          target="_blank"
+        >
+          <p className={styles.title}>Probussoft.de & Probus EventPilot</p>
+        </a>
+        <p className={styles.subtitle}>
+          Company Website - full design and development, cross-functional team member — product development and sales for a SaaS platform
+        </p>
+      </div>
+    ),
+  },
+  {
     title: "Katya-Granova.com",
     image: "/",
     HTML_block: (
@@ -25,9 +43,67 @@ export const ContentData = [
           <p className={styles.title}>Katya-Granova.com</p>
         </a>
         <p className={styles.subtitle}>
-          Artist Portfolio Website and Showroom - full custom design &
-          development, including unique custom gallery carousel and content
-          management.
+          Artist Portfolio Website & Showroom — full custom design and development, including a bespoke gallery carousel and content management system
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "SCH_ecoCalc",
+    image: "/",
+    HTML_block: (
+      <div className="group">
+        <Link to="/SHC_eco_calc" onClick={handleClick}>
+          <p className={styles.title}>SHC EcoCalculator</p>
+        </Link>
+        <p className={styles.subtitle}>
+          
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "Schaustelle-Halle.de",
+    image: "/",
+    HTML_block: (
+      <div className="group">
+        <a
+          href="https://schaustelle-halle.de/"
+          rel="noreferrer noopener"
+          target="_blank"
+        >
+          <p className={styles.title}>Schaustelle-Halle.de</p>
+        </a>
+        <p className={styles.subtitle}>
+          Actor Collective Website — contracted for both admin management and development, including a custom WordPress plugin for a fully adjustable form and reservation manager, controlled entirely via the admin dashboard.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "ColorShader",
+    image: "/",
+    HTML_block: (
+      <div className="group">
+        <Link to="/RGB-colorShader" onClick={handleClick}>
+          <p className={styles.title}>ColorShader App</p>
+        </Link>
+        <p className={styles.subtitle}>
+          RGB Shader App — semi-randomized palette generator, born from color-palette fatigue. Adds a nice element of surprise to every design.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "WeatherApp",
+    image: "/",
+    HTML_block: (
+      <div className="group">
+        <Link to="/compareYourWeather" onClick={handleClick}>
+          <p className={styles.title}>Multi-Stop Travel Planner</p>
+        </Link>
+        <p className={styles.subtitle}>
+          Multi-Stop Travel Planner — built for my own trips, which usually hit way more than 2 destinations in a short time. Lets you set multiple locations plus your go-to constants at once. Simple, but genuinely useful.
         </p>
       </div>
     ),
@@ -51,24 +127,6 @@ export const ContentData = [
     ),
   },
   {
-    title: "Schaustelle-Halle.de",
-    image: "/",
-    HTML_block: (
-      <div className="group">
-        <a
-          href="https://schaustelle-halle.de/"
-          rel="noreferrer noopener"
-          target="_blank"
-        >
-          <p className={styles.title}>Schaustelle-Halle.de</p>
-        </a>
-        <p className={styles.subtitle}>
-          Actor Collective Website - admin responsibilities and development as contractor, build a custom WordPress plugin for fully adjustable form and reservation manager controlled via admin dashboard.
-        </p>
-      </div>
-    ),
-  },
-  {
     title: "BubbleBlaster",
     image: "/",
     HTML_block: (
@@ -77,73 +135,36 @@ export const ContentData = [
           <p className={styles.title}>BubbleBlaster App</p>
         </Link>
         <p className={styles.subtitle}>
-          Playaround App for Background or as a Screensaver - for my first
-          Website I was in need for an easy-for-the-eye background, so I came up
-          with that utilizing my ColorShader App down below.
+          Playaround App for Background & Screensaver Use — built for my first website when I needed an easy-on-the-eyes background, powered by my own ColorShader App.
         </p>
       </div>
     ),
   },
   {
-    title: "ColorShader",
+    title: "CollyBlocs0.2",
     image: "/",
     HTML_block: (
       <div className="group">
-        <Link to="/RGB-colorShader" onClick={handleClick}>
-          <p className={styles.title}>ColorShader App</p>
+        <Link to="/collyblocs1.2" onClick={handleClick}>
+          <p className={styles.title}>CollyBlocs 0.2</p>
         </Link>
         <p className={styles.subtitle}>
-          Adjustable Shader App for RGB - I once got so annoyed by creating new
-          color palettes again and again that I build my own semi-randomized
-          version for RGB colors. The randomized element here delivers a nice
-          touch for unique designs.
+          Early Browser Game Demo — current 0.2 demo"
         </p>
       </div>
     ),
   },
   {
-    title: "WeatherApp",
-    image: "/",
-    HTML_block: (
-      <div className="group">
-        <Link to="/compareYourWeather" onClick={handleClick}>
-          <p className={styles.title}>CompareYourWeather App</p>
-        </Link>
-        <p className={styles.subtitle}>
-          Title says it all - I like to travel, usually including way more than
-          2 locations in a short time span. The App allows to set multiple
-          locations (and my 3 most needed constants) at once. Simple but super
-          convenient.
-        </p>
-      </div>
-    ),
-  },
-  {
-    title: "CollyBlocs",
+    title: "CollyBlocs0.1",
     image: "/",
     HTML_block: (
       <div className="group">
         <Link to="/collyblocs" onClick={handleClick}>
-          <p className={styles.title}>CollyBlocs App</p>
+          <p className={styles.title}>CollyBlocs 0.1</p>
         </Link>
         <p className={styles.subtitle}>
-          Early Browser Game Demo - this demo architecture is based on my first
-          ever learning project, formerly in plain JavaScript and HTML.
-          Currently in 1.0 development to be injected as TypeScript Telegram bot
-          and as complete browser game. Be excited, because I am too!
+          Early Browser Game Demo — architecture based on my very first learning project (vanilla JS & HTML). Currently evolving into a TypeScript-based Telegram bot and full browser game (v1.0 in development)."
         </p>
-      </div>
-    ),
-  },
-  {
-    title: "Gallery",
-    image: "/",
-    HTML_block: (
-      <div className="group">
-        <Link to="/galleryApp" onClick={handleClick}>
-          <p className={styles.title}>GalleryApp</p>
-        </Link>
-        <p className={styles.subtitle}>nice pics</p>
       </div>
     ),
   },

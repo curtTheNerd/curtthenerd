@@ -1,22 +1,22 @@
 import { Link } from "react-router";
-import ContactForm from "./ContactForm";
-import Footer from "../HomepageVariants/MinimalHomepage/Footer";
+import WeatherApp from "./WeatherApp";
+import Footer from "../../HomepageVariants/MinimalHomepage/Footer";
 
-const ContactPage: React.FC = () => {
+const WeatherWrapper: React.FC = () => {
     return (
         <div
         id="contactFormPage"
          className="flex flex-col w-[95%] md:w-[90%] max-w-360 mx-auto overflow-hidden"
         > 
             <Link to="/">
-                <img src="/public/CurtTheNerd_cursive_2.svg" alt="logo" className="flex w-75"/>
+                <img src="/public/CurtTheNerd_cursive_2.svg" alt="logo" className="flex w-75 pb-2 lg:py-12 "/>
             </Link>
             
-            <ContactForm /> 
+            <WeatherApp /> 
             
             <div className="w-full py-12"><Footer/></div>
         </div>
     )
 }
 
-export default ContactPage;
+export default WeatherWrapper;

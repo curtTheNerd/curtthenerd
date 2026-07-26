@@ -47,7 +47,7 @@ const CV = () => {
             Email
           </h3>
           <NavLink to="/contact" onClick={scrollToTop}>
-            <p>curtthenerd.dev/contact</p>
+            <p className="hover:underline hover:tracking-wide transition-all duration-400">curtthenerd.dev/contact</p>
           </NavLink>
         </div>
         <div>
@@ -55,7 +55,7 @@ const CV = () => {
             Website
           </h3>
           <NavLink to="/">
-            <p>www.curtthenerd.dev</p>
+            <p className="hover:underline hover:tracking-wide transition-all duration-400">www.curtthenerd.dev</p>
           </NavLink>
         </div>
         <div>
@@ -63,7 +63,7 @@ const CV = () => {
             GitHub
           </h3>
           <a href="https://github.com/curtTheNerd" target="_blank" rel="noreferrer noopener">
-            <p>curtTheNerd</p>
+            <p className="hover:underline hover:tracking-wide transition-all duration-400">curtTheNerd</p>
           </a>
         </div>
         

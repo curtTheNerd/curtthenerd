@@ -1,9 +1,14 @@
+import { Link } from "react-router";
 import CollyBlocs from "./Collyblocs.jsx";
+import Footer from "../../HomepageVariants/MinimalHomepage/Footer.js";
 
 const CollyBlocsWrapper = () => {
   return (
-    <div className="w-full flex flex-col pt-12 bg-gray-300">
-      <h2 className="text-center pb-12">CollyBlocs Demo</h2>
+    <div className="w-full flex flex-col pt-4 bg-gray-200">
+      <Link to="/">
+        <img src="/public/CurtTheNerd_cursive_2.svg" alt="logo" className="flex w-75"/>
+      </Link>
+      <h2 className="text-center pb-12">CollyBlocs0.1 Demo</h2>
       <CollyBlocs />
       <div className="w-[90%] mx-auto py-12">
         <p className="text-xl pb-2">How to play:</p>
@@ -21,8 +26,8 @@ const CollyBlocsWrapper = () => {
         </p>
 
         <p className="pt-8 text-lg">
-          Additions in progress: <br />- nicer optic of course, additionally
-          more visual pleasing score board <br />- multiple stages that add
+          Additions in progress: <br />- nicer visuals of course and a
+          better score board <br />- multiple stages that add
           obstacle blocks
           <br />- submitting scores and highscore board
           <br />- adding difficulty progression; difficulty defined by increased
@@ -30,6 +35,7 @@ const CollyBlocsWrapper = () => {
           <br />- soon to be seen as Telegram Bot
         </p>
       </div>
+      <Footer />
     </div>
   );
 };
