@@ -26,7 +26,7 @@ const ContentSectionBlock = ({
         onClick={handleToggleFoldout}
       >
         <p
-          className="text-3xl text-gray-700 font-semibold tracking-tight group-hover:tracking-wider group-hover:text-[var(--textColor)] transition-all duration-300"
+          className="text-3xl xl:text-4xl text-gray-700 font-semibold tracking-tight group-hover:tracking-wide group-hover:text-[var(--textColor)] transition-all duration-300"
         >
           {header}
         </p>

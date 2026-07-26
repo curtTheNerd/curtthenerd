@@ -14,7 +14,7 @@ import CollyBlocs from "../Content/CollyBlocs/CollyBlocsWrapper";
 import GalleryWrapper from "../Content/GalleryApp/GalleryAppWrapper";
 
 import CV from "../Content/About/CV";
-import Contact from "../Content/ContactForm";
+import ContactPage from "./ContactFormPage";
 import NotFound from "./NotFound";
 
 const HomepageRouter: React.FC = () => {
@@ -30,7 +30,7 @@ const HomepageRouter: React.FC = () => {
         <Route path="/galleryApp" element={<GalleryWrapper />} />
 
         <Route path="/CV" element={<CV />} />
-        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Contact" element={<ContactPage />} />
 
         <Route path="*" element={<NotFound />} />
       </>,

@@ -2,10 +2,10 @@ const History = () => {
   const jobs = [
     {
       company: "ProbusSoft",
-      role: "Fullstack Engineer",
+      role: "Frontend Engineer & Sales Agent",
       period: "01 / 2026 – present",
       description:
-        "Company website – design & development; Work on UI & Backend for Probus EventPilot.",
+        "Company Website – Design & Development; Work on UI & Backend for Probus EventPilot.",
       mainTech: "JavaScript, PHP, CSS 3",
     },
     {
@@ -14,14 +14,14 @@ const History = () => {
       period: "12 / 2024 – 12 / 2025",
       description:
         "Work on Frontend Development & Design for Hackney Games Catalogue.",
-      mainTech: "React TypeScript, CSS 3",
+      mainTech: "React TypeScript, CSS 3, Bootstrap",
     },
     {
       company: "Rewe Digital Fulfilment Services GmbH",
       role: "App Analyst",
       period: "08 / 2024 – 08 / 2025",
       description:
-        "App analysis/testing and support of error management for mobile delivery app.",
+        "App Analysis/Testing as well as Support of Error Management for REWE's Mobile App.",
       mainTech: "Python 3, JavaScript, HTML 5, CSS",
     },
     {
@@ -29,7 +29,7 @@ const History = () => {
       role: "Sales Agent & IT Consultant",
       period: "03 / 2024 – 07 / 2024",
       description:
-        "IT Sales and Coaching with strong focus on web hosting and infrastructure as well as website design solutions and virtual servers.",
+        "IT Sales and Coaching with strong focus on Web Hosting and Infrastructure as well as modern Website Design Solutions and Virtual Servers.",
       mainTech: "WordPress, HTML 5",
     },
     {
@@ -37,7 +37,7 @@ const History = () => {
       role: "Contract Web Developer & WebApp Consultant",
       period: "05 / 2023 – present",
       description:
-        "Custom designs and Frontend developments and apps (e.g. custom websites & inventory management) for private clients.",
+        "Frontend/Backend Development, Custom Apps and Design (e.g. custom websites & inventory/reservation management) for private clients.",
       mainTech: "React TypeScript/JavaScript, Laravel, Docker, HTML 5, CSS 3, TailwindCSS",
     },
   ];

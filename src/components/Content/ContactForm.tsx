@@ -51,7 +51,7 @@ export default function Contact() {
 
   return (
     <div className="w-full mx-auto">
-      <p className="w-full text-center text-[1.4rem] pt-12">
+      <p className="w-full text-center text-2xl xl:text-3xl pt-12">
         Write me a message!
       </p>
       <div className="w-full max-w-[640px] mx-auto mt-12 p-8 mb-20 bg-gray-50 rounded-md ring-1 ring-gray-200">
@@ -63,7 +63,7 @@ export default function Contact() {
             </p>
             <div id="name" className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div>
-                <label className="block mb-1 text-sm font-semibold text-[var(--textColor)]">
+                <label className="block mb-1 text-md xl:text-lg font-semibold text-[var(--textColor)]">
                   First Name <span className="font-normal">(required)</span>
                 </label>
                 <input
@@ -77,7 +77,7 @@ export default function Contact() {
               </div>
 
               <div className="">
-                <label className="block mb-1 text-sm font-semibold text-[var(--textColor)]">
+                <label className="block mb-1 text-md xl:text-lg font-semibold text-[var(--textColor)]">
                   Last Name <span className="font-normal">(required)</span>
                 </label>
                 <input
@@ -92,7 +92,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block mb-1 mt-4 text-sm font-semibold text-[var(--textColor)]">
+              <label className="block mb-1 mt-4 text-md xl:text-lg font-semibold text-[var(--textColor)]">
                 Email <span className="font-normal">(required)</span>
               </label>
               <input
@@ -106,7 +106,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="mb-4 pt-4">
-            <label className="block mb-1 text-sm text-[var(--textColor)] font-semibold">
+            <label className="block mb-1 text-md xl:text-lg text-[var(--textColor)] font-semibold">
               Subject <span className="font-normal"></span>
             </label>
             <input
@@ -119,7 +119,7 @@ export default function Contact() {
             />
           </div>
           <div className="mb-4">
-            <label className="block mb-1 text-sm text-[var(--textColor)] font-semibold">
+            <label className="block mb-1 text-md xl:text-lg text-[var(--textColor)] font-semibold">
               Message <span className="font-normal">(required)</span>
             </label>
             <textarea
@@ -133,7 +133,7 @@ export default function Contact() {
           </div>
           <button
             type="submit"
-            className="w-[160px] right-4 py-3 text-white bg-gray-700 rounded hover:bg-gray-900 transition"
+            className="w-[160px] right-4 py-3 text-lg xl:text-xl text-white bg-gray-700 rounded hover:bg-gray-900 transition"
           >
             Submit
           </button>

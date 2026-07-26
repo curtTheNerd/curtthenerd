@@ -30,7 +30,7 @@ const Navbar = () => {
             <a
               href={item.link}
               key={item.name}
-              className={`${navItems.indexOf(item) < navItems.length - 1 ? "border-r-1" : ""} px-4 border-gray-500 text-xl text-shadow-sm hidden md:block hover:underline`}
+              className={`${navItems.indexOf(item) < navItems.length - 1 ? "border-r-1" : ""} px-4 border-gray-500 text-xl xl:text-2xl text-shadow-sm hidden md:block hover:underline`}
             >
               {item.name}
             </a>

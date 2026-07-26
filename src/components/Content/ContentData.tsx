@@ -2,9 +2,9 @@ import { Link } from "react-router";
 
 const styles = {
   title:
-    "py-1 text-xl text-gray-500 font-semibold tracking-tight hover:tracking-normal underline hover:text-[var(--textColor)] group-hover:text-gray-700 transition-color duration-300",
+    "py-1 text-xl xl:text-2xl text-gray-500 font-semibold tracking-tight hover:tracking-normal underline hover:text-[var(--textColor)] group-hover:text-gray-700 transition-color duration-300",
   subtitle:
-    "text-md text-gray-600 group-hover:text-gray-800 transition-color duration-300",
+    "text-md xl:text-lg text-gray-600 group-hover:text-gray-800 transition-color duration-300",
 };
 
 const handleClick = () => {

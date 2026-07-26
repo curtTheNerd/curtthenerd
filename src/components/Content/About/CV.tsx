@@ -5,7 +5,7 @@ const CV = () => {
     window.scrollTo(0, 0);
   };
   return (
-    <div className="w-[95%] max-w-[1200px] min-h-screen bg-[#faf9f6] text-[#1a1a1a] font-sans mx-auto pb-20 px-6 lg:px-16 xl:px-32">
+    <div className="w-full max-w-320 min-h-screen bg-[#faf9f6] text-[#1a1a1a] font-sans mx-auto px-6 py-12 lg:py-24 lg:px-16 xl:px-32">
       {/* Header */}
       <section className="grid md:grid-cols-2 gap-8 mb-16 items-center pt-16">
         {/* Profile Text */}
@@ -25,21 +25,13 @@ const CV = () => {
             Software Engineer & Web-Developer
           </h2>
           <p className="text-base leading-relaxed max-w-prose">
-            I'm a Software Engineer and Web-Developer based in Leipzig, Germany,
-            with a strong focus on Frontends using React, JavaScript, and
-            TypeScript. After years of treating coding just as a passion, I now
-            turned one of my biggest long-term hobbies into a career. With 3
-            years of experience I'm still relatively new to the industry - and
-            absolutely hungry for more.
+            I'm a Software Engineer and Web Developer based in Leipzig, Germany, with a strong focus on frontends using React, JavaScript, and TypeScript. After years of coding as a passion, I've turned one of my longest-running hobbies into a career. With over 3 years of professional experience, I'm still relatively new to the industry - and hungry to grow further.
+
+
             <br />
-            <br /> After completing my Frontend studies a while ago, I'm
-            currently expanding my knowlegde in Backend and Fullstack
-            development as well as Databases. I'm looking for interesting new
-            projects and opportunities to dive deeper into the field, sharpen my
-            skills, and grow at a even faster pace. If that resonates with you
-            and you like what I do, feel free to reach out - I'd be happy to
-            have a conversation.
+            <br /> Since completing my frontend studies, I've been expanding into backend and full-stack development with Laravel and Express.js, along with databases like PostgreSQL and MySQL, using Docker to tie it all together. I'm looking for interesting projects and opportunities to dive deeper into the field, sharpen my skills, and keep growing at pace. If that resonates with you, feel free to reach out - let's talk.
           </p>
+          
         </div>
 
         {/* Image */}
@@ -68,10 +60,26 @@ const CV = () => {
         </div>
         <div>
           <h3 className="font-semibold uppercase text-xs tracking-widest mb-2">
+            GitHub
+          </h3>
+          <a href="https://github.com/curtTheNerd" target="_blank" rel="noreferrer noopener">
+            <p>curtTheNerd</p>
+          </a>
+        </div>
+        
+        <div>
+          <h3 className="font-semibold uppercase text-xs tracking-widest mb-2">
             Location
           </h3>
           <p>Leipzig, Germany</p>
         </div>
+        <a
+            href="/CV - Kurt Gatzke.pdf"
+            download="CV - Kurt Gatzke.pdf"
+            className="inline-block w-40 mt-6 px-6 py-3 border border-gray-700 text-sm rounded-xs uppercase tracking-wide hover:bg-gray-600 hover:text-white transition-colors duration-250"
+          >
+            Download CV
+          </a>
       </section>
 
       {/* Experience */}
@@ -89,33 +97,48 @@ const CV = () => {
             <ul className="list-disc list-inside text-base space-y-1">
               <li className="pb-2">Selfemployed, Leipzig / London</li>
               <li>
-                - React JavaScript & TypeScript, HTML 5, CSS, CSS 3, SCSS, SASS,
-                TailwindCSS, WordPress, PHP, SQL, and more
+                - React, JavaScript & TypeScript, HTML 5, CSS 3, SCSS,
+                TailwindCSS, Docker, Laravel, PHP, Wordpress, MySQL, postgreSQL, and more
               </li>
               <li>
-                Specializing in WebApp and website development with React
-                JavaScript and TypeScript. I design intuitive, responsive user
-                interfaces, improve user experiences, connect frontends with
-                backend systems, and provide technical consulting. Also
-                experienced in German-English translation and localization to
-                support international projects.
+                Web app and website development with React, JavaScript, and TypeScript. I build
+                responsive interfaces, connect frontends to backend systems, and advise on technical
+                decisions. I also handle German–English translation and localisation for international
+                projects.
               </li>
             </ul>
           </div>
+
+          <div>
+            <h3 className="text-lg font-medium pt-4">Frontend Engineer & Sales Agent</h3>
+            <p className="text-sm text-gray-500 mb-2">03 / 2026 – present</p>
+            <ul className="list-disc list-inside text-base space-y-1">
+              <li className="pb-2">ProbusSoft Richter eK, Erfurt, Germany (remote)</li>
+              <li>
+                - PHP & JavaScript, React, TailwindCSS, CSS 3, Azure, Docker, Frontend / Backend &
+                  Deployment
+              </li>
+              <li>
+                Frontend and backend work on the Probus Eventpilot app, plus website development.
+                Focused on the PHP backend, implementing and deploying new website content, and
+                building the UI in React. Worked across the full stack and handled Azure deployment.
+              </li>
+            </ul>
+          </div>
+
           <div>
             <h3 className="text-lg font-medium pt-4">Frontend Engineer</h3>
             <p className="text-sm text-gray-500 mb-2">12 / 2024 – 12 / 2025</p>
             <ul className="list-disc list-inside text-base space-y-1">
-              <li className="pb-2">Hackney Games, London , UK (remote)</li>
+              <li className="pb-2">Hackney Games, London, UK (remote)</li>
               <li>
                 - React JavaScript & TypeScript, MUI, CSS 3, Frontend Design
               </li>
               <li>
-                Frontend and component development for the Hackney Games App
-                Catalog; focusing on React, implemeting and integrating new
-                games content, working on the main UI design, and connecting
-                user interfaces with backend databases. First experiences in
-                modular game development based on Telegram chat bots.
+                Frontend and component development for the Hackney Games app catalogue. Built
+                and integrated new game content in React, contributed to the main UI design, and
+                connected interfaces to backend databases. Worked on modular game development
+                built around Telegram chat bots.
               </li>
             </ul>
           </div>
@@ -131,9 +154,9 @@ const CV = () => {
               </li>
               <li>- App Analysis, App Testing, Python 3</li>
               <li>
-                Supporting error management and customer support, mobile app
-                testing, bug fixing through standard ticket workflows, and basic
-                Python-based analysis to improve operational processes.
+                Supported error management and customer service, mobile app testing, and bug
+                fixing through standard ticket workflows, with basic Python analysis to improve
+                operational processes
               </li>
             </ul>
           </div>
@@ -160,7 +183,7 @@ const CV = () => {
             <h3 className="text-lg font-medium">
               Assembly Team Leader & Site Supervisor
             </h3>
-            <p className="text-sm text-gray-500 mb-2">02 / 2021 – 04 / 2023</p>
+            <p className="text-sm text-gray-500 mb-2">02 / 2020 – 04 / 2023</p>
             <ul className="list-disc list-inside text-base space-y-1">
               <li className="pb-2">CoMoDi GmbH, Arnstadt, Germany</li>
               <li>
@@ -190,11 +213,10 @@ const CV = () => {
           <div>
             <h3 className="text-lg font-medium">Self-taught Developer</h3>
             <p className="text-sm text-gray-500 mb-2">
-              Leipzig / London, 01/2023 - ongoing
+              Leipzig/London, 01/2023 - ongoing
             </p>
             <p className="text-[1.1rem] text-gray-800 mb-6">
-              Codecademy (FullStack Career Path currently in progress), own
-              projects as independent Developer, StackOverFlow and more
+              Built up through Codecademy career paths, technical documentation, and independent projects — and expanded through professional work since 2023.
             </p>
             <p className="text-lg font-medium mb-2">
               Certificates:
@@ -215,22 +237,6 @@ const CV = () => {
                 PHP Course
               </a>
               <a
-                href="/certificates/TypeScript Class Types.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="certificate-style"
-              >
-                Intermediate TypeScript: Class Types
-              </a>
-              <a
-                href="/certificates/TypeScript Configuration.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="certificate-style"
-              >
-                Intermediate TypeScript: Configuration
-              </a>
-              <a
                 href="/certificates/MySQLCertificate.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -248,6 +254,14 @@ const CV = () => {
               University of Leipzig, 2013–2017
             </p>
           </div>
+          <div>
+            <h3 className="text-lg font-medium">
+              State-certified Pharmaceutical Technician (PTA)
+            </h3>
+            <p className="text-sm text-gray-500 mb-2">
+              Bildungswerk für Gesundheitsberuf e.V, Erfurt/Germany, 2010–2013
+            </p>
+          </div>
         </div>
       </section>
 
@@ -259,18 +273,20 @@ const CV = () => {
 
         <div className="grid sm:grid-cols-2 gap-6 text-base">
           <ul className="list-disc list-inside space-y-1">
-            <li>React TypeScript & JavaScript</li>
-            <li>HTML 5, CSS 3, SCSS, SASS</li>
-            <li>TailwindCSS, BootStrap</li>
-            <li>SQL, Jest, Redux</li>
+            <li>React TypeScript / JavaScript</li>
             <li>Express.js, Next.js, Node.js</li>
+            <li>PHP, Laravel, WordPress</li>
+            <li>Docker, MySQL, postgreSQL</li>
+            <li>Context engineering & AI-assisted development (Claude / LLMs)</li>
           </ul>
           <ul className="list-disc list-inside space-y-1">
-            <li>WordPress, PHP, Python3</li>
+            
+            <li>HTML 5, CSS 3, SCSS, SASS</li>
+            <li>TailwindCSS, BootStrap</li>
             <li>Bilingual in German & English</li>
             <li>Fundamentals in Spanish & Polish</li>
-            <li>Pattern Recognition & Critical Thinking</li>
-            <li>Great Memory and Adaptivity</li>
+            <li>Pragmatic, focused on maintainable solutions</li>
+            <li>Adaptable, quick to pick up new tools</li>
           </ul>
         </div>
       </section>
