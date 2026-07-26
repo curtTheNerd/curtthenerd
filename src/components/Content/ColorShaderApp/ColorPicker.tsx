@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { parseColorString, RGB } from "./colorUtils";
+
 interface Props {
   red: number;
   green: number;
@@ -5,6 +8,7 @@ interface Props {
   setRed: (val: number) => void;
   setGreen: (val: number) => void;
   setBlue: (val: number) => void;
+  setColor: (rgb: RGB) => void;
   colorCardsAmount: number;
   setColorCardsAmount: (val: number) => void;
   progressionParameter: number;
@@ -19,12 +23,16 @@ const ColorPicker: React.FC<Props> = ({
   setRed,
   setGreen,
   setBlue,
+  setColor,
   colorCardsAmount,
   setColorCardsAmount,
   progressionParameter,
   setProgressionParameter,
   generateOnClick,
 }) => {
+  const [colorInput, setColorInput] = useState("");
+  const [colorInputError, setColorInputError] = useState(false);
+
   const handleRGBgenerate =
     (setter: (val: number) => void) =>
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -34,19 +42,36 @@ const ColorPicker: React.FC<Props> = ({
       setter(value);
     };
 
+  const handleColorInputSubmit = () => {
+    const parsed = parseColorString(colorInput);
+    if (!parsed) {
+      setColorInputError(true);
+      return;
+    }
+    setColorInputError(false);
+    setColor(parsed);
+  };
+
+  const handleColorInputKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleColorInputSubmit();
+    }
+  };
+
   const styles = {
     input:
-      "w-[70px] xl:w-[75px] text-xl xl:text-2xl pl-3 py-0.5 bg-gray-200 px-1 rounded-sm",
+      "w-[70px] xl:w-[75px] text-xl xl:text-2xl pl-3 py-1 bg-gray-100 focus:bg-gray-50 border border-transparent focus:border-gray-300 outline-none px-1 rounded-lg transition-colors duration-200",
   };
 
   return (
     <div className="flex-center w-full h-full mx-auto">
-      <div id="colorPicker" className="flex flex-row space-x-8">
+      <div id="colorPicker" className="flex flex-col sm:flex-row gap-10">
         <div
           id="displayInput"
-          className="flex flex-col space-x-2 sm:space-x-8 space-y-8"
+          className="flex flex-col gap-8"
         >
-          <div id="inputColors" className="flex-center flex-col space-y-2">
+          <div id="inputColors" className="flex-center flex-col gap-2.5">
             <label className="flex-center">
               <div className="w-[80px] xl:w-[120px] xl:text-2xl text-xl">
                 <span className="pr-0.25 text-2xl xl:text-3xl text-red-900">
@@ -95,8 +120,39 @@ const ColorPicker: React.FC<Props> = ({
                 className={styles.input}
               />
             </label>
+
+            <label className="flex-center flex-col items-start gap-1 pt-2">
+              <span className="text-lg xl:text-xl pt-2 pl-2">or just paste a rgb/hsl/hex string</span>
+              <div className="flex items-center gap-2">
+                <input
+                  type="text"
+                  value={colorInput}
+                  onChange={(e) => {
+                    setColorInput(e.target.value);
+                    if (colorInputError) setColorInputError(false);
+                  }}
+                  onKeyDown={handleColorInputKeyDown}
+                  placeholder="#ff8800, rgb(255,136,0), hsl(30,100%,50%)"
+                  className={`${styles.input} w-[220px] xl:w-[240px] ${
+                    colorInputError ? "ring-2 ring-red-400 focus:border-transparent" : ""
+                  }`}
+                />
+                <button
+                  type="button"
+                  onClick={handleColorInputSubmit}
+                  className="text-lg xl:text-xl px-4 py-1 rounded-lg bg-gray-800 text-white hover:bg-black transition-colors duration-200"
+                >
+                  set
+                </button>
+              </div>
+              {colorInputError && (
+                <span className="text-sm text-red-600">
+                  couldn't read that color, try hex/rgb/hsl
+                </span>
+              )}
+            </label>
           </div>
-          <div className="flex flex-col space-y-2" id="shaderControl">
+          <div className="flex flex-col gap-3" id="shaderControl">
             <label htmlFor="intensity" className="flex-center flex-col">
               gradient
               <input
@@ -110,9 +166,9 @@ const ColorPicker: React.FC<Props> = ({
                 min={8}
                 max={32}
                 step={1}
-                className="w-[95%]"
+                className="w-[95%] accent-gray-800"
               />
-              <div className="flex justify-between w-full">
+              <div className="flex justify-between w-full text-sm text-gray-500">
                 <span className="flex">smooth</span>
                 <span className="flex">hard</span>
               </div>
@@ -129,11 +185,11 @@ const ColorPicker: React.FC<Props> = ({
                 min={4}
                 max={32}
                 step={1}
-                className="w-[95%]"
+                className="w-[95%] accent-gray-800"
               />
-              <div className="flex justify-between w-full">
+              <div className="flex justify-between w-full text-sm text-gray-500">
                 <span className="flex">min</span>
-                <span className="flex">{colorCardsAmount}</span>
+                <span className="flex font-medium text-[var(--textColor)]">{colorCardsAmount}</span>
                 <span className="flex">max</span>
               </div>
             </label>
@@ -142,23 +198,23 @@ const ColorPicker: React.FC<Props> = ({
 
         <div
           id="baseColorCard"
-          className="flex flex-col items-center justify-between"
+          className="flex flex-col items-center justify-between gap-6"
         >
-          <div className="flex-center flex-col space-y-2">
+          <div className="flex-center flex-col gap-3">
             <div
               id="baseColor"
-              className="group relative flex-center flex-col w-[140px] aspect-square md:w-[160px] xl:w-[180px] rounded-lg"
+              className="group relative flex-center flex-col w-[140px] aspect-square md:w-[160px] xl:w-[180px] rounded-2xl shadow-[0_4px_18px_rgba(0,0,0,0.15)] ring-1 ring-black/10"
               style={{ background: `rgb(${red}, ${green}, ${blue})` }}
             ></div>
             <div
               id="baseColorValue"
-              className="text-xl tracking-tight"
-            >{`rgb(${red},${green},${blue})`}</div>
+              className="text-xl tracking-tight text-gray-600"
+            >{`rgb(${red}, ${green}, ${blue})`}</div>
           </div>
           <button
             id="generatePallete"
             onClick={generateOnClick}
-            className="flex-center w-[120px] h-[45px] text-xl tracking-tight ml-4 mb-6 text-[#0d390d] hover:text-black border border-[#71ef71] hover:border-[#6ae76a] rounded-xl bg-[#44e444] hover:bg-[#71ef71] shadow-[1px_1px_5px_rgba(128,128,128,0.6)] hover:shadow-none transition-colors duration-200"
+            className="flex-center w-[130px] h-[48px] text-xl font-medium tracking-tight text-[#0d390d] hover:text-black border border-green-300 hover:border-[#6ae76a] rounded-full bg-green-400 hover:bg-green-200 shadow-[0_3px_10px_rgba(68,228,68,0.4)] hover:shadow-[0_5px_16px_rgba(68,228,68,0.55)] hover:-translate-y-0.5 transition-all duration-200"
           >
             Start
           </button>

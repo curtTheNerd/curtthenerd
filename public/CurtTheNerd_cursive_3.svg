@@ -11,5 +11,5 @@
     </style>
   </defs>
   <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" class="curt-cursive-3">Curt the Nerd</text>
-  <circle cx="300" cy="185" r="4" fill="#c0392b" opacity="0.7"/>
+  <circle cx="300" cy="185" r="4" fill="#7d0606" opacity="0.7"/>
 </svg>

@@ -8,14 +8,16 @@ type Props = {
   id: string;
   color: RGB;
   onDoubleClick?: () => void;
-  showRGB: boolean;
+  showValues: boolean;
+  seamless?: boolean;
 };
 
 const DraggableColorCard: React.FC<Props> = ({
   id,
   color,
   onDoubleClick,
-  showRGB,
+  showValues,
+  seamless,
 }) => {
   //  what a hassle bro... didn't expect to have sorting and animating with a kit with that many variables :/
   const { attributes, listeners, setNodeRef, transform, transition } =
@@ -32,13 +34,15 @@ const DraggableColorCard: React.FC<Props> = ({
       style={style}
       {...attributes}
       {...listeners}
-      onDoubleClick={onDoubleClick}
+      //  while values are shown, copy-buttons need clicks -> don't let double-click move the card out from under the user
+      onDoubleClick={showValues ? undefined : onDoubleClick}
     >
       <ColorCard
         red={color[0]}
         green={color[1]}
         blue={color[2]}
-        showRGB={showRGB}
+        showValues={showValues}
+        seamless={seamless}
       />
     </div>
   );

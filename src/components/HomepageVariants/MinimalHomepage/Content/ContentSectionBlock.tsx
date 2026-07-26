@@ -4,10 +4,15 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 interface SectionProps {
   header: string;
   sectionContent: ReactNode;
+  defaultOpen?: boolean;
 }
 
-const ContentSectionBlock = ({ header, sectionContent }: SectionProps) => {
-  const [foldoutOpen, setFoldoutOpen] = useState(true);
+const ContentSectionBlock = ({
+  header,
+  sectionContent,
+  defaultOpen = true,
+}: SectionProps) => {
+  const [foldoutOpen, setFoldoutOpen] = useState(defaultOpen);
 
   const handleToggleFoldout = () => setFoldoutOpen(!foldoutOpen);
 
