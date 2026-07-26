@@ -3,7 +3,7 @@ import { ContentData } from "../../../Content/ContentData";
 const Projects = () => {
   return (
     <div className="content-section-projects py-4 space-y-4">
-      <p className="section-title text-2xl font-semibold tracking-tighter">
+      <p className="section-title text-3xl font-semibold tracking-tighter">
         Featured Projects and Content
       </p>
       {ContentData.map((element) => element.HTML_block)}

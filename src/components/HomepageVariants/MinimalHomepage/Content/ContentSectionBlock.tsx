@@ -14,15 +14,14 @@ const ContentSectionBlock = ({ header, sectionContent }: SectionProps) => {
   return (
     <div
       id={header}
-      className={`group w-full border-b-1 border-gray-300 ${foldoutOpen ? "pb-12" : "pb-2"}`}
+      className={`group pt-24 sm:pt-32 w-full border-b-1 border-gray-300 ${foldoutOpen ? "pb-12" : "pb-2"}`}
     >
       <div
         className="flex items-center justify-between cursor-pointer"
         onClick={handleToggleFoldout}
       >
         <p
-          className="text-[1.4rem] text-gray-700 font-semibold tracking-tight group-hover:tracking-wider group-hover:text-[var(--textColor)] transition-all duration-300"
-          style={{ fontFamily: "Inter, sans-serif" }}
+          className="text-3xl text-gray-700 font-semibold tracking-tight group-hover:tracking-wider group-hover:text-[var(--textColor)] transition-all duration-300"
         >
           {header}
         </p>

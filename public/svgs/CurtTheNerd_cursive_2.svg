@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="200" viewBox="0 0 600 200">
+  <defs>
+    <style>
+      .curt-cursive-2 {
+        font-family: 'Segoe Script', 'Brush Script MT', 'Lucida Handwriting', cursive;
+        font-size: 64px;
+        font-style: italic;
+        fill: #2e86ab;
+      }
+    </style>
+  </defs>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" class="curt-cursive-2">Curt the Nerd</text>
+  <line x1="90" y1="140" x2="510" y2="140" stroke="#2e86ab" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+</svg>

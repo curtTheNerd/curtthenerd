@@ -1,5 +1,394 @@
 @import "tailwindcss";
 
+/* ---------------------------------------------------------------- */
+/* Local fonts (public/fonts/) — @font-face declarations            */
+/* ---------------------------------------------------------------- */
+
+/* Cinzel */
+@font-face {
+  font-family: "Cinzel";
+  src: url("/fonts/Cinzel Family/Cinzel/Cinzel-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("/fonts/Cinzel Family/Cinzel/Cinzel-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("/fonts/Cinzel Family/Cinzel/Cinzel-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Cinzel Decorative */
+@font-face {
+  font-family: "Cinzel Decorative";
+  src: url("/fonts/Cinzel Family/Cinzel_Decorative/CinzelDecorative-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cinzel Decorative";
+  src: url("/fonts/Cinzel Family/Cinzel_Decorative/CinzelDecorative-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cinzel Decorative";
+  src: url("/fonts/Cinzel Family/Cinzel_Decorative/CinzelDecorative-Black.ttf")
+    format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Cormorant (main family) */
+@font-face {
+  font-family: "Cormorant";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/Cormorant-Light.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/Cormorant-LightItalic.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/Cormorant-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/Cormorant-RegularItalic.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/Cormorant-Medium.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/Cormorant-MediumItalic.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/Cormorant-Semi.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/Cormorant-SemiItalic.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/Cormorant-Bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/Cormorant-BoldItalic.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Cormorant Infant */
+@font-face {
+  font-family: "Cormorant Infant";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantInfant-Light.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Infant";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantInfant-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Infant";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantInfant-Medium.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Infant";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantInfant-Semi.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Infant";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantInfant-Bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Cormorant SC (small caps) */
+@font-face {
+  font-family: "Cormorant SC";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantSC-Light.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant SC";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantSC-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant SC";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantSC-Medium.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant SC";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantSC-Semi.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant SC";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantSC-Bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Cormorant Unicase */
+@font-face {
+  font-family: "Cormorant Unicase";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantUnicase-Light.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Unicase";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantUnicase-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Unicase";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantUnicase-Medium.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Unicase";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantUnicase-Semi.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Unicase";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantUnicase-Bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Cormorant Upright */
+@font-face {
+  font-family: "Cormorant Upright";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantUpright-Light.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Upright";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantUpright-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Upright";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantUpright-Medium.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Upright";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantUpright-Semi.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Upright";
+  src: url("/fonts/cormorant/Cormorant_Install_v0.2/1. OpenType Font Files/CormorantUpright-Bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Atlanta College (single weight) */
+@font-face {
+  font-family: "Atlanta College";
+  src: url("/fonts/atlanta-college/Atlanta-College.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bastliga One (single weight) */
+@font-face {
+  font-family: "Bastliga One";
+  src: url("/fonts/bastliga-one/Bastliga One.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gondens DEMO (single weight, trial font — limited glyph set) */
+@font-face {
+  font-family: "Gondens Demo";
+  src: url("/fonts/gondens-demo/Gondens DEMO.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Orange Avenue DEMO (single weight, trial font — limited glyph set) */
+@font-face {
+  font-family: "Orange Avenue Demo";
+  src: url("/fonts/orange-avenue-demo/OrangeAvenueDEMO-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Orange Avenue Outline Demo";
+  src: url("/fonts/orange-avenue-demo/OrangeAvenueOutlineDEMO-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Primor Stylish (single weight) */
+@font-face {
+  font-family: "Primor Stylish";
+  src: url("/fonts/primorstylish/PrimorStylish.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Victory Striker Sans DEMO (single weight, trial font — limited glyph set) */
+@font-face {
+  font-family: "Victory Striker Sans Demo";
+  src: url("/fonts/victory-striker-sans-demo/Victory Striker Sans Demo.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------------------------------------------------------------- */
+/* Expose fonts as Tailwind utilities: font-<name>                  */
+/* ---------------------------------------------------------------- */
+@theme {
+  --font-cinzel: "Cinzel", serif;
+  --font-cinzel-decorative: "Cinzel Decorative", serif;
+  --font-cormorant: "Cormorant", serif;
+  --font-cormorant-infant: "Cormorant Infant", serif;
+  --font-cormorant-sc: "Cormorant SC", serif;
+  --font-cormorant-unicase: "Cormorant Unicase", serif;
+  --font-cormorant-upright: "Cormorant Upright", serif;
+  --font-atlanta-college: "Atlanta College", cursive;
+  --font-bastliga: "Bastliga One", cursive;
+  --font-gondens: "Gondens Demo", cursive;
+  --font-orange-avenue: "Orange Avenue Demo", serif;
+  --font-orange-avenue-outline: "Orange Avenue Outline Demo", serif;
+  --font-primor-stylish: "Primor Stylish", cursive;
+  --font-victory-striker: "Victory Striker Sans Demo", sans-serif;
+
+  --animate-bounce-slow: bounceSlow 2.5s ease-in-out infinite;
+}
+
 @keyframes slideRight {
   0% {
     transform: translateX(0);
@@ -16,6 +405,16 @@
   100% {
     transform: scale(6);
     opacity: 0;
+  }
+}
+
+@keyframes bounceSlow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15%);
   }
 }
 

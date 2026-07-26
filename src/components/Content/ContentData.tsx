@@ -63,10 +63,7 @@ export const ContentData = [
           <p className={styles.title}>Schaustelle-Halle.de</p>
         </a>
         <p className={styles.subtitle}>
-          Actor Collective Website - maintenance & bug fixing, developed a
-          custom reservation form based on Wordpress plugin and essentially took
-          over all admin responsibilities after the former developer abandoned
-          the project.
+          Actor Collective Website - admin responsibilities and development as contractor, build a custom WordPress plugin for fully adjustable form and reservation manager controlled via admin dashboard.
         </p>
       </div>
     ),

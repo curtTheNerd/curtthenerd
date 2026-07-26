@@ -6,15 +6,17 @@ import { Link } from "react-router";
 interface IconProps {
   size?: string;
   color?: string;
+  link?: string;
 }
 
 export const IconLinkedIn = ({
   size = "text-[2.4rem]",
   color = "text-green-950",
+  link = "https://www.linkedin.com/in/kurt-georg-gatzke-143831350/"
 }: IconProps) => {
   return (
     <a
-      href="https://www.linkedin.com/in/kurt-georg-gatzke-143831350/"
+      href={link}
       target="_blank"
       rel="noreferrer noopener"
       title="LinkedIn"
@@ -29,10 +31,11 @@ export const IconLinkedIn = ({
 export const IconGithub = ({
   size = "text-[2.8rem]",
   color = "text-green-950",
+  link = "https://github.com/curtTheNerd",
 }: IconProps) => {
   return (
     <a
-      href="https://github.com/curtTheNerd"
+      href={link}
       target="_blank"
       rel="noreferrer noopener"
       title="GitHub"

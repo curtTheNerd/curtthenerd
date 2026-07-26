@@ -1,6 +1,14 @@
 const History = () => {
   const jobs = [
     {
+      company: "ProbusSoft",
+      role: "Fullstack Engineer",
+      period: "01 / 2026 – present",
+      description:
+        "Company website – design & development; Work on UI & Backend for Probus EventPilot.",
+      mainTech: "JavaScript, PHP, CSS 3",
+    },
+    {
       company: "Hackney Games",
       role: "Frontend Engineer",
       period: "12 / 2024 – 12 / 2025",
@@ -30,7 +38,7 @@ const History = () => {
       period: "05 / 2023 – present",
       description:
         "Custom designs and Frontend developments and apps (e.g. custom websites & inventory management) for private clients.",
-      mainTech: "React JavaScript & TypeScript, HTML 5, CSS 3, TailwindCSS",
+      mainTech: "React TypeScript/JavaScript, Laravel, Docker, HTML 5, CSS 3, TailwindCSS",
     },
   ];
 
@@ -49,13 +57,14 @@ const History = () => {
               <div className="absolute left-4 top-5 w-4 h-px bg-gray-400" />
 
               <div className="flex flex-col space-y-1">
-                <p className="font-semibold text-gray-800">{job.role}</p>
-                <p className="flex flex-col sm:flex-row text-gray-600 text-sm">
+                <p className="font-semibold text-gray-800 text-lg">{job.role}</p>
+                <p className="flex flex-col sm:flex-row text-gray-600 text-md">
                   <span>{job.company} </span>
                   <span className="hidden sm:block px-2">|</span>
                   <span> {job.period}</span>
                 </p>
-                <p className="text-gray-500 text-sm">{job.description}</p>
+                <p className="text-gray-500 text-md">{job.description}</p>
+                <p className="text-gray-500 text-md pl-2">– Technologies: {job.mainTech}</p>
               </div>
             </div>
           ))}
