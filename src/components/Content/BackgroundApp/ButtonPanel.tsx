@@ -83,8 +83,8 @@ const ButtonPanel: React.FC<ButtonPanelProps> = ({
       <div className="group backdrop-blur-md">
         <p className="relative flex items-center h-[4rem]">
           <img
-            className={`opacity-50 w-[42px] 2xl:w-[52px] ${panelActive ? "hidden" : "block"}`}
-            src="/ContentGrid/settings-2-svgrepo-com.svg"
+            className={`opacity-50 w-[36px] 2xl:w-[42px] ${panelActive ? "hidden" : "block"}`}
+            src="/public/settings-2-svgrepo-com.svg"
             alt="#"
           />
           <div className={`${panelActive ? "block" : "hidden"} pl-4`}>

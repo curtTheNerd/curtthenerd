@@ -1,4 +1,9 @@
 import { Link } from "react-router";
+import { IconGithub } from "../Core/IconLinks";
+
+// IconLinkDefault 
+//<IconGithub size="" color="" link="" />}
+
 
 const styles = {
   title:
@@ -39,8 +44,10 @@ export const ContentData = [
           href="https://katya-granova.com/"
           rel="noreferrer noopener"
           target="_blank"
+          className="flex justify-between"
         >
           <p className={styles.title}>Katya-Granova.com</p>
+          <IconGithub size="flex items-center text-[1.5rem] xl:text-[2rem] hover:scale-110 pr-2 xl:pr-6" color="text-gray-500 hover:text-[var(--textColor)] transition-color duration-300" link="https://github.com/curtTheNerd/katyaGranovadev1.2" />
         </a>
         <p className={styles.subtitle}>
           Artist Portfolio Website & Showroom — full custom design and development, including a bespoke gallery carousel and content management system
@@ -54,10 +61,10 @@ export const ContentData = [
     HTML_block: (
       <div className="group">
         <Link to="/SHC_eco_calc" onClick={handleClick}>
-          <p className={styles.title}>SHC EcoCalculator</p>
+          <p className={styles.title}>SHC EcoCalc  [Beta]</p>
         </Link>
         <p className={styles.subtitle}>
-          
+          Stronghold Crusader (Video Game) Economy Calculator — reverse-engineered grid-placement & pathfinding system for calculating exact economical output by building or in total. Built to finally settle a 20+ year ongoing multiplayer meta debate with hard numbers instead of opinions. Currently just available in German!
         </p>
       </div>
     ),
@@ -103,7 +110,7 @@ export const ContentData = [
           <p className={styles.title}>Multi-Stop Travel Planner</p>
         </Link>
         <p className={styles.subtitle}>
-          Multi-Stop Travel Planner — built for my own trips, which usually hit way more than 2 destinations in a short time. Lets you set multiple locations plus your go-to constants at once. Simple, but genuinely useful.
+          Multi-Stop Weather Travel Planner — built for my own trips, which usually hit way more than 2 destinations in a short time. I got bothered by the necessity to check local weather one by one everytime. Lets you set multiple locations plus your go-to constants at once. Simple, but genuinely useful.
         </p>
       </div>
     ),
@@ -149,7 +156,7 @@ export const ContentData = [
           <p className={styles.title}>CollyBlocs 0.2</p>
         </Link>
         <p className={styles.subtitle}>
-          Early Browser Game Demo — current 0.2 demo"
+          Early Browser Game Demo — current 0.2 Demo
         </p>
       </div>
     ),
@@ -163,7 +170,7 @@ export const ContentData = [
           <p className={styles.title}>CollyBlocs 0.1</p>
         </Link>
         <p className={styles.subtitle}>
-          Early Browser Game Demo — architecture based on my very first learning project (vanilla JS & HTML). Currently evolving into a TypeScript-based Telegram bot and full browser game (v1.0 in development)."
+          Early Browser Game Demo — architecture based on my very first learning project (vanilla JS & HTML). Currently evolving into a TypeScript-based Telegram bot and full browser game (v1.0 in development).
         </p>
       </div>
     ),

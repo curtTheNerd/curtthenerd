@@ -6,7 +6,7 @@ const CollyBlocsWrapper = () => {
   return (
     <div className="w-full flex flex-col pt-4 bg-gray-200">
       <Link to="/">
-        <img src="/public/CurtTheNerd_cursive_2.svg" alt="logo" className="flex w-75"/>
+        <img src="/public/CurtTheNerd_cursive_main.svg" alt="logo" className="flex w-75 lg:ml-24"/>
       </Link>
       <h2 className="text-center pb-12">CollyBlocs0.1 Demo</h2>
       <CollyBlocs />

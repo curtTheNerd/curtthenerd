@@ -1,6 +1,6 @@
 import { useState } from "react";
-import WaffenRechner from "./assets/waffen-rechner.jsx";
-import StrongholdGrid from "./assets/stronghold-grid.jsx";
+import WaffenRechner from "./SingleBuildingCalc.jsx";
+import StrongholdGrid from "./StrongholdGrid.jsx";
 
 const TABS = [
   { id: "waffen", label: "Waffenschmiede-Ökonomie", Component: WaffenRechner },

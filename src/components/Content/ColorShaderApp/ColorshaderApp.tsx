@@ -128,10 +128,10 @@ const ColorShaderApp: React.FC = () => {
       id="colorShaderApp"
       
     > <Link to="/">
-      <img src="/public/CurtTheNerd_cursive_2.svg" alt="logo" className="flex w-75"/>
+      <img src="/public/CurtTheNerd_cursive_main.svg" alt="logo" className="flex w-75 lg:ml-24"/>
     </Link>
-      <div className="flex-center flex-col w-[95%] md:w-[90%] max-w-360 mx-auto pt-12 sm:pt-24 overflow-hidden">  
-        <h2 className="text-[clamp(1.8rem,1.2rem+2.5vw,3rem)] font-semibold tracking-tight text-center mb-2">
+      <div className="flex-center flex-col w-[95%] md:w-[90%] max-w-360 mx-auto pt-4 lg:pt-12 overflow-hidden">  
+        <h2 className="text-2xl lg:text-3xl font-semibold tracking-tight text-center mb-2">
           RGB ColorShader
         </h2>
         <div className="h-[3px] w-[64px] rounded-full bg-[var(--textColor)]/20 mb-10" />
