@@ -431,6 +431,7 @@
   }
 
   html {
+    font-size: 80%;
     @apply w-screen h-screen scroll-smooth;
   }
   body {

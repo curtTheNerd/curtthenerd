@@ -10,7 +10,7 @@ import { IoIosArrowDown } from "react-icons/io";
 const MinimalHomepage = () => {
   return (
     <div className="homepage-wrapper bg-stone-50">
-      <div className="minimal-hompepage w-[90%] sm:w-[85%] max-w-[1440px] h-full min-h-screen mx-auto font-cormorant-infant">
+      <div className="minimal-hompepage w-[90%] sm:w-[85%] max-w-[1000px] h-full min-h-screen mx-auto font-cormorant-infant">
         
         <div className="z-50 w-full h-[6rem] sm:h-[8rem] flex items-center sticky top-0 backdrop-blur-xs">
           <Navbar />
