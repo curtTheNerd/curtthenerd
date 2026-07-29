@@ -128,7 +128,7 @@ const ColorShaderApp: React.FC = () => {
       id="colorShaderApp"
       
     > <Link to="/">
-      <img src="/public/CurtTheNerd_cursive_main.svg" alt="logo" className="flex w-75 lg:ml-24"/>
+      <img src="/CurtTheNerd_cursive_main.svg" alt="logo" className="flex w-75 lg:ml-24"/>
     </Link>
       <div className="flex-center flex-col w-[95%] md:w-[90%] max-w-360 mx-auto pt-4 lg:pt-12 overflow-hidden">  
         <h2 className="text-2xl lg:text-3xl font-semibold tracking-tight text-center mb-2">

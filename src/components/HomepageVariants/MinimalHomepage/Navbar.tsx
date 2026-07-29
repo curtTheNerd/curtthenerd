@@ -22,7 +22,7 @@ const Navbar = () => {
       {/* NAV-LIST */}
       <div className="w-full flex items-center justify-end sm:justify-between space-x-4">
         {/* BANNER */}
-        <img src="/public/CurtTheNerd_cursive_main.svg" alt="logo" className="hidden sm:block sm:w-75"/>
+        <img src="/CurtTheNerd_cursive_main.svg" alt="logo" className="hidden sm:block sm:w-75"/>
         {/* NAV_ITEMS */}
         <div>
           <ul className="flex justify-end">

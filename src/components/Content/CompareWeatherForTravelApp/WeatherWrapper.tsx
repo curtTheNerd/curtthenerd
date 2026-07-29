@@ -9,7 +9,7 @@ const WeatherWrapper: React.FC = () => {
          className="flex flex-col w-[95%] md:w-[90%] max-w-360 mx-auto overflow-hidden"
         > 
             <Link to="/">
-                <img src="/public/CurtTheNerd_cursive_main.svg" alt="logo" className="flex w-75"/>
+                <img src="/CurtTheNerd_cursive_main.svg" alt="logo" className="flex w-75"/>
             </Link>
             <div className="pt-4 lg:pt-12"><WeatherApp /> </div>
             

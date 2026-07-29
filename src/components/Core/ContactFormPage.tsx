@@ -9,7 +9,7 @@ const ContactPage: React.FC = () => {
          className="flex flex-col w-[95%] md:w-[90%] max-w-360 mx-auto overflow-hidden"
         > 
             <Link to="/">
-                <img src="/public/CurtTheNerd_cursive_sub_teal.svg" alt="logo" className="flex w-75"/>
+                <img src="/CurtTheNerd_cursive_sub_teal.svg" alt="logo" className="flex w-75"/>
             </Link>
             
             <ContactForm /> 

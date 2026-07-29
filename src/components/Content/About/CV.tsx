@@ -111,26 +111,6 @@ const CV = () => {
 
         <div className="space-y-12">
           <div>
-            <h3 className="text-lg font-medium">
-              Contract Web Developer & WebApp Consultant
-            </h3>
-            <p className="text-sm text-gray-500 mb-2">05 / 2023 – Present</p>
-            <ul className="list-disc list-inside text-base space-y-1">
-              <li className="pb-2">Selfemployed, Leipzig / London</li>
-              <li>
-                - React, JavaScript & TypeScript, HTML 5, CSS 3, SCSS,
-                TailwindCSS, Docker, Laravel, PHP, Wordpress, MySQL, postgreSQL, and more
-              </li>
-              <li>
-                Web app and website development with React, JavaScript, and TypeScript. I build
-                responsive interfaces, connect frontends to backend systems, and advise on technical
-                decisions. I also handle German–English translation and localisation for international
-                projects.
-              </li>
-            </ul>
-          </div>
-
-          <div>
             <h3 className="text-lg font-medium pt-4">Frontend Engineer & Sales Agent</h3>
             <p className="text-sm text-gray-500 mb-2">03 / 2026 – present</p>
             <ul className="list-disc list-inside text-base space-y-1">
@@ -199,6 +179,27 @@ const CV = () => {
               </li>
             </ul>
           </div>
+
+          <div>
+            <h3 className="text-lg font-medium">
+              Contract Web Developer & WebApp Consultant
+            </h3>
+            <p className="text-sm text-gray-500 mb-2">05 / 2023 – Present</p>
+            <ul className="list-disc list-inside text-base space-y-1">
+              <li className="pb-2">Selfemployed, Leipzig / London</li>
+              <li>
+                - React, JavaScript & TypeScript, HTML 5, CSS 3, SCSS,
+                TailwindCSS, Docker, Laravel, PHP, Wordpress, MySQL, postgreSQL, and more
+              </li>
+              <li>
+                Web app and website development with React, JavaScript, and TypeScript. I build
+                responsive interfaces, connect frontends to backend systems, and advise on technical
+                decisions. I also handle German–English translation and localisation for international
+                projects.
+              </li>
+            </ul>
+          </div>
+
 
           <div>
             <h3 className="text-lg font-medium">

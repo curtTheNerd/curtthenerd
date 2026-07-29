@@ -17,7 +17,7 @@ const MinimalHomepage = () => {
         </div>
 
         <div id="Hero" className="relative h-[80vh] flex-center sm:hidden">
-          <img src="/public/CurtTheNerd_cursive_main.svg" alt="logo" className="flex w-[100%] mx-auto sm:w-100 -translate-x-4 -translate-y-8"/>
+          <img src="/CurtTheNerd_cursive_main.svg" alt="logo" className="flex w-[100%] mx-auto sm:w-100 -translate-x-4 -translate-y-8"/>
           <a
             href="#HeroScript"
             aria-label="Scroll to content"

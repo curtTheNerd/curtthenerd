@@ -84,7 +84,7 @@ const ButtonPanel: React.FC<ButtonPanelProps> = ({
         <p className="relative flex items-center h-[4rem]">
           <img
             className={`opacity-50 w-[36px] 2xl:w-[42px] ${panelActive ? "hidden" : "block"}`}
-            src="/public/settings-2-svgrepo-com.svg"
+            src="/settings-2-svgrepo-com.svg"
             alt="#"
           />
           <div className={`${panelActive ? "block" : "hidden"} pl-4`}>

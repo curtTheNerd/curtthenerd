@@ -159,7 +159,7 @@ const Background = () => {
   return (
     <>
       <Link to="/">
-        <img src="/public/CurtTheNerd_cursive_main.svg" alt="logo" className="absolute top-0 left-0 flex w-50 z-1000"/>
+        <img src="/CurtTheNerd_cursive_main.svg" alt="logo" className="absolute top-0 left-0 flex w-50 z-1000"/>
       </Link>
       <div
         className="absolute inset-0 w-[100%] h-[100vh] m-0 -z-10 overflow-hidden"
