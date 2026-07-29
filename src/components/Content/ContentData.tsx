@@ -64,7 +64,7 @@ export const ContentData = [
           <Link to="/SHC_eco_calc" onClick={handleClick} className="flex justify-between">
             <p className={styles.title}>SHC EcoCalc [Beta]</p>  
           </Link>
-          <IconGithub size="flex items-center text-[1.5rem] xl:text-[2rem] hover:scale-110 pr-2 xl:pr-6" color="text-gray-500 hover:text-stone-700 group-hover:text-gray-600 transition-color duration-300" link="https://github.com/curtTheNerd/curtthenerd/tree/dev1.1/src/components/Content/SHC_eco_calc" /></div>
+          <IconGithub size="flex items-center text-[1.5rem] xl:text-[2rem] hover:scale-110 pr-2 xl:pr-6" color="text-gray-500 hover:text-stone-700 group-hover:text-gray-600 transition-color duration-300" link="https://github.com/curtTheNerd/curtthenerd/tree/gitMain/src/components/Content/SHC_eco_calc" /></div>
         
         <p className={styles.subtitle}>
           Stronghold Crusader (Video Game) Economy Calculator — reverse-engineered grid-placement & pathfinding system for calculating exact economical output by building or in total. Built to finally settle a 20+ year ongoing multiplayer meta debate with hard numbers instead of opinions. Currently just available in German!
@@ -99,7 +99,7 @@ export const ContentData = [
           <Link to="/RGB-colorShader" onClick={handleClick}>
             <p className={styles.title}>ColorShader App</p>
           </Link>
-          <IconGithub  size="flex items-center text-[1.5rem] xl:text-[2rem] hover:scale-110 pr-2 xl:pr-6" color="text-gray-500 hover:text-stone-700 group-hover:text-gray-600 transition-color duration-300" link="https://github.com/curtTheNerd/curtthenerd/tree/dev1.1/src/components/Content/ColorShaderApp" />
+          <IconGithub  size="flex items-center text-[1.5rem] xl:text-[2rem] hover:scale-110 pr-2 xl:pr-6" color="text-gray-500 hover:text-stone-700 group-hover:text-gray-600 transition-color duration-300" link="https://github.com/curtTheNerd/curtthenerd/tree/gitMain/src/components/Content/ColorShaderApp" />
         </div>
         <p className={styles.subtitle}>
           RGB Shader App — semi-randomized palette generator, born from color-palette fatigue. Adds a nice element of surprise to every design.
@@ -116,7 +116,7 @@ export const ContentData = [
           <Link to="/compareYourWeather" onClick={handleClick}>
             <p className={styles.title}>Multi-Stop Travel Planner</p>
           </Link>
-          <IconGithub  size="flex items-center text-[1.5rem] xl:text-[2rem] hover:scale-110 pr-2 xl:pr-6" color="text-gray-500 hover:text-stone-700 group-hover:text-gray-600 transition-color duration-300" link="https://github.com/curtTheNerd/curtthenerd/tree/dev1.1/src/components/Content/CompareWeatherForTravelApp" />
+          <IconGithub  size="flex items-center text-[1.5rem] xl:text-[2rem] hover:scale-110 pr-2 xl:pr-6" color="text-gray-500 hover:text-stone-700 group-hover:text-gray-600 transition-color duration-300" link="https://github.com/curtTheNerd/curtthenerd/tree/gitMain/src/components/Content/CompareWeatherForTravelApp" />
         </div>        
         <p className={styles.subtitle}>
           Multi-Stop Weather Travel Planner — built for my own trips, which usually hit way more than 2 destinations in a short time. I got bothered by the necessity to check local weather one by one everytime. Lets you set multiple locations plus your go-to constants at once. Simple, but genuinely useful.
@@ -151,10 +151,12 @@ export const ContentData = [
     image: "/",
     HTML_block: (
       <div className="group">
-        <Link to="/bubbleBlaster" onClick={handleClick}>
+        <div className="flex justify-between">
+          <Link to="/bubbleBlaster" onClick={handleClick}>
           <p className={styles.title}>BubbleBlaster</p>
         </Link>
-        <IconGithub size="flex items-center text-[1.5rem] xl:text-[2rem] hover:scale-110 pr-2 xl:pr-6" color="text-gray-500 hover:text-stone-700 group-hover:text-gray-600 transition-color duration-300" link="" />
+        <IconGithub size="flex items-center text-[1.5rem] xl:text-[2rem] hover:scale-110 pr-2 xl:pr-6" color="text-gray-500 hover:text-stone-700 group-hover:text-gray-600 transition-color duration-300" link="https://github.com/curtTheNerd/curtthenerd/tree/gitMain/src/components/Content/BackgroundApp" />
+        </div>
         <p className={styles.subtitle}>
           Playaround App for Background & Screensaver Use — built for my first website when I needed an easy-on-the-eyes background, powered by my own ColorShader App.
         </p>
@@ -166,10 +168,12 @@ export const ContentData = [
     image: "/",
     HTML_block: (
       <div className="group">
-        <Link to="/collyblocs1.2" onClick={handleClick}>
-          <p className={styles.title}>CollyBlocs 0.2</p>
-        </Link>
-        <IconGithub  size="flex items-center text-[1.5rem] xl:text-[2rem] hover:scale-110 pr-2 xl:pr-6" color="text-gray-500 hover:text-stone-700 group-hover:text-gray-600 transition-color duration-300" link="" />
+        <div className="flex justify-between">
+          <Link to="/collyblocs1.2" onClick={handleClick}>
+            <p className={styles.title}>CollyBlocs 0.2</p>
+          </Link>
+        <IconGithub  size="flex items-center text-[1.5rem] xl:text-[2rem] hover:scale-110 pr-2 xl:pr-6" color="text-gray-500 hover:text-stone-700 group-hover:text-gray-600 transition-color duration-300" link="https://github.com/curtTheNerd/curtthenerd/tree/gitMain/src/components/Content/CollyBlocs/CollyBlocs1.2_demo" />
+        </div>
         <p className={styles.subtitle}>
           Early Browser Game Demo — current 0.2 Demo
         </p>
@@ -181,10 +185,12 @@ export const ContentData = [
     image: "/",
     HTML_block: (
       <div className="group">
-        <Link to="/collyblocs" onClick={handleClick}>
-          <p className={styles.title}>CollyBlocs 0.1</p>
-        </Link>
-        <IconGithub  size="flex items-center text-[1.5rem] xl:text-[2rem] hover:scale-110 pr-2 xl:pr-6" color="text-gray-500 hover:text-stone-700 group-hover:text-gray-600 transition-color duration-300" link="" />
+        <div className="flex justify-between">
+          <Link to="/collyblocs" onClick={handleClick}>
+            <p className={styles.title}>CollyBlocs 0.1</p>
+          </Link>
+          <IconGithub  size="flex items-center text-[1.5rem] xl:text-[2rem] hover:scale-110 pr-2 xl:pr-6" color="text-gray-500 hover:text-stone-700 group-hover:text-gray-600 transition-color duration-300" link="https://github.com/curtTheNerd/curtthenerd/tree/gitMain/src/components/Content/CollyBlocs" />
+        </div>
         <p className={styles.subtitle}>
           Early Browser Game Demo — architecture based on my very first learning project (vanilla JS & HTML). Currently evolving into a TypeScript-based Telegram bot and full browser game (v1.0 in development).
         </p>

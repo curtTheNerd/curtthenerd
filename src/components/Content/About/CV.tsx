@@ -1,9 +1,22 @@
 import { NavLink } from "react-router";
+import { useEffect, useState } from "react";
+
+const cvImages = ["/meWithStrawHatMarocco.jpg", "/meWithDoggoInHeinz.jpg"];
 
 const CV = () => {
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
+
+  const [activeImage, setActiveImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveImage((prev) => (prev + 1) % cvImages.length);
+    }, 12000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="w-full max-w-320 min-h-screen bg-[#faf9f6] text-[#1a1a1a] font-sans mx-auto px-6 py-12 lg:py-24 lg:px-16 xl:px-32">
       {/* Header */}
@@ -35,8 +48,16 @@ const CV = () => {
         </div>
 
         {/* Image */}
-        <div className="flex-center w-full max-w-[90%] mx-auto bg-gray-300 rounded-md shadow-md">
-          <img src="/meWithStrawHatMarocco.jpg" />
+        <div className="relative flex-center w-full aspect-2/3 max-w-[90%] mx-auto overflow-hidden">
+          {cvImages.map((src, i) => (
+            <img
+              key={src}
+              src={src}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1500 ${
+                i === activeImage ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          ))}
         </div>
       </section>
 
