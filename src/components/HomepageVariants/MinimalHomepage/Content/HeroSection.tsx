@@ -11,7 +11,7 @@ const HeroSection = () => {
       </div>
       <div className="hero-image relative w-4/5 h-auto mx-auto overflow-hidden">
         <img
-          src="/artworksAndAI_shenenigans/altered_self_portrait_01.webp"
+          src="/meWithShirtLookingConcentrated.jpg"
           alt="filtered image of me"
           className="w-full max-w-[360px] mx-auto aspect-square object-cover rounded-sm"
         />

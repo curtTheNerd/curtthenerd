@@ -431,9 +431,30 @@
   }
 
   html {
-    font-size: 80%;
-    @apply w-screen h-screen scroll-smooth;
+    scroll-behavior: smooth;
   }
+
+  /* Viewport under 1024px (= TailWindCSS-lg) */
+  @media (max-width: 1023px) {
+    html {
+      font-size: 90%;
+    }
+  }
+
+  /* Desktop/Tablet over 1024px */
+  @media (min-width: 1024px) {
+    html {
+      font-size: 80%;
+    }
+  }
+
+  /* Desktop over 1440px */
+  @media (min-width: 1800px) {
+    html {
+      font-size: 120%;
+    }
+  }
+
   body {
     @apply w-full h-full flex flex-col items-center mx-auto overflow-x-hidden;
   }
